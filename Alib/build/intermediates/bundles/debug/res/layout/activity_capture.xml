@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.google.zxing.client.android.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="#77000000" >
+
+        <Button
+            android:id="@+id/btn_activate_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activate_title_padding"
+            android:background="@null"
+            android:drawableLeft="@drawable/navigationbar_leftbtn_icon2"
+            android:gravity="left|center_vertical"
+            android:text="返回"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:padding="@dimen/activate_title_padding"
+            android:text="@string/activate_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium" />
+
+        <Button
+            android:id="@+id/btn_activate_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/page_left_margin"
+            android:background="@color/transparent"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:text="@string/register_skip"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/result_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="250dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/status_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/transparent"
+            android:text="@string/msg_default_status"
+            android:textColor="@color/status_text" />
+
+        <TextView
+            android:id="@+id/tv_activate_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/zxing_error"
+            android:gravity="center"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+</FrameLayout>

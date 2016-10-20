@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\navigationbar_leftbtn_icon2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\navigationbar_leftbtn_icon2.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\navigationbar_bg.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\navigationbar_bg.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\zxing_error.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\zxing_error.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\navigationbar_rightbtn_icon2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\navigationbar_rightbtn_icon2.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\search_icon.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\search_icon.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\navigationbar_bg2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\navigationbar_bg2.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\navigation_bar_back2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\navigation_bar_back2.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\navigationbar_leftbtn_icon.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\navigationbar_leftbtn_icon.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\navigation_bar_bg.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\navigation_bar_bg.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\navigation_bar_back.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\navigation_bar_back.png"
+    }
+]

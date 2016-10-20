@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string-array name="drivetype">
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>B1</item>
+        <item>B2</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+    </string-array>
+    <string-array name="cartypes">
+        <item>A1：大型客车</item>
+        <item>A2：牵引车</item>
+        <item>A3: 城市公交车</item>
+        <item>B1：中型客车</item>
+        <item>B2：大型货车</item>
+        <item>C1: 小型汽车</item>
+        <item>C2：小型自动档汽车</item>
+        <item>C3: 低速载货汽车</item>
+    </string-array>
+    <string-array name="carusenature">
+        <item>营运</item>
+        <item>非营运</item>
+    </string-array>
+    <string-array name="persion_sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="valid_driver_license">
+        <item>6年</item>
+        <item>10年</item>
+        <item>长期</item>
+    </string-array>
+    <string-array name="country_codes">
+        <item>-</item>
+        <item>AR</item>
+        <item>AU</item>
+        <item>BR</item>
+        <item>BG</item>
+        <item>CA</item>
+        <item>CH</item>
+        <item>CN</item>
+        <item>CZ</item>
+        <item>DE</item>
+        <item>DK</item>
+        <item>ES</item>
+        <item>FI</item>
+        <item>FR</item>
+        <item>GB</item>
+        <item>GR</item>
+        <item>HU</item>
+        <item>ID</item>
+        <item>IT</item>
+        <item>JP</item>
+        <item>KR</item>
+        <item>NL</item>
+        <item>PL</item>
+        <item>PT</item>
+        <item>RO</item>
+        <item>RU</item>
+        <item>SE</item>
+        <item>SK</item>
+        <item>SI</item>
+        <item>TR</item>
+        <item>TW</item>
+        <item>US</item>
+    </string-array>
+    <string-array name="car_district">
+        <item>京</item>
+        <item>津</item>
+        <item>沪</item>
+        <item>渝</item>
+        <item>黑</item>
+        <item>吉</item>
+        <item>辽</item>
+        <item>蒙</item>
+        <item>冀</item>
+        <item>新</item>
+        <item>甘</item>
+        <item>青</item>
+        <item>陕</item>
+        <item>宁</item>
+        <item>豫</item>
+        <item>鲁</item>
+        <item>晋</item>
+        <item>皖</item>
+        <item>鄂</item>
+        <item>湘</item>
+        <item>苏</item>
+        <item>川</item>
+        <item>贵</item>
+        <item>云</item>
+        <item>桂</item>
+        <item>藏</item>
+        <item>浙</item>
+        <item>赣</item>
+        <item>粤</item>
+        <item>闽</item>
+        <item>台</item>
+        <item>琼</item>
+    </string-array>
+    <string-array name="car_city">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+
+    
+     <string-array name="test_date">
+        <item>数据加载中</item>
+    </string-array>
+    
+</resources>

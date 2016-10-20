@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="car_city">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+    <string-array name="car_district">
+        <item>京</item>
+        <item>津</item>
+        <item>沪</item>
+        <item>渝</item>
+        <item>黑</item>
+        <item>吉</item>
+        <item>辽</item>
+        <item>蒙</item>
+        <item>冀</item>
+        <item>新</item>
+        <item>甘</item>
+        <item>青</item>
+        <item>陕</item>
+        <item>宁</item>
+        <item>豫</item>
+        <item>鲁</item>
+        <item>晋</item>
+        <item>皖</item>
+        <item>鄂</item>
+        <item>湘</item>
+        <item>苏</item>
+        <item>川</item>
+        <item>贵</item>
+        <item>云</item>
+        <item>桂</item>
+        <item>藏</item>
+        <item>浙</item>
+        <item>赣</item>
+        <item>粤</item>
+        <item>闽</item>
+        <item>台</item>
+        <item>琼</item>
+    </string-array>
+    <string-array name="cartypes">
+        <item>A1：大型客车</item>
+        <item>A2：牵引车</item>
+        <item>A3: 城市公交车</item>
+        <item>B1：中型客车</item>
+        <item>B2：大型货车</item>
+        <item>C1: 小型汽车</item>
+        <item>C2：小型自动档汽车</item>
+        <item>C3: 低速载货汽车</item>
+    </string-array>
+    <string-array name="carusenature">
+        <item>营运</item>
+        <item>非营运</item>
+    </string-array>
+    <string-array name="country_codes">
+        <item>-</item>
+        <item>AR</item>
+        <item>AU</item>
+        <item>BR</item>
+        <item>BG</item>
+        <item>CA</item>
+        <item>CH</item>
+        <item>CN</item>
+        <item>CZ</item>
+        <item>DE</item>
+        <item>DK</item>
+        <item>ES</item>
+        <item>FI</item>
+        <item>FR</item>
+        <item>GB</item>
+        <item>GR</item>
+        <item>HU</item>
+        <item>ID</item>
+        <item>IT</item>
+        <item>JP</item>
+        <item>KR</item>
+        <item>NL</item>
+        <item>PL</item>
+        <item>PT</item>
+        <item>RO</item>
+        <item>RU</item>
+        <item>SE</item>
+        <item>SK</item>
+        <item>SI</item>
+        <item>TR</item>
+        <item>TW</item>
+        <item>US</item>
+    </string-array>
+    <string-array name="drivetype">
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>B1</item>
+        <item>B2</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+    </string-array>
+    <string-array name="persion_sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="test_date">
+        <item>数据加载中</item>
+    </string-array>
+    <string-array name="valid_driver_license">
+        <item>6年</item>
+        <item>10年</item>
+        <item>长期</item>
+    </string-array>
+    <attr format="reference" name="absListViewStyle"/>
+    <attr format="reference" name="listViewStyle"/>
+    <color name="about_bg">#f2f2f2</color>
+    <color name="about_text4and5">#898989</color>
+    <color name="account_text">#636363</color>
+    <color name="actionBarBackground">#ffe5f4ff</color>
+    <color name="actionBarHighlight">#ff0073c4</color>
+    <color name="aliceblue">#F0F8FF</color>
+    <color name="antiquewhite">#FAEBD7</color>
+    <color name="app_default_bg">#30549e</color>
+    <color name="apptheme">#f7bc35</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="aquamarine">#7FFFD4</color>
+    <color name="azure">#F0FFFF</color>
+    <color name="beige">#F5F5DC</color>
+    <color name="bisque">#FFE4C4</color>
+    <color name="black">#000000</color>
+    <color name="blanchedalmond">#FFEBCD</color>
+    <color name="blickgraybg">#555555</color>
+    <color name="blue">#117bcf</color>
+    <color name="blueBackground">#ff1865a9</color>
+    <color name="blueviolet">#8A2BE2</color>
+    <color name="brown">#A52A2A</color>
+    <color name="burlywood">#DEB887</color>
+    <color name="buttonHighlight">#ffffa443</color>
+    <color name="cadetblue">#5F9EA0</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="chocolate">#D2691E</color>
+    <color name="content_background">#ffe6e6e6</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="coral">#FF7F50</color>
+    <color name="cornflowerblue">#6495ED</color>
+    <color name="cornsilk">#FFF8DC</color>
+    <color name="crimson">#DC143C</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="darkBlueText">#ff2b405c</color>
+    <color name="darkButtonText">#ffffffff</color>
+    <color name="darkGrayText">#ff323436</color>
+    <color name="dark_grey">#ff555555</color>
+    <color name="darkblue">#00008B</color>
+    <color name="darkcyan">#008B8B</color>
+    <color name="darkgoldenrod">#B8860B</color>
+    <color name="darkgray">#A9A9A9</color>
+    <color name="darkgreen">#006400</color>
+    <color name="darkgrey">#A9A9A9</color>
+    <color name="darkkhaki">#BDB76B</color>
+    <color name="darkmagenta">#8B008B</color>
+    <color name="darkolivegreen">#556B2F</color>
+    <color name="darkorange">#FF8C00</color>
+    <color name="darkorchid">#9932CC</color>
+    <color name="darkred">#8B0000</color>
+    <color name="darksalmon">#E9967A</color>
+    <color name="darkseagreen">#8FBC8F</color>
+    <color name="darkslateblue">#483D8B</color>
+    <color name="darkslategray">#2F4F4F</color>
+    <color name="darkslategrey">#2F4F4F</color>
+    <color name="darkturquoise">#00CED1</color>
+    <color name="darkviolet">#9400D3</color>
+    <color name="deeppink">#FF1493</color>
+    <color name="deepskyblue">#00BFFF</color>
+    <color name="dialogBoxTitleBackground">#dd000000</color>
+    <color name="dimgray">#696969</color>
+    <color name="dimgrey">#696969</color>
+    <color name="dodgerblue">#1E90FF</color>
+    <color name="elect_rang_line">#d0d0d0</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="errorText">#ffbb0000</color>
+    <color name="fileListMediumGrayText">#ff666666</color>
+    <color name="filelistBackground">#ffffffff</color>
+    <color name="filelistItemSelected">#ffd3e7fa</color>
+    <color name="filelistPressedDarker">#cfdae5</color>
+    <color name="firebrick">#B22222</color>
+    <color name="floralwhite">#FFFAF0</color>
+    <color name="forestgreen">#228B22</color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="galleryItemSelectedOverlay">#5affffff</color>
+    <color name="ghostwhite">#F8F8FF</color>
+    <color name="gold">#FFD700</color>
+    <color name="goldenrod">#DAA520</color>
+    <color name="gray">#8f9192</color>
+    <color name="grayButtonText">#ff111111</color>
+    <color name="gray_half_transparent">#60000000</color>
+    <color name="gray_textcolor">#484747</color>
+    <color name="green">#008000</color>
+    <color name="greenButtonText">#ffffffff</color>
+    <color name="greenyellow">#ADFF2F</color>
+    <color name="grey">#808080</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="hint_color">#d4d4d4</color>
+    <color name="home_bg">#30549e</color>
+    <color name="home_line_color">#E7E7E7</color>
+    <color name="home_remind_no_read">#C5C6C7</color>
+    <color name="home_remind_read">#B1B3B5</color>
+    <color name="honeydew">#F0FFF0</color>
+    <color name="hotpink">#FF69B4</color>
+    <color name="indianred">#CD5C5C</color>
+    <color name="indigo">#4B0082</color>
+    <color name="information_text">#bbb</color>
+    <color name="information_view_bg">#ccc</color>
+    <color name="ivory">#FFFFF0</color>
+    <color name="khaki">#F0E68C</color>
+    <color name="lavender">#E6E6FA</color>
+    <color name="lavenderblush">#FFF0F5</color>
+    <color name="lawngreen">#7CFC00</color>
+    <color name="lemonchiffon">#FFFACD</color>
+    <color name="lightBlueBackground">#fff4faff</color>
+    <color name="light_black">#eeeeee</color>
+    <color name="light_blue">#1C86EE</color>
+    <color name="light_gray">#e1e1e1</color>
+    <color name="light_item_gray">#f7f7f7</color>
+    <color name="lightblue">#ADD8E6</color>
+    <color name="lightcoral">#F08080</color>
+    <color name="lightcyan">#E0FFFF</color>
+    <color name="lightgoldenrodyellow">#FAFAD2</color>
+    <color name="lightgray">#D3D3D3</color>
+    <color name="lightgreen">#90EE90</color>
+    <color name="lightgrey">#D3D3D3</color>
+    <color name="lightpink">#FFB6C1</color>
+    <color name="lightsalmon">#FFA07A</color>
+    <color name="lightseagreen">#20B2AA</color>
+    <color name="lightskyblue">#87CEFA</color>
+    <color name="lightslategray">#778899</color>
+    <color name="lightslategrey">#778899</color>
+    <color name="lightsteelblue">#B0C4DE</color>
+    <color name="lightyellow">#FFFFE0</color>
+    <color name="lime">#00FF00</color>
+    <color name="limegreen">#32CD32</color>
+    <color name="linen">#FAF0E6</color>
+    <color name="listEmptyText">#ff666666</color>
+    <color name="list_category">#FBAA0E</color>
+    <color name="little_gray">#e9e9e9e9</color>
+    <color name="localFilelistBackground">#ff000000</color>
+    <color name="loginButtonText">#ff000000</color>
+    <color name="loginText">#ffffffff</color>
+    <color name="login_bg">#fcc43d</color>
+    <color name="login_forget_text_color">#7d7d7d</color>
+    <color name="login_home">#ebf0f1</color>
+    <color name="login_view_bg">#ccc</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="maroon">#800000</color>
+    <color name="mediumGrayText">#ff738499</color>
+    <color name="mediumaquamarine">#66CDAA</color>
+    <color name="mediumblue">#0000CD</color>
+    <color name="mediumorchid">#BA55D3</color>
+    <color name="mediumpurple">#9370DB</color>
+    <color name="mediumseagreen">#3CB371</color>
+    <color name="mediumslateblue">#7B68EE</color>
+    <color name="mediumspringgreen">#00FA9A</color>
+    <color name="mediumturquoise">#48D1CC</color>
+    <color name="mediumvioletred">#C71585</color>
+    <color name="menu_item_color">#252525</color>
+    <color name="menu_item_text_color">#8e8e8e</color>
+    <color name="menu_right_text_color">#8e8e8e</color>
+    <color name="midnightblue">#191970</color>
+    <color name="mintcream">#F5FFFA</color>
+    <color name="mistyrose">#FFE4E1</color>
+    <color name="moccasin">#FFE4B5</color>
+    <color name="moneycolor">#1C86EE</color>
+    <color name="mypoints_tab">#fbaa0e</color>
+    <color name="navajowhite">#FFDEAD</color>
+    <color name="navy">#000080</color>
+    <color name="oldlace">#FDF5E6</color>
+    <color name="olive">#808000</color>
+    <color name="olivedrab">#6B8E23</color>
+    <color name="orange">#FFA500</color>
+    <color name="orange_2">#FBAA0E</color>
+    <color name="orangered">#FF4500</color>
+    <color name="orchid">#DA70D6</color>
+    <color name="palegoldenrod">#EEE8AA</color>
+    <color name="palegreen">#98FB98</color>
+    <color name="paleturquoise">#AFEEEE</color>
+    <color name="palevioletred">#DB7093</color>
+    <color name="papayawhip">#FFEFD5</color>
+    <color name="passcodeBackgroundOverride">#ff454545</color>
+    <color name="peachpuff">#FFDAB9</color>
+    <color name="peru">#CD853F</color>
+    <color name="picture_background">#e2e2e2</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="plum">#DDA0DD</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="powderblue">#B0E0E6</color>
+    <color name="product_operate_normal">#000000</color>
+    <color name="product_operate_selected">#ffffff</color>
+    <color name="purple">#800080</color>
+    <color name="red">#FF0000</color>
+    <color name="register_view_bg">#ccc</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="rosybrown">#BC8F8F</color>
+    <color name="royalblue">#4169E1</color>
+    <color name="saddlebrown">#8B4513</color>
+    <color name="salmon">#FA8072</color>
+    <color name="sandybrown">#F4A460</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="seagreen">#2E8B57</color>
+    <color name="seashell">#FFF5EE</color>
+    <color name="setting_btntext_color">#eee</color>
+    <color name="setting_text">#535353</color>
+    <color name="setting_text_color">#bbb</color>
+    <color name="setting_text_gray">#757878</color>
+    <color name="setting_view_bg">#bbb</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="sienna">#A0522D</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="skyblue">#87CEEB</color>
+    <color name="slateblue">#6A5ACD</color>
+    <color name="slategray">#708090</color>
+    <color name="slategrey">#708090</color>
+    <color name="sliding_menu_background">#ff2c2c2e</color>
+    <color name="sliding_menu_body_background">#fff5f5f5</color>
+    <color name="sliding_menu_item_down">#ff39393b</color>
+    <color name="sliding_menu_item_release">#00000000</color>
+    <color name="snow">#FFFAFA</color>
+    <color name="solid_blue">#0000ff</color>
+    <color name="solid_green">#f0f0</color>
+    <color name="solid_red">#f00</color>
+    <color name="solid_yellow">#ffffff00</color>
+    <color name="splashwhite">#FFFFFF</color>
+    <color name="splashyellow">#FFA200</color>
+    <color name="springgreen">#00FF7F</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="steelblue">#4682B4</color>
+    <color name="tan">#D2B48C</color>
+    <color name="teal">#008080</color>
+    <color name="text">#ff000000</color>
+    <color name="textFieldStroke">#ff359cf8</color>
+    <color name="textHighlight">#ff1865a9</color>
+    <color name="text_black">#000000</color>
+    <color name="text_red">#9B0B07</color>
+    <color name="textcolor">#949494</color>
+    <color name="textcolor_selected">#999999</color>
+    <color name="textcolor_unselected">#fe5000</color>
+    <color name="thistle">#D8BFD8</color>
+    <color name="thumbnail_solid_background">#ffdddddd</color>
+    <color name="titleBarText">#ff333333</color>
+    <color name="titleBarTextWhite">#ffffffff</color>
+    <color name="tomato">#FF6347</color>
+    <color name="tourBoxText">#ff000000</color>
+    <color name="tourButtonText">#ffffffff</color>
+    <color name="tourGrayBorder">#ff999999</color>
+    <color name="tourText">#ff404040</color>
+    <color name="translucent_background">#77000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="turquoise">#40E0D0</color>
+    <color name="umeng_socialize_color_group">#2c3035</color>
+    <color name="umeng_socialize_comments_bg">#F4F4F4</color>
+    <color name="umeng_socialize_divider">#E6E6E6</color>
+    <color name="umeng_socialize_edit_bg">#C4C4C4</color>
+    <color name="umeng_socialize_grid_divider_line">#F8F8F8</color>
+    <color name="umeng_socialize_list_item_bgcolor">#FFFFFF</color>
+    <color name="umeng_socialize_list_item_textcolor">#333333</color>
+    <color name="umeng_socialize_text_friends_list">#959696</color>
+    <color name="umeng_socialize_text_share_content">#666666</color>
+    <color name="umeng_socialize_text_time">#999999</color>
+    <color name="umeng_socialize_text_title">#464f61</color>
+    <color name="umeng_socialize_text_ucenter">#595959</color>
+    <color name="umeng_socialize_ucenter_bg">#EEEEEE</color>
+    <color name="viewfinder_corner">#ffffffff</color>
+    <color name="viewfinder_frame">#bb466e87</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#bb25353e</color>
+    <color name="violet">#EE82EE</color>
+    <color name="wheat">#F5DEB3</color>
+    <color name="white">#ffffff</color>
+    <color name="whiteBackground">#ffffffff</color>
+    <color name="whitesmoke">#F5F5F5</color>
+    <color name="yellow">#FFFF00</color>
+    <declare-styleable name="AbsListView"><attr format="color|reference" name="listSelector"/><attr format="boolean" name="drawSelectorOnTop"/><attr format="boolean" name="stackFromBottom"/><attr format="boolean" name="scrollingCache"/><attr format="boolean" name="textFilterEnabled"/><attr name="transcriptMode"><enum name="disabled" value="0"/><enum name="normal" value="1"/><enum name="alwaysScroll" value="2"/></attr><attr format="color" name="cacheColorHint"/><attr format="boolean" name="fastScrollEnabled"/><attr format="boolean" name="smoothScrollbar"/><attr name="choiceMode"><enum name="none" value="0"/><enum name="singleChoice" value="1"/><enum name="multipleChoice" value="2"/><enum name="multipleChoiceModal" value="3"/></attr><attr format="boolean" name="fastScrollAlwaysVisible"/></declare-styleable>
+    <declare-styleable name="ListView"><attr format="dimension" name="dividerHeight"/><attr format="boolean" name="headerDividersEnabled"/><attr format="boolean" name="footerDividersEnabled"/><attr format="reference|color" name="overScrollHeader"/><attr format="reference|color" name="overScrollFooter"/></declare-styleable>
+    <declare-styleable name="MultiColumnListView"><attr format="integer" name="plaColumnNumber"/><attr format="integer" name="plaLandscapeColumnNumber"/><attr format="dimension" name="plaColumnPaddingLeft"/><attr format="dimension" name="plaColumnPaddingRight"/></declare-styleable>
+    <declare-styleable name="PullToRefreshView"><attr format="dimension" name="ptrHeight"/><attr format="dimension" name="ptrSpinnerMarginRight"/><attr format="dimension" name="ptrArrowMarginRight"/><attr format="dimension" name="ptrTextSize"/><attr format="dimension" name="ptrLastUpdateTextSize"/></declare-styleable>
+    <declare-styleable name="SlidingMenu"><attr name="mode"><enum name="left" value="0"/><enum name="right" value="1"/></attr><attr format="reference" name="viewAbove"/><attr format="reference" name="viewBehind"/><attr format="dimension" name="behindOffset"/><attr format="dimension" name="behindWidth"/><attr format="float" name="behindScrollScale"/><attr name="touchModeAbove"><enum name="margin" value="0"/><enum name="fullscreen" value="1"/><enum name="none" value="2"/></attr><attr name="touchModeBehind"><enum name="margin" value="0"/><enum name="fullscreen" value="1"/><enum name="none" value="2"/></attr><attr format="reference" name="shadowDrawable"/><attr format="dimension" name="shadowWidth"/><attr format="boolean" name="fadeEnabled"/><attr format="float" name="fadeDegree"/><attr format="boolean" name="selectorEnabled"/><attr format="reference" name="selectorDrawable"/></declare-styleable>
+    <declare-styleable name="StickyListHeadersListView"><attr name="android:clipToPadding"/><attr name="android:scrollbars"/><attr name="android:overScrollMode"/><attr name="android:padding"/><attr name="android:paddingLeft"/><attr name="android:paddingTop"/><attr name="android:paddingRight"/><attr name="android:paddingBottom"/><attr name="android:fadingEdgeLength"/><attr name="android:requiresFadingEdge"/><attr name="android:cacheColorHint"/><attr name="android:choiceMode"/><attr name="android:drawSelectorOnTop"/><attr name="android:fastScrollEnabled"/><attr name="android:fastScrollAlwaysVisible"/><attr name="android:listSelector"/><attr name="android:scrollingCache"/><attr name="android:scrollbarStyle"/><attr name="android:divider"/><attr name="android:dividerHeight"/><attr name="android:transcriptMode"/><attr format="boolean" name="hasStickyHeaders"/><attr format="boolean" name="isDrawingListUnderStickyHeader"/></declare-styleable>
+    <declare-styleable name="View"><attr format="reference" name="id"/><attr format="string" name="tag"/><attr format="dimension" name="scrollX"/><attr format="dimension" name="scrollY"/><attr format="dimension" name="padding"/><attr format="dimension" name="paddingLeft"/><attr format="dimension" name="paddingTop"/><attr format="dimension" name="paddingRight"/><attr format="dimension" name="paddingBottom"/><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr format="boolean" name="focusable"/><attr format="boolean" name="focusableInTouchMode"/><attr name="visibility"><enum name="visible" value="0"/><enum name="invisible" value="1"/><enum name="gone" value="2"/></attr><attr format="boolean" name="fitsSystemWindows"/><attr name="scrollbars"><flag name="none" value="0x00000000"/><flag name="horizontal" value="0x00000100"/><flag name="vertical" value="0x00000200"/></attr><attr name="scrollbarStyle"><enum name="insideOverlay" value="0x0"/><enum name="insideInset" value="0x01000000"/><enum name="outsideOverlay" value="0x02000000"/><enum name="outsideInset" value="0x03000000"/></attr><attr format="boolean" name="isScrollContainer"/><attr format="boolean" name="fadeScrollbars"/><attr format="integer" name="scrollbarFadeDuration"/><attr format="integer" name="scrollbarDefaultDelayBeforeFade"/><attr format="dimension" name="scrollbarSize"/><attr format="reference" name="scrollbarThumbHorizontal"/><attr format="reference" name="scrollbarThumbVertical"/><attr format="reference" name="scrollbarTrackHorizontal"/><attr format="reference" name="scrollbarTrackVertical"/><attr format="boolean" name="scrollbarAlwaysDrawHorizontalTrack"/><attr format="boolean" name="scrollbarAlwaysDrawVerticalTrack"/><attr name="fadingEdge"><flag name="none" value="0x00000000"/><flag name="horizontal" value="0x00001000"/><flag name="vertical" value="0x00002000"/></attr><attr name="requiresFadingEdge"><flag name="none" value="0x00000000"/><flag name="horizontal" value="0x00001000"/><flag name="vertical" value="0x00002000"/></attr><attr format="dimension" name="fadingEdgeLength"/><attr format="reference" name="nextFocusLeft"/><attr format="reference" name="nextFocusRight"/><attr format="reference" name="nextFocusUp"/><attr format="reference" name="nextFocusDown"/><attr format="reference" name="nextFocusForward"/><attr format="boolean" name="clickable"/><attr format="boolean" name="longClickable"/><attr format="boolean" name="saveEnabled"/><attr format="boolean" name="filterTouchesWhenObscured"/><attr name="drawingCacheQuality"><enum name="auto" value="0"/><enum name="low" value="1"/><enum name="high" value="2"/></attr><attr format="boolean" name="keepScreenOn"/><attr format="boolean" name="duplicateParentState"/><attr format="dimension" name="minHeight"/><attr format="dimension" name="minWidth"/><attr format="boolean" name="soundEffectsEnabled"/><attr format="boolean" name="hapticFeedbackEnabled"/><attr format="string" localization="suggested" name="contentDescription"/><attr format="string" name="onClick"/><attr name="overScrollMode"><enum name="always" value="0"/><enum name="ifContentScrolls" value="1"/><enum name="never" value="2"/></attr><attr format="float" name="alpha"/><attr format="dimension" name="translationX"/><attr format="dimension" name="translationY"/><attr format="dimension" name="transformPivotX"/><attr format="dimension" name="transformPivotY"/><attr format="float" name="rotation"/><attr format="float" name="rotationX"/><attr format="float" name="rotationY"/><attr format="float" name="scaleX"/><attr format="float" name="scaleY"/><attr name="verticalScrollbarPosition"><enum name="defaultPosition" value="0"/><enum name="left" value="1"/><enum name="right" value="2"/></attr><attr name="layerType"><enum name="none" value="0"/><enum name="software" value="1"/><enum name="hardware" value="2"/></attr><attr name="layoutDirection"><enum name="ltr" value="0"/><enum name="rtl" value="1"/><enum name="inherit" value="2"/><enum name="locale" value="3"/></attr><attr format="integer" name="textDirection"><enum name="inherit" value="0"/><enum name="firstStrong" value="1"/><enum name="anyRtl" value="2"/><enum name="ltr" value="3"/><enum name="rtl" value="4"/><enum name="locale" value="5"/></attr><attr format="integer" name="textAlignment"><enum name="inherit" value="0"/><enum name="gravity" value="1"/><enum name="textStart" value="2"/><enum name="textEnd" value="3"/><enum name="center" value="4"/><enum name="viewStart" value="5"/><enum name="viewEnd" value="6"/></attr><attr format="integer" name="importantForAccessibility"><enum name="auto" value="0"/><enum name="yes" value="1"/><enum name="no" value="2"/></attr><attr format="integer" name="accessibilityFocusable"><enum name="auto" value="0"/><enum name="yes" value="1"/><enum name="no" value="2"/></attr></declare-styleable>
+    <dimen name="account_group_height">40dp</dimen>
+    <dimen name="account_group_separate_height">30dp</dimen>
+    <dimen name="account_item_height">35dp</dimen>
+    <dimen name="account_item_margin_left">10dp</dimen>
+    <dimen name="account_item_margin_right">10dp</dimen>
+    <dimen name="account_item_separate_height">1dp</dimen>
+    <dimen name="acount_view_margin_top">25dp</dimen>
+    <dimen name="activate_prompt_margin">20dp</dimen>
+    <dimen name="activate_status_text_distance">10dp</dimen>
+    <dimen name="activate_title_padding">10dp</dimen>
+    <dimen name="activatesucceed_prompt_margin_bottom">20dp</dimen>
+    <dimen name="activatesucceed_prompt_margin_top">70dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="alphabet_size">12dip</dimen>
+    <dimen name="bound_alter_input_height">60dp</dimen>
+    <dimen name="bound_alter_input_margin">30dp</dimen>
+    <dimen name="bound_alter_input_padding">10dp</dimen>
+    <dimen name="bound_alter_margin_top">25dp</dimen>
+    <dimen name="bound_alter_next_btn_height">50dp</dimen>
+    <dimen name="bound_alter_next_btn_margin">35dp</dimen>
+    <dimen name="discovery_margin_1">15dp</dimen>
+    <dimen name="discovery_margin_2">3dp</dimen>
+    <dimen name="half_padding">4dip</dimen>
+    <dimen name="home_burn_calories_top_magin">15dp</dimen>
+    <dimen name="home_edit_data_magin_top">6dp</dimen>
+    <dimen name="home_gridview_dian_magin">30dp</dimen>
+    <dimen name="home_gridview_height">230dp</dimen>
+    <dimen name="home_gridview_image_height">85dp</dimen>
+    <dimen name="home_gridview_image_width">75dp</dimen>
+    <dimen name="home_gridview_item_height">110dp</dimen>
+    <dimen name="home_gridview_line_width">2dp</dimen>
+    <dimen name="home_gridview_margin_button">20dp</dimen>
+    <dimen name="home_gridview_margin_top">120dp</dimen>
+    <dimen name="home_gridview_margin_top1">50dp</dimen>
+    <dimen name="home_head_magin_top">10dp</dimen>
+    <dimen name="home_head_width">45dp</dimen>
+    <dimen name="home_kilometre_left_magin">30dp</dimen>
+    <dimen name="home_kilometre_top_magin">35dp</dimen>
+    <dimen name="home_kiolmetre_count_textsize">40sp</dimen>
+    <dimen name="home_kiolmetre_name_textsize">15sp</dimen>
+    <dimen name="home_secend_btn_height">40dp</dimen>
+    <dimen name="home_secend_btn_magin_botton">135dp</dimen>
+    <dimen name="home_secend_btn_width">250dp</dimen>
+    <dimen name="home_text_head_name_textsize">25sp</dimen>
+    <dimen name="information_fifty">50dp</dimen>
+    <dimen name="information_margin_small">5dp</dimen>
+    <dimen name="information_ten">10dp</dimen>
+    <dimen name="information_text_padding">20dp</dimen>
+    <dimen name="information_text_size">18sp</dimen>
+    <dimen name="information_text_size_l">25sp</dimen>
+    <dimen name="information_text_size_s">13sp</dimen>
+    <dimen name="information_thirty">30dp</dimen>
+    <dimen name="information_twenty">20dp</dimen>
+    <dimen name="information_view_height">0.5dp</dimen>
+    <dimen name="login_button_height">50dp</dimen>
+    <dimen name="login_layout_margin">30dp</dimen>
+    <dimen name="login_margin_l">20dp</dimen>
+    <dimen name="login_margin_m">10dp</dimen>
+    <dimen name="login_margin_s">5dp</dimen>
+    <dimen name="login_text_size">16sp</dimen>
+    <dimen name="navigationbar_height">48dp</dimen>
+    <dimen name="page_left_margin">5dp</dimen>
+    <dimen name="page_right_margin">5dp</dimen>
+    <dimen name="photo_select_btn_margin">10dp</dimen>
+    <dimen name="photo_select_btn_padding">5dp</dimen>
+    <dimen name="rb_name_edit">24sp</dimen>
+    <dimen name="register_button_height">50dp</dimen>
+    <dimen name="register_button_height_m">40dp</dimen>
+    <dimen name="register_layout_margin">30dp</dimen>
+    <dimen name="register_margin_l">20dp</dimen>
+    <dimen name="register_margin_m">10dp</dimen>
+    <dimen name="register_margin_s">5dp</dimen>
+    <dimen name="register_text_size">16sp</dimen>
+    <dimen name="register_text_size_m">14sp</dimen>
+    <dimen name="register_text_size_s">13sp</dimen>
+    <dimen name="roadbook_titleheight">50dp</dimen>
+    <dimen name="setting_btn_marginBottom">50dp</dimen>
+    <dimen name="setting_btn_marginLeft">30dp</dimen>
+    <dimen name="setting_btn_marginRight">30dp</dimen>
+    <dimen name="setting_button_height">50dp</dimen>
+    <dimen name="setting_image_height">30dp</dimen>
+    <dimen name="setting_item_margin_right">20dp</dimen>
+    <dimen name="setting_marginLeft">15dp</dimen>
+    <dimen name="setting_view_height">0.5dp</dimen>
+    <dimen name="space_0">0.0dip</dimen>
+    <dimen name="space_1">1.0dip</dimen>
+    <dimen name="space_10">10.0dip</dimen>
+    <dimen name="space_100">100.0dip</dimen>
+    <dimen name="space_11">11.0dip</dimen>
+    <dimen name="space_110">110.0dip</dimen>
+    <dimen name="space_12">12.0dip</dimen>
+    <dimen name="space_120">120.0dip</dimen>
+    <dimen name="space_13">13.0dip</dimen>
+    <dimen name="space_14">14.0dip</dimen>
+    <dimen name="space_140">140.0dip</dimen>
+    <dimen name="space_15">15.0dip</dimen>
+    <dimen name="space_150">150.0dip</dimen>
+    <dimen name="space_16">16.0dip</dimen>
+    <dimen name="space_160">160.0dip</dimen>
+    <dimen name="space_17">17.0dip</dimen>
+    <dimen name="space_18">18.0dip</dimen>
+    <dimen name="space_180">180.0dip</dimen>
+    <dimen name="space_19">19.0dip</dimen>
+    <dimen name="space_2">2.0dip</dimen>
+    <dimen name="space_20">20.0dip</dimen>
+    <dimen name="space_200">200.0dip</dimen>
+    <dimen name="space_21">21.0dip</dimen>
+    <dimen name="space_210">210.0dip</dimen>
+    <dimen name="space_22">22.0dip</dimen>
+    <dimen name="space_23">23.0dip</dimen>
+    <dimen name="space_24">24.0dip</dimen>
+    <dimen name="space_25">25.0dip</dimen>
+    <dimen name="space_26">26.0dip</dimen>
+    <dimen name="space_27">27.0dip</dimen>
+    <dimen name="space_28">28.0dip</dimen>
+    <dimen name="space_29">29.0dip</dimen>
+    <dimen name="space_3">3.0dip</dimen>
+    <dimen name="space_30">30.0dip</dimen>
+    <dimen name="space_31">31.0dip</dimen>
+    <dimen name="space_32">32.0dip</dimen>
+    <dimen name="space_4">4.0dip</dimen>
+    <dimen name="space_40">40.0dip</dimen>
+    <dimen name="space_45">45.0dip</dimen>
+    <dimen name="space_48">48.0dip</dimen>
+    <dimen name="space_5">5.0dip</dimen>
+    <dimen name="space_50">50.0dip</dimen>
+    <dimen name="space_56">56.0dip</dimen>
+    <dimen name="space_6">6.0dip</dimen>
+    <dimen name="space_60">60.0dip</dimen>
+    <dimen name="space_63">63.0dip</dimen>
+    <dimen name="space_64">64.0dip</dimen>
+    <dimen name="space_7">7.0dip</dimen>
+    <dimen name="space_70">70.0dip</dimen>
+    <dimen name="space_75">75.0dip</dimen>
+    <dimen name="space_79">79.0dip</dimen>
+    <dimen name="space_8">8.0dip</dimen>
+    <dimen name="space_80">80.0dip</dimen>
+    <dimen name="space_81">81.0dip</dimen>
+    <dimen name="space_9">9.0dip</dimen>
+    <dimen name="space_90">90.0dip</dimen>
+    <dimen name="space_98">98.0dip</dimen>
+    <dimen name="space_m1">-1.0dip</dimen>
+    <dimen name="space_m2">-2.0dip</dimen>
+    <dimen name="space_m3">-3.0dip</dimen>
+    <dimen name="space_m4">-4.0dip</dimen>
+    <dimen name="space_m5">-5.0dip</dimen>
+    <dimen name="space_m6">-6.0dip</dimen>
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_25">25sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_huge">40sp</dimen>
+    <dimen name="text_size_large">30sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">18sp</dimen>
+    <dimen name="umeng_socialize_pad_window_height">350dip</dimen>
+    <dimen name="umeng_socialize_pad_window_width">580dip</dimen>
+    <drawable name="black">#ff000000</drawable>
+    <drawable name="blue">#ff0000ff</drawable>
+    <drawable name="cyan">#ff00ffff</drawable>
+    <drawable name="green">#ff00ff00</drawable>
+    <drawable name="magenta">#ffff00ff</drawable>
+    <drawable name="red">#ffff0000</drawable>
+    <drawable name="yellow">#ffffff00</drawable>
+    <item name="application_dialog_net_error" type="id"/>
+    <item name="auto_focus" type="id"/>
+    <item name="check_net_dialog" type="id"/>
+    <item name="choose_server_dialog" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="decode_url" type="id"/>
+    <item name="encode_failed" type="id"/>
+    <item name="encode_succeeded" type="id"/>
+    <item name="exit_application_dialog" type="id"/>
+    <item name="get_hotproducts" type="id"/>
+    <item name="launch_product_query" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    <item name="search_barcode_net" type="id"/>
+    <item name="selected_view" type="id"/>
+    <item name="show_process" type="id"/>
+    <item name="update_app_dialog" type="id"/>
+    <string name="ODB">车辆诊断</string>
+    <string name="account_tip">提示</string>
+    <string name="achievement">成就</string>
+    <string name="action_settings">Settings</string>
+    <string name="activate_title">扫描</string>
+    <string name="app_picker_name">Applications</string>
+    <string name="back">返回</string>
+    <string name="barcode_code_null">条码不能为空</string>
+    <string name="barcode_exit">返　回</string>
+    <string name="barcode_img_title">条形码扫描:</string>
+    <string name="barcode_not">对不起，没找到条码对应的商品，试试直接搜索吧！</string>
+    <string name="barcode_scan">扫　描</string>
+    <string name="barcode_scan_btn">手动输入</string>
+    <string name="barcode_search_result">扫描结果</string>
+    <string name="barcode_search_title">您扫描的商品是:</string>
+    <string name="barcode_submit">提　交</string>
+    <string name="barcode_success_msg">扫描成功，搜索中</string>
+    <string name="barcode_text_content">(如条码无法识别,请手动输入条码编号)</string>
+    <string name="barcode_text_title">手动输入条码编号：</string>
+    <string name="barcode_title">条形码</string>
+    <string name="bookmark_picker_name">Bookmarks</string>
+    <string name="borrow_car">借车关注</string>
+    <string name="button_add_calendar">Add to calendar</string>
+    <string name="button_add_contact">Add contact</string>
+    <string name="button_back">Back</string>
+    <string name="button_book_search">Book Search</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_custom_product_search">Custom search</string>
+    <string name="button_dial">Dial number</string>
+    <string name="button_done">Done</string>
+    <string name="button_email">Send email</string>
+    <string name="button_get_directions">Get directions</string>
+    <string name="button_google_shopper">Shopper</string>
+    <string name="button_mms">Send MMS</string>
+    <string name="button_ok">确定</string>
+    <string name="button_open_browser">Open browser</string>
+    <string name="button_product_search">Product Search</string>
+    <string name="button_search_book_contents">Search contents</string>
+    <string name="button_share_app">Application</string>
+    <string name="button_share_bookmark">Bookmark</string>
+    <string name="button_share_by_email">Share via email</string>
+    <string name="button_share_by_sms">Share via SMS</string>
+    <string name="button_share_clipboard">Clipboard</string>
+    <string name="button_share_contact">Contact</string>
+    <string name="button_show_map">Show map</string>
+    <string name="button_sms">Send SMS</string>
+    <string name="button_sure">确定</string>
+    <string name="button_web_search">Web search</string>
+    <string name="button_wifi">Connect to Network</string>
+    <string name="car_address">徐汇区肇嘉滨路33号美罗大厦</string>
+    <string name="car_pin">车辆识别码</string>
+    <string name="com_facebook_loading">Loading...</string>
+    <string name="commit">提交</string>
+    <string name="confirm_your_password">请确认您的登录密码 (6-16位)</string>
+    <string name="contents_contact">Contact info</string>
+    <string name="contents_email">Email address</string>
+    <string name="contents_location">Geographic coordinates</string>
+    <string name="contents_phone">Phone number</string>
+    <string name="contents_sms">SMS address</string>
+    <string name="contents_text">Plain text</string>
+    <string name="create_account">创建用户</string>
+    <string name="diagnose_click_start">点击进行车辆诊断扫描</string>
+    <string name="diagnose_last_scan">上次扫描时间:  </string>
+    <string name="drive_route">行驶轨迹</string>
+    <string name="drive_score">驾驶评分</string>
+    <string name="drive_tips">驾驶贴士</string>
+    <string name="elect_search_location">正在加载地址</string>
+    <string name="exception_record">您的车辆发生异常移动</string>
+    <string name="feedback">意见反馈</string>
+    <string name="hardware">硬件</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="history_clear_one_history_text">Clear</string>
+    <string name="history_clear_text">Clear history</string>
+    <string name="history_email_title">Barcode Scanner history</string>
+    <string name="history_empty">Empty</string>
+    <string name="history_empty_detail">No barcode scans have been recorded</string>
+    <string name="history_send">Send history</string>
+    <string name="history_title">History</string>
+    <string name="home_alter">修改</string>
+    <string name="home_cancel">取消</string>
+    <string name="home_save">保存</string>
+    <string name="hot_events">优惠推荐</string>
+    <string name="http_return_null">网络连接异常</string>
+    <string name="input_pas_hit">请输入登录密码</string>
+    <string name="input_phone_number">请输入手机号码</string>
+    <string name="input_your_password">请输入您的登录密码 (6-16位)</string>
+    <string name="km">公里</string>
+    <string name="level">等级</string>
+    <string name="list_refreshing_text">正在刷新...</string>
+    <string name="loading_net">加载中,请稍候...</string>
+    <string name="login">登        录</string>
+    <string name="login_error_tag">输入不能为空！</string>
+    <string name="login_forget_password">忘记密码？</string>
+    <string name="love">关爱</string>
+    <string name="maintain_detection">保养检测</string>
+    <string name="maintenance_skill">保养技巧</string>
+    <string name="menu_encode_mecard">Use MECARD</string>
+    <string name="menu_encode_vcard">Use vCard</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_history">History</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_share">Share</string>
+    <string name="more">查看全部提醒消息</string>
+    <string name="msg_bulk_mode_scanned">Bulk mode: barcode scanned and saved</string>
+    <string name="msg_camera_framework_bug">对不起，您的摄像头不支持扫描，请手动输入！</string>
+    <string name="msg_default_format">Format</string>
+    <string name="msg_default_meta">Metadata</string>
+    <string name="msg_default_mms_subject">Hi</string>
+    <string name="msg_default_status">请将二维码置于框内开始扫描</string>
+    <string name="msg_default_time">Time</string>
+    <string name="msg_default_type">Type</string>
+    <string name="msg_encode_contents_failed">Could not encode a barcode from the data provided.</string>
+    <string name="msg_google_books">Google Books</string>
+    <string name="msg_google_product">Google Product Search</string>
+    <string name="msg_google_shopper_missing">Google Shopper is not installed</string>
+    <string name="msg_install_google_shopper">Google Shopper combines barcode scanning with online and local prices, reviews and more without opening the browser. Would you like to try it?</string>
+    <string name="msg_intent_failed">Sorry, the requested application could not be launched. The barcode contents may be invalid.</string>
+    <string name="msg_redirect">Redirect</string>
+    <string name="msg_sbc_book_not_searchable">Sorry, this book is not searchable.</string>
+    <string name="msg_sbc_failed">Sorry, the search encountered a problem.</string>
+    <string name="msg_sbc_no_page_returned">No page returned</string>
+    <string name="msg_sbc_page">Page</string>
+    <string name="msg_sbc_results">Results</string>
+    <string name="msg_sbc_searching_book">Searching book\u2026</string>
+    <string name="msg_sbc_snippet_unavailable">Snippet not available</string>
+    <string name="msg_sbc_unknown_page">Unknown page</string>
+    <string name="msg_share_explanation">You can share data by displaying a barcode on your screen and scanning it with another phone.</string>
+    <string name="msg_share_subject_line">Here are the contents of a barcode I scanned</string>
+    <string name="msg_share_text">Or type some text and press Enter</string>
+    <string name="msg_sure">Are you sure?</string>
+    <string name="msg_unmount_usb">Sorry, the SD card is not accessible.</string>
+    <string name="mysite">http://MiniX.IVoka.cn</string>
+    <string name="next">下一步</string>
+    <string name="preferences_actions_title">When a barcode is found\u2026</string>
+    <string name="preferences_auto_focus_title">Use auto focus</string>
+    <string name="preferences_bulk_mode_summary">Scan and save many barcodes continuously</string>
+    <string name="preferences_bulk_mode_title">Bulk scan mode</string>
+    <string name="preferences_copy_to_clipboard_title">Copy to clipboard</string>
+    <string formatted="false" name="preferences_custom_product_search_summary">Substitutions: %s = contents, %f = format, %t = type</string>
+    <string name="preferences_custom_product_search_title">Custom search URL</string>
+    <string name="preferences_decode_1D_title">1D barcodes</string>
+    <string name="preferences_decode_Data_Matrix_title">Data Matrix</string>
+    <string name="preferences_decode_QR_title">QR Codes</string>
+    <string name="preferences_device_bug_workarounds_title">Device Bug Workarounds</string>
+    <string name="preferences_disable_continuous_focus_summary">Use only standard focus mode</string>
+    <string name="preferences_disable_continuous_focus_title">No continuous focus</string>
+    <string name="preferences_disable_exposure_title">No exposure</string>
+    <string name="preferences_front_light_summary">Improves scanning in low light on some phones, but may cause glare. Does not work on all phones.</string>
+    <string name="preferences_front_light_title">Use front light</string>
+    <string name="preferences_general_title">General settings</string>
+    <string name="preferences_name">Settings</string>
+    <string name="preferences_play_beep_title">Beep</string>
+    <string name="preferences_remember_duplicates_summary">Store multiple scans of the same barcode in History</string>
+    <string name="preferences_remember_duplicates_title">Remember duplicates</string>
+    <string name="preferences_result_title">Result settings</string>
+    <string name="preferences_scanning_title">When scanning for barcodes, decode\u2026</string>
+    <string name="preferences_search_country">Search country</string>
+    <string name="preferences_supplemental_summary">Try to retrieve more information about the barcode contents</string>
+    <string name="preferences_supplemental_title">Retrieve more info</string>
+    <string name="preferences_try_bsplus">Try Barcode Scanner+</string>
+    <string name="preferences_try_bsplus_summary">Enhanced with new features and interface</string>
+    <string name="preferences_vibrate_title">Vibrate</string>
+    <string name="ptr_last_updated">上次更新：</string>
+    <string name="ptr_loading">加载中...</string>
+    <string name="ptr_pull_to_refresh">下拉刷新...</string>
+    <string name="ptr_release_to_refresh">释放以刷新...</string>
+    <string name="pull_refresh_tap_label">点击刷新...</string>
+    <string name="pull_to_fresh_text">下拉可以刷新...</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">上拉刷新</string>
+    <string name="pull_to_refresh_pull_label" translatable="false">向下拉动可以刷新</string>
+    <string name="pull_to_refresh_refreshing_Time">Last Update:</string>
+    <string name="pull_to_refresh_refreshing_label" translatable="false">加载中…</string>
+    <string name="pull_to_refresh_release_label" translatable="false">松开可以刷新</string>
+    <string name="pull_to_refresh_tap_label" translatable="false">点击刷新</string>
+    <string name="reg_account_toast">我们会发送一条短信到您填写的号码, 以验证号码的准确性</string>
+    <string name="reg_agree_protocol">你未同意协议,无法进入下一步</string>
+    <string name="reg_check">请检查您的手机号码或区号是否正确</string>
+    <string name="reg_confirm_account">确认账户</string>
+    <string name="reg_confirm_toast">我们给您发送一条短信, 请将短信中的数字作为验证码填写在下面</string>
+    <string name="reg_finish">完成</string>
+    <string name="reg_finish_toast_1">即刻起, 您便可以通过您注册的手机号码</string>
+    <string name="reg_finish_toast_2">  和您设置的独立密码进行登录。</string>
+    <string name="reg_in_app">进入应用</string>
+    <string name="reg_input_your_phone_num">请输入您的手机号码</string>
+    <string name="reg_protocol">《用户使用协议》</string>
+    <string name="reg_read_agree">我已阅读并同意</string>
+    <string name="reg_resend">重新发送验证码</string>
+    <string name="reg_resend_time">(60)</string>
+    <string name="reg_set_alone_password">请设置使用手机登录时的独立密码。</string>
+    <string name="reg_set_password">设置密码</string>
+    <string name="reg_success">注册成功</string>
+    <string name="reg_your_phone_num">您的手机号:</string>
+    <string name="register_skip">跳过</string>
+    <string name="register_tip">注册新帐号  ></string>
+    <string name="release_to_fresh_text">松开可以刷新...</string>
+    <string name="reset_get_password">重新获取验证码</string>
+    <string name="result_address_book">Found contact info</string>
+    <string name="result_calendar">Found calendar event</string>
+    <string name="result_email_address">Found email address</string>
+    <string name="result_geo">Found geographic coordinates</string>
+    <string name="result_isbn">Found book</string>
+    <string name="result_product">Found product</string>
+    <string name="result_sms">Found SMS address</string>
+    <string name="result_tel">Found phone number</string>
+    <string name="result_text">Found plain text</string>
+    <string name="result_uri">Found URL</string>
+    <string name="result_wifi">Found WLAN Configuration</string>
+    <string name="sbc_name">Google Book Search</string>
+    <string name="scan_failuer">扫描失败</string>
+    <string name="scan_null_result_title01">扫描结果</string>
+    <string name="scan_null_result_title02">搜索结果</string>
+    <string name="scan_result_barcode_text">条码“{0}”\n暂无相关商品</string>
+    <string name="scan_result_manual_btn_str">手动输入</string>
+    <string name="scan_result_reinput_btn_str">重新输入</string>
+    <string name="scan_result_rescan_btn_str">重新扫描</string>
+    <string name="scan_result_search_btn_str">搜    索</string>
+    <string name="score">分</string>
+    <string name="security_alarm">安全防盗</string>
+    <string name="security_edit_elecrange">修改围栏位置</string>
+    <string name="security_edit_elecrange_tip">左右移动地图设置围栏中心点</string>
+    <string name="security_tad_collision_set">碰撞设置</string>
+    <string name="security_tad_ele_range">围栏范围</string>
+    <string name="security_tad_elecfence">电子围栏</string>
+    <string name="security_tad_findcar">车辆位置</string>
+    <string name="setting">设置</string>
+    <string name="setting_about_tip">关于</string>
+    <string name="setting_account_tip">个人信息</string>
+    <string name="setting_car_tip">车辆信息</string>
+    <string name="setting_cur_ver">iVokaMiniX 1.0.1版</string>
+    <string name="setting_cur_ver_date">2014-03-02</string>
+    <string name="setting_driver_num">驾驶证号</string>
+    <string name="setting_feedback">请填写您使用中遇到的问题或意见或建议......</string>
+    <string name="setting_feedback_tip">意见反馈</string>
+    <string name="setting_help_tip">使用帮助</string>
+    <string name="setting_offline_tip">离线地图</string>
+    <string name="setting_quit_tip">退出当前账户</string>
+    <string name="setting_share_tip">绑定分享平台</string>
+    <string name="setting_valid_start_date">有效起始日期</string>
+    <string name="setting_valid_year">有效期限</string>
+    <string name="share_name">Share via barcode</string>
+    <string name="skin">换肤</string>
+    <string name="text">http://miloisbadboy.com/</string>
+    <string name="title_activity_basic_slide">BasicSlideActivity</string>
+    <string name="title_activity_send_error">SendErrorActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="umeng_example_home_btn_plus">社交分享</string>
+    <string name="umeng_socialize_back" translatable="false">返回</string>
+    <string name="umeng_socialize_cancel_btn_str">取消</string>
+    <string name="umeng_socialize_comment" translatable="false">评论</string>
+    <string name="umeng_socialize_comment_detail" translatable="false">评论详情</string>
+    <string name="umeng_socialize_content_hint">说点啥…</string>
+    <string name="umeng_socialize_friends" translatable="false">关注的好友</string>
+    <string name="umeng_socialize_img_des"/>
+    <string name="umeng_socialize_login">登录</string>
+    <string name="umeng_socialize_login_qq">QQ空间</string>
+    <string name="umeng_socialize_msg_hor" translatable="false">小时前</string>
+    <string name="umeng_socialize_msg_min" translatable="false">分钟前</string>
+    <string name="umeng_socialize_msg_sec" translatable="false">秒前</string>
+    <string name="umeng_socialize_near_At" translatable="false">最近\@的好友</string>
+    <string name="umeng_socialize_network_break_alert" translatable="false">请连接网络后再尝试！</string>
+    <string name="umeng_socialize_send" translatable="false">发布</string>
+    <string name="umeng_socialize_send_btn_str">发送</string>
+    <string name="umeng_socialize_share">分享</string>
+    <string name="umeng_socialize_share_content">友盟社会化组件（SDK）让移动应用快速整合社交分享功能，我们简化了社交平台的接入，为开发者提供坚实的基础服务。（一）支持各大主流社交平台， 
+												（二）支持图片、文字、gif动图、音频、视频；@好友，关注官方微博等功能。
+												（三）提供详尽的后台用户社交行为分析。www.umeng.com/social</string>
+    <string name="umeng_socialize_text_add_custom_platform">请配置用户平台</string>
+    <string name="umeng_socialize_text_authorize">授权</string>
+    <string name="umeng_socialize_text_choose_account">选择已有帐号登录</string>
+    <string name="umeng_socialize_text_comment_hint">说点什么吧…</string>
+    <string name="umeng_socialize_text_douban_key">豆瓣网</string>
+    <string name="umeng_socialize_text_friend_list">好友列表</string>
+    <string name="umeng_socialize_text_loading_message">载入中,请稍候...</string>
+    <string name="umeng_socialize_text_login_fail">登录失败了，请重试</string>
+    <string name="umeng_socialize_text_qq_key">QQ</string>
+    <string name="umeng_socialize_text_qq_zone_key">QQ空间</string>
+    <string name="umeng_socialize_text_renren_key">人人网</string>
+    <string name="umeng_socialize_text_sina_key">新浪微博</string>
+    <string name="umeng_socialize_text_tencent_key">腾讯微博</string>
+    <string name="umeng_socialize_text_tencent_no_connection">无法连接到腾讯微博客户端</string>
+    <string name="umeng_socialize_text_tencent_no_install">未安装腾讯微博客户端</string>
+    <string name="umeng_socialize_text_tencent_oauth_login_fail">授权登录失败</string>
+    <string name="umeng_socialize_text_tencent_version_no_match">版本不匹配，SSO只对微博客户端V3.8.1及以上的版本提供支持</string>
+    <string name="umeng_socialize_text_ucenter">个人中心</string>
+    <string name="umeng_socialize_text_unauthorize">未授权</string>
+    <string name="umeng_socialize_text_visitor">游客</string>
+    <string name="umeng_socialize_text_waitting">请稍候...</string>
+    <string name="umeng_socialize_text_waitting_message">,请稍候...</string>
+    <string name="umeng_socialize_text_waitting_qq">跳转QQ中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_qzone">跳转QZone中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_redirect">跳转</string>
+    <string name="umeng_socialize_text_waitting_share">分享中…</string>
+    <string name="umeng_socialize_text_waitting_weixin">跳转微信中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_weixin_circle">跳转朋友圈中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_yixin">跳转易信中，请稍候...</string>
+    <string name="umeng_socialize_text_waitting_yixin_circle">跳转易信朋友圈中，请稍候...</string>
+    <string name="umeng_socialize_text_weixin_circle_key">微信朋友圈</string>
+    <string name="umeng_socialize_text_weixin_key">微信</string>
+    <string name="umeng_socialize_tip_blacklist" translatable="false">对不起，因为违反了用户协议您已被禁言.</string>
+    <string name="umeng_socialize_tip_loginfailed" translatable="false">登录失败…</string>
+    <string name="umeng_socialize_ucenter_login_title_guide" translatable="false">游客登录</string>
+    <string name="umeng_socialize_ucenter_login_title_platform" translatable="false">登录帐号</string>
+    <string name="update_time">更新时间:   </string>
+    <string name="usinghelp">使用帮助</string>
+    <string name="version_name">0.0.1</string>
+    <string name="vi_add_car_detail">所填信息为当地交管局查询所必须消息, 我们将对您的信息严格保密, 请放心填写</string>
+    <string name="violation_record">违章查询</string>
+    <string name="vl_add_car_info">添加车辆</string>
+    <string name="vl_add_my_car">添加我的车辆</string>
+    <string name="vl_add_other_car">添加其它车辆</string>
+    <string name="vl_car_type">车型</string>
+    <string name="vl_choice_car_city">选择查询城市</string>
+    <string name="vl_choice_car_type">选择车型</string>
+    <string name="vl_engine_num">发动机号</string>
+    <string name="vl_identify_mark">请输入便于您标识的备注(选填)</string>
+    <string name="vl_license_num">车牌号码</string>
+    <string name="vl_mark">备注</string>
+    <string name="vl_query">违章查询</string>
+    <string name="vl_query_city">查询城市</string>
+    <string name="vl_rec_address">违章处理地址</string>
+    <string name="vl_rec_notify">违章处理须知</string>
+    <string name="wifi_changing_network">Requesting connection to network\u2026</string>
+    <string name="wifi_ssid_label">Network Name</string>
+    <string name="wifi_type_label">Type</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="yy_mm_dd_hh_mm_refresh_text">"上次刷新：yyyy年MM月dd日 HH:mm"</string>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="CustomDialog2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="CustomDialog3" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Theme.UMDefault" parent="android:style/Theme.NoTitleBar"/>
+    <style name="Theme.UMDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="info_cell_style">
+        <item name="android:singleLine">false</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="nav_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow1</item>
+        <item name="android:windowExitAnimation">@anim/pophide1</item>
+    </style>
+    <style name="umeng_socialize_action_bar_item_im">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="umeng_socialize_action_bar_item_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:text">999</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="umeng_socialize_action_bar_itemlayout">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="umeng_socialize_dialog_anim_fade">
+        <item name="android:windowEnterAnimation">@anim/umeng_socialize_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/umeng_socialize_fade_out</item>
+    </style>
+    <style name="umeng_socialize_dialog_animations">
+        <item name="android:windowEnterAnimation">@anim/umeng_socialize_slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/umeng_socialize_slide_out_from_bottom</item>
+    </style>
+    <style name="umeng_socialize_divider">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/umeng_socialize_divider</item>
+    </style>
+    <style name="umeng_socialize_edit_padding">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/umeng_socialize_list_item_bgcolor</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style>
+    <style name="umeng_socialize_list_item">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:background">@color/umeng_socialize_list_item_bgcolor</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+    <style name="umeng_socialize_popup_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+    <style name="umeng_socialize_popup_dialog_anim" parent="@style/umeng_socialize_popup_dialog">
+        <item name="android:windowAnimationStyle">@style/umeng_socialize_dialog_animations</item>
+    </style>
+    <style name="umeng_socialize_shareboard_animation">
+        <item name="android:windowEnterAnimation">@anim/umeng_socialize_shareboard_animation_in</item>
+        <item name="android:windowExitAnimation">@anim/umeng_socialize_shareboard_animation_out</item>
+    </style>
+</resources>

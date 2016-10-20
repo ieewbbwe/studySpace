@@ -1,0 +1,190 @@
+<resources>
+
+     <!-- Default screen margins, per the Android Design guidelines. -->
+       <dimen name="navigationbar_height">48dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 激活 -->
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+    <dimen name="activate_status_text_distance">10dp</dimen>
+    <dimen name="activatesucceed_prompt_margin_top">70dp</dimen>
+    <dimen name="activatesucceed_prompt_margin_bottom">20dp</dimen>
+    <dimen name="page_left_margin">5dp</dimen>
+    <dimen name="page_right_margin">5dp</dimen>
+    <dimen name="activate_prompt_margin">20dp</dimen>
+    <dimen name="activate_title_padding">10dp</dimen>
+    <!-- 修改绑定 -->
+    <dimen name="bound_alter_input_margin">30dp</dimen>
+    <dimen name="bound_alter_input_padding">10dp</dimen>
+    <dimen name="bound_alter_margin_top">25dp</dimen>
+    <dimen name="bound_alter_input_height">60dp</dimen>
+    <dimen name="bound_alter_next_btn_height">50dp</dimen>
+    <dimen name="bound_alter_next_btn_margin">35dp</dimen>
+    <!-- text size -->
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">18sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_large">30sp</dimen>
+    <dimen name="text_size_huge">40sp</dimen>
+
+    <!-- account -->
+    <dimen name="account_item_height">35dp</dimen>
+    <dimen name="account_group_height">40dp</dimen>
+    <dimen name="account_group_separate_height">30dp</dimen>
+    <dimen name="account_item_separate_height">1dp</dimen>
+    <dimen name="account_item_margin_left">10dp</dimen>
+    <dimen name="account_item_margin_right">10dp</dimen>
+    <dimen name="setting_item_margin_right">20dp</dimen>
+    <dimen name="acount_view_margin_top">25dp</dimen>
+    <dimen name="photo_select_btn_margin">10dp</dimen>
+    <dimen name="photo_select_btn_padding">5dp</dimen>
+
+    <!-- home -->
+    <dimen name="home_gridview_margin_top">120dp</dimen>
+    <dimen name="home_gridview_margin_top1">50dp</dimen>
+    <dimen name="home_gridview_margin_button">20dp</dimen>
+    <dimen name="home_gridview_image_width">75dp</dimen>
+    <dimen name="home_gridview_image_height">85dp</dimen>
+    <dimen name="home_gridview_item_height">110dp</dimen>
+    <dimen name="home_gridview_height">230dp</dimen>
+    <dimen name="home_gridview_line_width">2dp</dimen>
+    <dimen name="home_gridview_dian_magin">30dp</dimen>
+    <dimen name="home_head_width">45dp</dimen>
+    <dimen name="home_head_magin_top">10dp</dimen>
+    <dimen name="home_secend_btn_height">40dp</dimen>
+    <dimen name="home_secend_btn_width">250dp</dimen>
+    <dimen name="home_secend_btn_magin_botton">135dp</dimen>
+    <dimen name="home_kilometre_left_magin">30dp</dimen>
+    <dimen name="home_kilometre_top_magin">35dp</dimen>
+    <dimen name="home_burn_calories_top_magin">15dp</dimen>
+    <dimen name="home_edit_data_magin_top">6dp</dimen>
+    <dimen name="home_kiolmetre_count_textsize">40sp</dimen>
+    <dimen name="home_kiolmetre_name_textsize">15sp</dimen>
+    <dimen name="home_text_head_name_textsize">25sp</dimen>
+
+    <!-- create road book -->
+    <dimen name="roadbook_titleheight">50dp</dimen>
+
+    <!-- edit road book -->
+    <dimen name="rb_name_edit">24sp</dimen>
+
+    <!-- font size -->
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_25">25sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="space_210">210.0dip</dimen>
+    <dimen name="space_200">200.0dip</dimen>
+    <dimen name="space_160">160.0dip</dimen>
+    <dimen name="space_180">180.0dip</dimen>
+    <dimen name="space_150">150.0dip</dimen>
+    <dimen name="space_140">140.0dip</dimen>
+    <dimen name="space_120">120.0dip</dimen>
+    <dimen name="space_110">110.0dip</dimen>
+    <dimen name="space_100">100.0dip</dimen>
+    <dimen name="space_98">98.0dip</dimen>
+    <dimen name="space_90">90.0dip</dimen>
+    <dimen name="space_81">81.0dip</dimen>
+    <dimen name="space_80">80.0dip</dimen>
+    <dimen name="space_79">79.0dip</dimen>
+    <dimen name="space_75">75.0dip</dimen>
+    <dimen name="space_70">70.0dip</dimen>
+    <dimen name="space_64">64.0dip</dimen>
+    <dimen name="space_63">63.0dip</dimen>
+    <dimen name="space_60">60.0dip</dimen>
+    <dimen name="space_56">56.0dip</dimen>
+    <dimen name="space_50">50.0dip</dimen>
+    <dimen name="space_48">48.0dip</dimen>
+    <dimen name="space_45">45.0dip</dimen>
+    <dimen name="space_40">40.0dip</dimen>
+    <dimen name="space_32">32.0dip</dimen>
+    <dimen name="space_31">31.0dip</dimen>
+    <dimen name="space_30">30.0dip</dimen>
+    <dimen name="space_29">29.0dip</dimen>
+    <dimen name="space_28">28.0dip</dimen>
+    <dimen name="space_27">27.0dip</dimen>
+    <dimen name="space_26">26.0dip</dimen>
+    <dimen name="space_25">25.0dip</dimen>
+    <dimen name="space_24">24.0dip</dimen>
+    <dimen name="space_23">23.0dip</dimen>
+    <dimen name="space_22">22.0dip</dimen>
+    <dimen name="space_21">21.0dip</dimen>
+    <dimen name="space_20">20.0dip</dimen>
+    <dimen name="space_19">19.0dip</dimen>
+    <dimen name="space_18">18.0dip</dimen>
+    <dimen name="space_17">17.0dip</dimen>
+    <dimen name="space_16">16.0dip</dimen>
+    <dimen name="space_15">15.0dip</dimen>
+    <dimen name="space_14">14.0dip</dimen>
+    <dimen name="space_13">13.0dip</dimen>
+    <dimen name="space_12">12.0dip</dimen>
+    <dimen name="space_11">11.0dip</dimen>
+    <dimen name="space_10">10.0dip</dimen>
+    <dimen name="space_9">9.0dip</dimen>
+    <dimen name="space_8">8.0dip</dimen>
+    <dimen name="space_7">7.0dip</dimen>
+    <dimen name="space_6">6.0dip</dimen>
+    <dimen name="space_5">5.0dip</dimen>
+    <dimen name="space_4">4.0dip</dimen>
+    <dimen name="space_3">3.0dip</dimen>
+    <dimen name="space_2">2.0dip</dimen>
+    <dimen name="space_1">1.0dip</dimen>
+    <dimen name="space_0">0.0dip</dimen>
+    <dimen name="space_m1">-1.0dip</dimen>
+    <dimen name="space_m2">-2.0dip</dimen>
+    <dimen name="space_m3">-3.0dip</dimen>
+    <dimen name="space_m4">-4.0dip</dimen>
+    <dimen name="space_m5">-5.0dip</dimen>
+    <dimen name="space_m6">-6.0dip</dimen>
+    <!-- setting -->
+    <dimen name="setting_marginLeft">15dp</dimen>
+    <dimen name="setting_view_height">0.5dp</dimen>
+    <dimen name="setting_image_height">30dp</dimen>
+    <dimen name="setting_button_height">50dp</dimen>
+    <dimen name="setting_btn_marginLeft">30dp</dimen>
+    <dimen name="setting_btn_marginRight">30dp</dimen>
+    <dimen name="setting_btn_marginBottom">50dp</dimen>
+
+    <!-- information -->
+    <dimen name="information_text_padding">20dp</dimen>
+    <dimen name="information_text_size_l">25sp</dimen>
+    <dimen name="information_text_size">18sp</dimen>
+    <dimen name="information_text_size_s">13sp</dimen>
+    <dimen name="information_view_height">0.5dp</dimen>
+    <dimen name="information_margin_small">5dp</dimen>
+    <dimen name="information_ten">10dp</dimen>
+    <dimen name="information_twenty">20dp</dimen>
+    <dimen name="information_thirty">30dp</dimen>
+    <dimen name="information_fifty">50dp</dimen>
+
+    <!-- register -->
+    <dimen name="register_layout_margin">30dp</dimen>
+    <dimen name="register_margin_s">5dp</dimen>
+    <dimen name="register_margin_m">10dp</dimen>
+    <dimen name="register_margin_l">20dp</dimen>
+    <dimen name="register_button_height">50dp</dimen>
+    <dimen name="register_button_height_m">40dp</dimen>
+    <dimen name="register_text_size">16sp</dimen>
+    <dimen name="register_text_size_m">14sp</dimen>
+    <dimen name="register_text_size_s">13sp</dimen>
+
+    <!-- login -->
+    <dimen name="login_layout_margin">30dp</dimen>
+    <dimen name="login_margin_s">5dp</dimen>
+    <dimen name="login_margin_m">10dp</dimen>
+    <dimen name="login_margin_l">20dp</dimen>
+    <dimen name="login_button_height">50dp</dimen>
+    <dimen name="login_text_size">16sp</dimen>
+
+    <!-- discovery -->
+    <dimen name="discovery_margin_1">15dp</dimen>
+    <dimen name="discovery_margin_2">3dp</dimen>
+</resources>

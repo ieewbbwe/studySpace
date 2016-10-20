@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\umeng_socialize_slide_in_from_bottom.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\umeng_socialize_slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\popshow.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\popshow.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\pophide1.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\pophide1.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\pophide.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\pophide.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\umeng_socialize_fade_in.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\umeng_socialize_fade_in.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\push_bottom_in.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\push_bottom_in.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\umeng_socialize_shareboard_animation_in.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\umeng_socialize_shareboard_animation_in.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\popshow1.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\popshow1.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\push_bottom_out.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\push_bottom_out.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\umeng_socialize_shareboard_animation_out.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\umeng_socialize_shareboard_animation_out.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\umeng_socialize_slide_out_from_bottom.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\umeng_socialize_slide_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\umeng_socialize_fade_out.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\anim\\umeng_socialize_fade_out.xml"
+    }
+]

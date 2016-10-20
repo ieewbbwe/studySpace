@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\navigationbar_rightbtn_icon2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xxhdpi\\navigationbar_rightbtn_icon2.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\navigationbar_bg2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xxhdpi\\navigationbar_bg2.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\navigationbar_leftbtn_icon.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xxhdpi\\navigationbar_leftbtn_icon.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\navigationbar_bg.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xxhdpi\\navigationbar_bg.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\navigationbar_leftbtn_icon2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xxhdpi\\navigationbar_leftbtn_icon2.png"
+    }
+]

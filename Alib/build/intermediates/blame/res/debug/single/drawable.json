@@ -1,0 +1,402 @@
+[
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\border_rect_fill_ffffff_e3e3e3.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\border_rect_fill_ffffff_e3e3e3.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\refresh_home.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\refresh_home.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\pull_to_refresh_header_background.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\pull_to_refresh_header_background.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\home_nav_carbg.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\home_nav_carbg.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_login_normal.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_login_normal.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_window_shadow_pad.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_window_shadow_pad.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_selected_bg.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\tab_selected_bg.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_wechat.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_wechat.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\navigationbar_bg2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\navigationbar_bg2.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_white.9.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_white.9.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_right_bt_selected.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_right_bt_selected.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_oauth_check_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_oauth_check_on.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_at_button.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_at_button.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_light_bar_bg.9.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_light_bar_bg.9.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_refersh.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_refersh.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_sina_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_sina_on.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_wechat_gray.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_wechat_gray.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_back_bt_selected.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_back_bt_selected.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\fz_progress_bg.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\fz_progress_bg.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_sidebar_normal.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_sidebar_normal.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_action_back_selected.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_action_back_selected.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_follow_check.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_follow_check.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_wxcircle.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_wxcircle.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\button_rounded_d9d9d9.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\button_rounded_d9d9d9.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_tab_right_pressed.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_tab_right_pressed.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\wheel_bg.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\capture_back_btn.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\capture_back_btn.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_douban_off.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_douban_off.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\textcolor_selecter.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\textcolor_selecter.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_search_icon.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_search_icon.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_tab_button_right.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_tab_button_right.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_action_back.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_action_back.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_follow_off.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_follow_off.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_white_blue.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_white_blue.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_location_ic.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_location_ic.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\navigationbar_leftbtn_icon.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\navigationbar_leftbtn_icon.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_facebook.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_facebook.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_test1.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\shape_test1.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_x_button.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_x_button.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_shape_solid_black.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_shape_solid_black.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_qzone_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_qzone_on.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_sidebar_selector.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_sidebar_selector.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_tx_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_tx_on.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_wxcircle_gray.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_wxcircle_gray.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_google.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_google.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\banner_point_unselect.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\banner_point_unselect.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_right_bt_normal.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_right_bt_normal.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\refresh_white.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\refresh_white.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_bind_bg.9.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_bind_bg.9.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_qq_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_qq_on.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_login_pressed.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_login_pressed.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_follow_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_follow_on.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_qq_off.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_qq_off.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_nav_bar_bg.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_nav_bar_bg.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_share_to_button.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_share_to_button.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_default_avatar.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_default_avatar.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_oauth_check_off.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_oauth_check_off.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\shadow.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\shadow.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\navigationbar_leftbtn_icon2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\navigationbar_leftbtn_icon2.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_grey_blue.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_grey_blue.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_at_selected.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_at_selected.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_renren_off.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_renren_off.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_grey.9.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_grey.9.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_tab_left_normal.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_tab_left_normal.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_shape_solid_grey.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_shape_solid_grey.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_qzone_off.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_qzone_off.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_renren_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_renren_on.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_val.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\wheel_val.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_sidebar_selected.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_sidebar_selected.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_blue.9.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_blue.9.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_red.9.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_red.9.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\show_head_toast_bg.9.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\show_head_toast_bg.9.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_oauth_check.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_oauth_check.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_back_bt_normal.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_back_bt_normal.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_login.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_login.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_tab_button_left.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_tab_button_left.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\border_round_fill_ffffff.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\border_round_fill_ffffff.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\tabbar_bg.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\tabbar_bg.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_douban_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_douban_on.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_back_bt.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_back_bt.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_tab_right_normal.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_tab_right_normal.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\navigationbar_bg.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\navigationbar_bg.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_location_off.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_location_off.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_location_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_location_on.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_shareboard_item_background.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_shareboard_item_background.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\navigationbar_rightbtn_icon2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\navigationbar_rightbtn_icon2.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_tx_off.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_tx_off.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\banner_point_select.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\banner_point_select.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_twitter.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_twitter.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_unselected_bg.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\tab_unselected_bg.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_tab_left_pressed.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_tab_left_pressed.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_sina_off.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_sina_off.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_at_normal.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_at_normal.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_share_transparent_corner.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_share_transparent_corner.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_title_right_bt.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_title_right_bt.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_action_back_normal.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_action_back_normal.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\sidebar_background.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\sidebar_background.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\refresh_icon.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\refresh_icon.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_fetch_image.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_fetch_image.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_red_blue.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_red_blue.xml"
+    }
+]

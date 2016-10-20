@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Alib/Alib.iml" filepath="$PROJECT_DIR$/Alib/Alib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebberDemo.iml" filepath="$PROJECT_DIR$/WebberDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coreLib/coreLib.iml" filepath="$PROJECT_DIR$/coreLib/coreLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retorfitdemo/retorfitdemo.iml" filepath="$PROJECT_DIR$/retorfitdemo/retorfitdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webber/webber.iml" filepath="$PROJECT_DIR$/webber/webber.iml" />
+    </modules>
+  </component>
+</project>

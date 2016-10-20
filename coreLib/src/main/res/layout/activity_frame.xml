@@ -1,0 +1,146 @@
+<RelativeLayout android:id="@+id/main_root"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:orientation="vertical">
+
+        <!-- 标题栏 -->
+        <ViewStub
+            android:id="@+id/title_stub"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigationbar_height"/>
+        <!-- 主体内容 -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ViewStub
+                android:id="@+id/body_stub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inflatedId="@+id/body_root"/>
+
+            <!--网络加载失败后的页面-->
+            <RelativeLayout
+                android:id="@+id/http_data_load_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f2f2f2"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/http_load_failed_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/http_load_failed_image"
+                        android:layout_width="160dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitXY"
+                        android:src="@null"/>
+
+                    <TextView
+                        android:id="@+id/http_data_load_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="15dp"
+                        android:text="数据加载失败,请重新加载(0)"
+                        android:textColor="#7f7f7f"
+                        android:textSize="16sp"
+                        android:visibility="visible"/>
+
+                    <Button
+                        android:id="@+id/http_load_failed_button"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/button_rounded_d9d9d9"
+                        android:gravity="center"
+                        android:text="重新加载"
+                        android:textColor="#3f87f2"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/frame_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/navigationbar_height"
+        android:background="#11ffffff"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/fz_progress_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:padding="20dp"/>
+
+            <TextView
+                android:id="@+id/frame_progress_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingRight="30dp"
+                android:visibility="visible"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_modal_view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/navigationbar_height"
+        android:background="#666"
+        android:clickable="true"
+        android:visibility="gone">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_modal_view_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/navigationbar_height"
+        android:background="@null"
+        android:clickable="true"
+        android:visibility="gone">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_help_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+    </RelativeLayout>
+
+</RelativeLayout>

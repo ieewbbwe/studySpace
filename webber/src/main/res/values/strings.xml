@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WebberDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_recycle">Recycle</string>
+    <string name="button_snack">SnackBar</string>
+    <string name="title_activity_recycle_view">RecycleViewActivity</string>
+</resources>

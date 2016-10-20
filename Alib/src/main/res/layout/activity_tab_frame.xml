@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null" >
+
+    <!-- 主体内容 -->
+
+    <RelativeLayout
+        android:id="@+id/activity_tab_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp" />
+    <!-- 底部栏 -->
+
+    <RelativeLayout
+        android:id="@+id/activity_tabbar_relativelayou"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true" >
+        <ImageView
+            android:id="@+id/tabbar_item_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+	<ImageView
+            android:id="@+id/tabbar_mid_bg"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY" />
+    <LinearLayout
+        android:id="@+id/activity_tabbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+</RelativeLayout>
