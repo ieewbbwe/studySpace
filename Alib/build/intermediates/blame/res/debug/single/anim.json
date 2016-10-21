@@ -12,12 +12,12 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\anim\\popshow.xml"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\anim\\umeng_socialize_fade_out.xml",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\anim\\umeng_socialize_fade_out.xml"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\anim\\umeng_socialize_shareboard_animation_out.xml",
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\anim\\umeng_socialize_shareboard_animation_out.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\anim\\umeng_socialize_fade_out.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\anim\\umeng_socialize_fade_out.xml"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_out.xml",

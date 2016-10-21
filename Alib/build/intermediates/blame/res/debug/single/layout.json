@@ -112,12 +112,12 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\layout\\pull_to_refresh_header_old.xml"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_at_view.xml",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\layout\\umeng_socialize_at_view.xml"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\layout\\activity_basic_slide.xml",
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\layout\\activity_basic_slide.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_at_view.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\layout\\umeng_socialize_at_view.xml"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tab_item.xml",

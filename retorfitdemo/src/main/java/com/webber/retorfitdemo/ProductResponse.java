@@ -37,7 +37,7 @@ public class ProductResponse extends BaseProduct {
         public ArrayList<Value> values;
     }
 
-    public class Value extends OptionValue {
+    public class Value {
        /* public String id;
         public String name;
         public boolean isSelected = false;*/

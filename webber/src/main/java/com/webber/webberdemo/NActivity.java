@@ -1,12 +1,13 @@
 package com.webber.webberdemo;
 
-import android.app.Activity;
 import android.os.Bundle;
+
+import com.android_mobile.core.base.BaseActivity;
 
 /**
  * Created by mxh on 2016/10/19.
  */
-public class NActivity extends Activity {
+public class NActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,21 @@ public class NActivity extends Activity {
     @Override
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
+    }
+
+    @Override
+    protected void initComp() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
 }

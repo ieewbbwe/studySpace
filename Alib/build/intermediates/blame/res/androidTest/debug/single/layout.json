@@ -100,12 +100,12 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header.xml"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_old.xml",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_old.xml"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\umeng_socialize_simple_spinner_item.xml",
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\layout\\umeng_socialize_simple_spinner_item.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_old.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_old.xml"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\xlistview_footer.xml",

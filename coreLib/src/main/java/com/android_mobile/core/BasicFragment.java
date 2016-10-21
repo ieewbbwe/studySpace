@@ -29,6 +29,7 @@ import com.android_mobile.core.ui.listener.IMediaPicturesListener;
 import com.android_mobile.core.ui.listener.IMediaScannerListener;
 import com.android_mobile.core.ui.listener.IMediaSoundRecordListener;
 import com.android_mobile.core.ui.listener.IMediaVideoListener;
+import com.android_mobile.core.utiles.BitmapUtils;
 import com.android_mobile.core.utiles.CacheUtil;
 import com.android_mobile.core.utiles.Lg;
 
@@ -64,11 +65,6 @@ public abstract class BasicFragment extends Fragment implements
         activity.updateSkin(BasicActivity.skinColor);
         init();
         return v;
-    }
-
-    @Override
-    public void async(ServiceRequest req, IBasicAsyncTask callback) {
-        activity.async(req, callback);
     }
 
     @Override
@@ -137,7 +133,6 @@ public abstract class BasicFragment extends Fragment implements
     @Override
     public void onDestroy() {
         printLog();
-        removeBasicEvent();
         super.onDestroy();
     }
 
@@ -158,7 +153,6 @@ public abstract class BasicFragment extends Fragment implements
     @Override
     public void onStop() {
         printLog();
-        removeBasicEvent();
         while (tasks.size() > 0) {
             cancelAsyncTask(tasks.pop());
         }
@@ -240,14 +234,7 @@ public abstract class BasicFragment extends Fragment implements
             activity.pushFragment(activity.fragmentBodyLayoutRes, f);
     }
 
-    /* 显示Dialog的method */
-    public void showDialog(String mess) {
-        activity.showDialog(mess);
-    }
 
-    public void showDialog(String title, String mess) {
-        activity.showDialog(title, mess);
-    }
 
     public void setTitle(String title) {
         activity.setTitle(title);
@@ -256,11 +243,6 @@ public abstract class BasicFragment extends Fragment implements
     @Override
     public void isDisplayFragmentEffect(boolean flag) {
         activity.isDisplayFragmentEffect(flag);
-    }
-
-    @Override
-    public void isDisplayProgressByHttpRequest(boolean b) {
-        activity.isDisplayProgressByHttpRequest(b);
     }
 
     @Override
@@ -280,11 +262,6 @@ public abstract class BasicFragment extends Fragment implements
     }
 
     @Override
-    public boolean isEmpty(Object obj) {
-        return activity.isEmpty(obj);
-    }
-
-    @Override
     public void showSoftInput(EditText et) {
         activity.showSoftInput(et);
     }
@@ -292,26 +269,6 @@ public abstract class BasicFragment extends Fragment implements
     @Override
     public int getVersionCode() {
         return activity.getVersionCode();
-    }
-
-    @Override
-    public void sendMailByIntent(String msg, String email) {
-        activity.sendMailByIntent(msg, email);
-    }
-
-    @Override
-    public boolean isNetworkAvailable() {
-        return activity.isNetworkAvailable();
-    }
-
-    @Override
-    public int dip2px(float dipValue) {
-        return activity.dip2px(dipValue);
-    }
-
-    @Override
-    public int px2dip(float pxValue) {
-        return activity.px2dip(pxValue);
     }
 
     @Override
@@ -367,22 +324,6 @@ public abstract class BasicFragment extends Fragment implements
     @Override
     public void startSoundRecorder() {
         activity.startSoundRecorder();
-    }
-
-    @Override
-    public PackageInfo getPackageInfo() {
-        return activity.getPackageInfo();
-    }
-
-    @Override
-    public boolean hasSdcard() {
-        return activity.hasSdcard();
-    }
-
-    @Deprecated
-    @Override
-    public void setRootFragmentView(int layoutId) {
-        activity.setRootFragmentView(layoutId);
     }
 
     @Override
@@ -469,41 +410,6 @@ public abstract class BasicFragment extends Fragment implements
     }
 
     @Override
-    public void setSkin(String color) {
-        activity.setSkin(color);
-    }
-
-    @Override
-    public void setSkin(int colorRes) {
-        activity.setSkin(colorRes);
-    }
-
-    @Override
-    public void updateSkin(int skinColor) {
-        if (activity != null)
-            activity.updateSkin(skinColor);
-    }
-
-    @Override
-    public void showDialog(String title, String mess,
-                           OnClickListener clickListener, boolean cancelable) {
-        activity.showDialog(title, mess, clickListener, cancelable);
-    }
-
-    @Override
-    public void showDialog(String title, String mess,
-                           OnClickListener clickListener, OnClickListener cancelListener,
-                           boolean cancelable) {
-        activity.showDialog(title, mess, clickListener, cancelListener, cancelable);
-    }
-
-    @Override
-    public void showDialog(String title, String mess,
-                           OnClickListener clickListener, OnClickListener cancelListener) {
-        activity.showDialog(title, mess, clickListener, cancelListener, true);
-    }
-
-    @Override
     public void popModalFragment() {
         activity.popModalFragment();
     }
@@ -511,65 +417,6 @@ public abstract class BasicFragment extends Fragment implements
     @Override
     public void displayProgressBar(String s) {
         activity.displayProgressBar(s);
-    }
-
-    @Override
-    public void dispatchBasicEvent(BasicEvent e) {
-        BasicEventDispatcher.dispatcher(e);
-    }
-
-    @Override
-    public void removeBasicEvent() {
-        BasicEventDispatcher.removeEventListenerByKey(this.getClass().getName());
-    }
-
-    @Override
-    public Bitmap takeScreenshot(View view) {
-        assert view.getWidth() > 0 && view.getHeight() > 0;
-        Bitmap.Config config = Bitmap.Config.ARGB_8888;
-        Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), config);
-        Canvas canvas = new Canvas(bitmap);
-        view.draw(canvas);
-        return bitmap;
-    }
-
-    @Override
-    public void displayHelpView(Integer... resIds) {
-        if (BasicApplication.helpFlag == 100 || resIds == null
-                || resIds.length == 0)
-            return;
-        for (int i = resIds.length - 1; i >= 0; i--) {
-            activity.helpFragmentImgs.add(resIds[i]);
-        }
-        activity.displayHelpView(activity.helpFragmentImgs.pop());
-    }
-
-    @Override
-    public int getSkinColor() {
-        return BasicActivity.skinColor;
-    }
-
-    @Override
-    public void startWebBrowser(String url) {
-        activity.startWebBrowser(url);
-    }
-
-    @Override
-    public boolean isTestUser(String phone) {
-        return activity.isTestUser(phone);
-    }
-
-    @Override
-    public boolean isFirstAppRunning() {
-        return BasicApplication.helpFlag != 100;
-    }
-
-    @Override
-    public boolean isFirstViewRunning() {
-        boolean b = true;
-        b = CacheUtil.getInteger("app_help_view" + this.getClass().getName()) < 0;
-        CacheUtil.saveInteger("app_help_view" + this.getClass().getName(), 100);
-        return b;
     }
 
     @Override
@@ -583,11 +430,6 @@ public abstract class BasicFragment extends Fragment implements
     public void onResume() {
         printLog();
         super.onResume();
-    }
-
-    @Override
-    public void startPhoneCall(String phoneNum) {
-        activity.startPhoneCall(phoneNum);
     }
 
     @Override
@@ -615,23 +457,16 @@ public abstract class BasicFragment extends Fragment implements
         activity.popModalView();
     }
 
-    @Override
     public int getStatusBarHeight() {
-        return activity.getStatusBarHeight();
+        return activity.STATUS_BAR_HEIGHT;
     }
 
-    @Override
     public Bitmap readBitmap(int resId) {
-        return activity.readBitmap(resId);
+        return BitmapUtils.readBitmap(activity,resId);
     }
 
     @Override
     public void setTextViewIcon(TextView tv, int l, int t, int r, int b) {
         activity.setTextViewIcon(tv, l, t, r, b);
-    }
-
-    @Override
-    public Bitmap readBitmap(String path) {
-        return activity.readBitmap(path);
     }
 }

@@ -19,6 +19,7 @@ public class BasicApplication extends Application {
     public void onCreate() {
         super.onCreate();
         context = getApplicationContext();
+        CacheUtil.context = context;
         helpFlag = CacheUtil.getInteger("app_help_view");
     }
 

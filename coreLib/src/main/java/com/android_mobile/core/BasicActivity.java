@@ -13,6 +13,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ import android.widget.Toast;
 import com.android_mobile.capture.CaptureActivity;
 import com.android_mobile.core.enums.CacheType;
 import com.android_mobile.core.enums.ModalDirection;
+import com.android_mobile.core.event.BasicEvent;
 import com.android_mobile.core.net.BasicAsyncTask;
 import com.android_mobile.core.net.IBasicAsyncTask;
 import com.android_mobile.core.net.IBasicAsyncTaskFinish;
@@ -56,12 +58,15 @@ import com.android_mobile.core.ui.listener.IMediaPicturesListener;
 import com.android_mobile.core.ui.listener.IMediaScannerListener;
 import com.android_mobile.core.ui.listener.IMediaSoundRecordListener;
 import com.android_mobile.core.ui.listener.IMediaVideoListener;
+import com.android_mobile.core.utiles.BitmapUtils;
 import com.android_mobile.core.utiles.CacheUtil;
 import com.android_mobile.core.utiles.Lg;
+import com.android_mobile.core.utiles.StringUtils;
 import com.android_mobile.core.utiles.Utils;
 import com.android_mobile.core.utiles.ViewServer;
 
 import java.io.File;
+import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -74,8 +79,6 @@ public abstract class BasicActivity extends AppCompatActivity
     public final String TAG = this.getClass().getSimpleName();
     //管理类
     private DisplayMetrics metrics;
-    public float SCREEN_WIDTH;
-    public float SCREEN_HEIGHT;
     private InputMethodManager imm;
     private ActivityManager activityManager;
     private BasicApplication application;
@@ -108,6 +111,9 @@ public abstract class BasicActivity extends AppCompatActivity
     public static String backActivityTitle = ""; //跳船activity 前保存当前activity 的title
     private Toast toast;
     private ProgressDialog progressDialog;
+    public float SCREEN_WIDTH;
+    public float SCREEN_HEIGHT;
+    public int STATUS_BAR_HEIGHT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +123,7 @@ public abstract class BasicActivity extends AppCompatActivity
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         SCREEN_WIDTH = metrics.widthPixels;
         SCREEN_HEIGHT = metrics.heightPixels;
+        STATUS_BAR_HEIGHT = getStatusBarHeightForReflect();
         imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         activityManager = (ActivityManager) getSystemService(Activity.ACTIVITY_SERVICE);
         application = (BasicApplication) this.getApplication();
@@ -449,7 +456,7 @@ public abstract class BasicActivity extends AppCompatActivity
                 RelativeLayout.LayoutParams.MATCH_PARENT,
                 RelativeLayout.LayoutParams.MATCH_PARENT);
         ImageView imageView = new ImageView(this);
-        Bitmap b = readBitmap(resId);
+        Bitmap b = BitmapUtils.readBitmap(this, resId);
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         imageView.setImageBitmap(b);
         helpView.addView(imageView, lp);
@@ -482,7 +489,7 @@ public abstract class BasicActivity extends AppCompatActivity
     }
 
     public void pushActivity(Class<?> a) {
-        if (isEmpty(backText)) {
+        if (StringUtils.isEmpty(backText)) {
             backActivityTitle = navigationBar.titleText.getText().toString()
                     .trim();
         } else {
@@ -492,7 +499,7 @@ public abstract class BasicActivity extends AppCompatActivity
     }
 
     public void pushActivity(Intent i) {
-        if (isEmpty(backText)) {
+        if (StringUtils.isEmpty(backText)) {
             backActivityTitle = navigationBar.titleText.getText().toString()
                     .trim();
         } else {
@@ -510,7 +517,7 @@ public abstract class BasicActivity extends AppCompatActivity
     }
 
     public void pushActivityForResult(Class<?> a, int requestCode) {
-        if (isEmpty(backText)) {
+        if (StringUtils.isEmpty(backText)) {
             backActivityTitle = navigationBar.titleText.getText().toString()
                     .trim();
         } else {
@@ -520,7 +527,7 @@ public abstract class BasicActivity extends AppCompatActivity
     }
 
     public void pushActivityForResult(Intent a, int requestCode) {
-        if (isEmpty(backText)) {
+        if (StringUtils.isEmpty(backText)) {
             backActivityTitle = navigationBar.titleText.getText().toString()
                     .trim();
         } else {
@@ -566,6 +573,10 @@ public abstract class BasicActivity extends AppCompatActivity
      */
     public void isDisplayFragmentEffect(boolean flag) {
         fragmentChangeEffect = flag;
+    }
+
+    public void isDisplayProgressByHttpRequest(boolean b) {
+        BasicAsyncTask.asyncWithProgress = b;
     }
 
     @Override
@@ -710,8 +721,8 @@ public abstract class BasicActivity extends AppCompatActivity
             modalViewGroup.setLayoutParams(imagebtn_params);
             ObjectAnimator
                     .ofFloat(modalViewGroup, "y",
-                            SCREEN_HEIGHT - getStatusBarHeight(),
-                            SCREEN_HEIGHT - getStatusBarHeight() - widthDip)
+                            SCREEN_HEIGHT - STATUS_BAR_HEIGHT,
+                            SCREEN_HEIGHT - STATUS_BAR_HEIGHT - widthDip)
                     .setDuration(modalAnimTime).start();
         } else if (ModalDirection.TOP == d) {
             // Lg.print("modal  top");
@@ -768,15 +779,15 @@ public abstract class BasicActivity extends AppCompatActivity
             modalViewGroup.setLayoutParams(imagebtn_params);
             ObjectAnimator
                     .ofFloat(modalViewGroup, "y",
-                            SCREEN_HEIGHT - getStatusBarHeight(),
-                            SCREEN_HEIGHT - getStatusBarHeight() - widthDip)
+                            SCREEN_HEIGHT - STATUS_BAR_HEIGHT,
+                            SCREEN_HEIGHT - STATUS_BAR_HEIGHT - widthDip)
                     .setDuration(modalAnimTime).start();
         } else if (ModalDirection.TOP == d) {
             // Lg.print("modal  top");
             imagebtn_params.height = widthDip;
             imagebtn_params.width = (int) SCREEN_WIDTH;
             modalViewGroup.setLayoutParams(imagebtn_params);
-            ObjectAnimator.ofFloat(modalViewGroup, "y", -widthDip, getStatusBarHeight() * 2)
+            ObjectAnimator.ofFloat(modalViewGroup, "y", -widthDip, STATUS_BAR_HEIGHT * 2)
                     .setDuration(modalAnimTime).start();
         }
     }
@@ -814,8 +825,8 @@ public abstract class BasicActivity extends AppCompatActivity
         } else if (direction == ModalDirection.BOTTOM) {
             ObjectAnimator
                     .ofFloat(modalViewGroup, "y",
-                            SCREEN_HEIGHT - widthDip - getStatusBarHeight(),
-                            SCREEN_HEIGHT - getStatusBarHeight())
+                            SCREEN_HEIGHT - widthDip - STATUS_BAR_HEIGHT,
+                            SCREEN_HEIGHT - STATUS_BAR_HEIGHT)
                     .setDuration(modalAnimTime).start();
         }
         ValueAnimator colorAnim = ObjectAnimator.ofInt(modalViewGroupBg,
@@ -837,21 +848,6 @@ public abstract class BasicActivity extends AppCompatActivity
             }
         });
         colorAnim.start();
-    }
-
-    @Override
-    public void startPhoneCall(String phoneNum) {
-        if (isEmpty(phoneNum))
-            return;
-        // 调用拨打电话页面，android.intent.action.Call直接调用拨打电话。
-        Intent intent = new Intent();
-        intent.setAction("android.intent.action.DIAL");
-        intent.setData(Uri.parse("tel:" + phoneNum));
-        if (Utils.isIntentAvailable(this, intent)) {
-            startActivity(intent);
-        } else {
-            toast("没有拨打电话功能");
-        }
     }
 
     /*----------常用方法----------*/
@@ -1082,12 +1078,12 @@ public abstract class BasicActivity extends AppCompatActivity
      */
     public void pushBody(int dept) {
         ObjectAnimator.ofFloat(bodyView, "y", dept).setDuration(300).start();
-        ObjectAnimator.ofFloat(navigationBar.layout, "y", dept - dip2px(55))
+        ObjectAnimator.ofFloat(navigationBar.layout, "y", dept - Utils.dip2px(this, 55))
                 .setDuration(300).start();
     }
 
     public void pushBackBody() {
-        ObjectAnimator.ofFloat(bodyView, "y", dip2px(55)).setDuration(300)
+        ObjectAnimator.ofFloat(bodyView, "y", Utils.dip2px(this, 55)).setDuration(300)
                 .start();
         ObjectAnimator.ofFloat(navigationBar.layout, "y", 0).setDuration(300)
                 .start();
@@ -1146,10 +1142,68 @@ public abstract class BasicActivity extends AppCompatActivity
     }
 
     /**
+     * 獲取狀態欄高度 反射
+     */
+    public int getStatusBarHeightForReflect() {
+        Class<?> c = null;
+        Object obj = null;
+        Field field = null;
+        int x = 0, statusBarHeight = 0;
+        try {
+            c = Class.forName("com.android.internal.R$dimen");
+            obj = c.newInstance();
+            field = c.getField("status_bar_height");
+            x = Integer.parseInt(field.get(obj).toString());
+            statusBarHeight = getResources().getDimensionPixelSize(x);
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+        return statusBarHeight;
+    }
+
+    /**
      * 获取运行中任务
      */
     public ArrayList<BasicAsyncTask> getTasks() {
         return tasks;
+    }
+
+    public int dip2px(float dipValue) {
+        final float scale = this.getResources().getDisplayMetrics().density;
+        return (int) (dipValue * scale + 0.5f);
+    }
+
+    public int px2dip(float pxValue) {
+        final float scale = this.getResources().getDisplayMetrics().density;
+        return (int) (pxValue / scale + 0.5f);
+    }
+
+    public void updateSkin(int skinColor) {
+        if (skinColor != -1) {
+            navigationBar.layout.setBackgroundColor(skinColor);
+            // bodyView.setBackgroundColor(skinColor);
+            BasicEvent e = new BasicEvent(BasicEvent.UPDATE_SKIN);
+            e.setData(skinColor);
+            CacheUtil.saveInteger("SKIN_COLOR", skinColor);
+        }
+    }
+
+    public void setSkin(String color) {
+        skinColor = Color.parseColor(color);
+        updateSkin(skinColor);
+    }
+
+    @Override
+    public boolean hasSkinColor() {
+        if (skinColor == -1) {
+            return false;
+        }
+        return true;
+    }
+
+    public void setSkin(int colorRes) {
+        skinColor = colorRes;
+        updateSkin(skinColor);
     }
 
     @Override
@@ -1175,7 +1229,6 @@ public abstract class BasicActivity extends AppCompatActivity
     public void finish() {
         printLog();
         cancelAllTask();
-        removeBasicEvent();
         BasicApplication.activityStack.remove(this);
         super.finish();
     }

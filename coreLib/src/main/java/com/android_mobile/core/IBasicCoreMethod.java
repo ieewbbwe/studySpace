@@ -1,17 +1,12 @@
 package com.android_mobile.core;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.android_mobile.core.enums.CacheType;
 import com.android_mobile.core.enums.ModalDirection;
-import com.android_mobile.core.event.BasicEvent;
-import com.android_mobile.core.event.BasicEventDispatcher;
 import com.android_mobile.core.net.BasicAsyncTask;
 import com.android_mobile.core.net.IBasicAsyncTask;
 import com.android_mobile.core.net.http.Service;
@@ -27,10 +22,6 @@ import java.util.List;
 public interface IBasicCoreMethod {
 
     void isDisplayFragmentEffect(boolean flag);
-
-    void isDisplayProgressByHttpRequest(boolean b);
-
-    void async(ServiceRequest req, IBasicAsyncTask callback);
 
     void async(IBasicAsyncTask callback, ServiceRequest req,
                Service service, CacheType cacheType);
@@ -57,8 +48,6 @@ public interface IBasicCoreMethod {
 
     void cancelProgress();
 
-    boolean isEmpty(Object obj);
-
     void exitAppWithToast();
 
     void closeSoftInput();
@@ -73,21 +62,9 @@ public interface IBasicCoreMethod {
 
     void toast(String text);
 
-    void sendMailByIntent(String msg, String email);
-
-    boolean isNetworkAvailable();
-
-    int dip2px(float dipValue);
-
-    int px2dip(float pxValue);
-
     List<View> getAllChildViews();
 
     List<View> getAllChildViews(View view);
-
-    void showDialog(String title, String mess);
-
-    void showDialog(String mess);
 
     void setMediaImageListener(IMediaImageListener listener);
 
@@ -110,10 +87,6 @@ public interface IBasicCoreMethod {
     void startVideo();
 
     void startSoundRecorder();
-
-    PackageInfo getPackageInfo();
-
-    boolean hasSdcard();
 
     void setTitle(String title);
 
@@ -139,8 +112,6 @@ public interface IBasicCoreMethod {
 
     void popModalFragment();
 
-    void setRootFragmentView(int layoutId);
-
     void setPushFragmentLayout(int layoutId);
 
     void pushFragment(BasicFragment f);
@@ -157,47 +128,6 @@ public interface IBasicCoreMethod {
 
     void displayViewAnimation(View v, int fx, float depth);
 
-    void setSkin(String color);
-
-    void setSkin(int colorRes);
-
-    void updateSkin(int skinColor);
-
-    void showDialog(String title, String mess,
-                    DialogInterface.OnClickListener clickListener, boolean cancelable);
-
-    void showDialog(String title, String mess,
-                    DialogInterface.OnClickListener clickListener,
-                    DialogInterface.OnClickListener cancelListener, boolean cancelable);
-
-    void showDialog(String title, String mess,
-                    DialogInterface.OnClickListener clickListener,
-                    DialogInterface.OnClickListener cancelListener);
-
-    void addBasicEventListener(String type, BasicEventDispatcher.IBasicListener listener);
-
-    void dispatchBasicEvent(BasicEvent e);
-
-    void removeBasicEvent();
-
-    Bitmap takeScreenshot(View view);
-
-    void displayHelpView(Integer... resIds);
-
-    int getSkinColor();
-
-    void startWebBrowser(String url);
-
-    boolean isTestUser(String phone);
-
-    boolean isFirstAppRunning();
-
-    boolean isFirstViewRunning();
-
-    void startPhoneCall(String phoneNum);
-
-    boolean hasSkinColor();
-
     void pushModalView(View v, ModalDirection d, int widthDip, int time);
 
     void pushModalView(View v, ModalDirection d, int widthDip);
@@ -206,14 +136,10 @@ public interface IBasicCoreMethod {
 
     void popModalView();
 
-    int getStatusBarHeight();
-
-    Bitmap readBitmap(int resId);
-
-    Bitmap readBitmap(String path);
-
     void pushModalFragment(ModalDirection d, int widthDip, int time,
                            BasicFragment f);
 
     void setTextViewIcon(TextView tv, int l, int t, int r, int b);
+
+    boolean hasSkinColor();
 }
