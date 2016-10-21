@@ -1,10 +1,12 @@
 package com.webber.myapplication;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewOutlineProvider;
 
 import com.android_mobile.core.base.BaseActivity;
 import com.android_mobile.core.net.IBasicAsyncTask;
@@ -20,6 +22,10 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setLogo(R.mipmap.ic_launcher);
+        if (Build.VERSION.SDK_INT > 21) {
+            toolbar.setOutlineProvider(ViewOutlineProvider.BOUNDS);
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -54,5 +60,6 @@ public class MainActivity extends BaseActivity {
             }
         }, new BaseRequest(), new PersionInfoService());
     }
+
 
 }
