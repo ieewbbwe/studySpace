@@ -7,7 +7,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,8 +23,8 @@ import cn.bingoogolapple.refreshlayout.BGARefreshViewHolder;
 
 public class RecycleViewActivity extends AppCompatActivity implements BGARefreshLayout.BGARefreshLayoutDelegate {
 
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
+    /*   @Bind(R.id.toolbar)
+       Toolbar toolbar;*/
     @Bind(R.id.fab)
     FloatingActionButton fab;
     @Bind(R.id.load_rv)
@@ -37,8 +36,8 @@ public class RecycleViewActivity extends AppCompatActivity implements BGARefresh
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle_view);
         ButterKnife.bind(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+      /*  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -73,9 +72,9 @@ public class RecycleViewActivity extends AppCompatActivity implements BGARefresh
         // 设置下拉刷新和上拉加载更多的风格
         mRefreshLayout.setRefreshViewHolder(refreshViewHolder);
 
-        // 为了增加下拉刷新头部和加载更多的通用性，提供了以下可选配置选项  -------------START
+    /*    // 为了增加下拉刷新头部和加载更多的通用性，提供了以下可选配置选项  -------------START
         // 设置正在加载更多时不显示加载更多控件
-        //mRefreshLayout.setIsShowLoadingMoreView(false);
+        mRefreshLayout.setIsShowLoadingMoreView(true);
         // 设置正在加载更多时的文本
         refreshViewHolder.setLoadingMoreText("加載更多");
         // 设置整个加载更多控件的背景颜色资源id
@@ -88,7 +87,7 @@ public class RecycleViewActivity extends AppCompatActivity implements BGARefresh
         refreshViewHolder.setRefreshViewBackgroundDrawableRes(R.mipmap.ic_launcher);
         // 设置自定义头部视图（也可以不用设置）     参数1：自定义头部视图（例如广告位）， 参数2：上拉加载更多是否可用
         //mRefreshLayout.setCustomHeaderView(mBanner, false);
-        // 可选配置  -------------END
+        // 可选配置  -------------END*/
     }
 
     @Override
@@ -103,13 +102,14 @@ public class RecycleViewActivity extends AppCompatActivity implements BGARefresh
 
     @Override
     public boolean onBGARefreshLayoutBeginLoadingMore(BGARefreshLayout refreshLayout) {
+        Log.d("webber", "加载跟多");
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 mRefreshLayout.endLoadingMore();
             }
         }, 2000);
-        return false;
+        return true;
     }
 
     private class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {

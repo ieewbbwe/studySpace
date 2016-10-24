@@ -7,7 +7,7 @@
     <!--   theme UI controls like checkboxes and text fields -->
     <color name="colorAccent">#FF4081</color>
 
-     <!-- 条形码中的 -->
+    <!-- 条形码中的 -->
     <color name="contents_text">#ff000000</color>
     <color name="encode_view">#ffffffff</color>
     <color name="help_button_view">#ffcccccc</color>
@@ -33,13 +33,12 @@
     <color name="viewfinder_corner">#ffffffff</color>
     <color name="viewfinder_laser">#ffff0000</color>
     <color name="viewfinder_mask">#bb25353e</color>
-    
-    
-    <color name="textcolor_selected">#999999</color>  
-    <color name="textcolor_unselected">#fe5000</color> 
-    
-    
-    
+
+
+    <color name="textcolor_selected">#999999</color>
+    <color name="textcolor_unselected">#fe5000</color>
+
+
     <color name="login_bg">#fcc43d</color>
     <color name="mypoints_tab">#fbaa0e</color>
     <color name="product_operate_normal">#000000</color>
@@ -132,7 +131,6 @@
     <!-- 滑动界面白色 -->
     <color name="splashwhite">#FFFFFF</color>
 
- 
 
     <!-- 灰色半透明背景色 -->
     <color name="gray_half_transparent">#60000000</color>
@@ -463,4 +461,6 @@
     <color name="home_remind_read">#B1B3B5</color>
     <color name="home_remind_no_read">#C5C6C7</color>
     <color name="home_bg">#30549e</color>
+
+    <color name="list_comp_swipe_color">#ff8b12</color>
 </resources>

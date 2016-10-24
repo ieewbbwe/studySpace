@@ -20,6 +20,11 @@ public class BuyerInfoModel extends ServiceResponse {
     public boolean isSaveContactInfo;//保存聯絡資料
     public boolean isLikeToPerson;//與個人資料一致
 
+    public BuyerInfoModel(String buyerFirstName, String buyerLastName) {
+        this.buyerFirstName = buyerFirstName;
+        this.buyerLastName = buyerLastName;
+    }
+
     @Override
     public String toString() {
         return "BuyerInfoModel{" +
