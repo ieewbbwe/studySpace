@@ -10,7 +10,6 @@ import android.view.View;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.Scheduler;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +41,6 @@ public class MainActivity extends AppCompatActivity {
                 e.onNext("RxJava");
                 e.onComplete();
             }
-        }).subscribeOn(Scheduler.);
+        });
     }
 }

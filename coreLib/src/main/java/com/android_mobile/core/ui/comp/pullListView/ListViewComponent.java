@@ -19,6 +19,7 @@ public class ListViewComponent extends BaseComponent {
 
     private BGARefreshLayout mRefreshLayout;
     private RecyclerView mRecycleView;
+    private BGARefreshViewHolder refreshViewHolder;
 
     public ListViewComponent(BasicActivity activity, int resId) {
         super(activity, resId);
@@ -38,7 +39,7 @@ public class ListViewComponent extends BaseComponent {
         mRefreshLayout = (BGARefreshLayout) findViewById(R.id.comp_refresh_bga_layout);
         mRecycleView = (RecyclerView) findViewById(R.id.comp_data_rv);
         // 设置下拉刷新和上拉加载更多的风格     参数1：应用程序上下文，参数2：是否具有上拉加载更多功能
-        BGARefreshViewHolder refreshViewHolder = new BGANormalRefreshViewHolder(activity, true);
+        refreshViewHolder = new BGANormalRefreshViewHolder(activity, true);
         // 设置下拉刷新和上拉加载更多的风格
         mRefreshLayout.setRefreshViewHolder(refreshViewHolder);
         mRecycleView.addItemDecoration(new DividerItemDecoration(activity, DividerItemDecoration.VERTICAL_LIST));
@@ -85,6 +86,17 @@ public class ListViewComponent extends BaseComponent {
 
     public RecyclerView getRecycleView() {
         return mRecycleView;
+    }
+
+    public BGARefreshViewHolder getViewHolder() {
+        return refreshViewHolder;
+    }
+
+    /**
+     * 设置正在加载更多时的文本
+     */
+    public void setLoadingMoreText(String loadingMoreText) {
+        refreshViewHolder.setLoadingMoreText(loadingMoreText);
     }
 
     /**

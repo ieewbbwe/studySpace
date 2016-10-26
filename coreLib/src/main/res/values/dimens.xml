@@ -4,4 +4,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <!--导航栏高-->
     <dimen name="navigationbar_height">48dp</dimen>
+    <!--button-->
+
 </resources>

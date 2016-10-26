@@ -1,10 +1,12 @@
 package com.webber.myapplication;
 
+import android.content.DialogInterface;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,7 +16,6 @@ import com.android_mobile.core.adapter.OnItemChildLongClickListener;
 import com.android_mobile.core.adapter.OnRVItemClickListener;
 import com.android_mobile.core.base.BaseActivity;
 import com.android_mobile.core.enums.ModalDirection;
-import com.android_mobile.core.net.IBasicAsyncTask;
 import com.android_mobile.core.ui.comp.pullListView.ListViewComponent;
 import com.android_mobile.core.ui.listener.IMediaPicturesListener;
 import com.android_mobile.core.utiles.BitmapUtils;
@@ -78,7 +79,34 @@ public class MainActivity extends BaseActivity {
                 Lg.print("webber", "img:" + imagePath);
                 Lg.print("webber", "degree:" + BitmapUtils.obtainBitmapDegree(imagePath));
                 //UniversalImageLoad.getInstance().displayImage(imagePath, imageView);
-                imageView.setBackground(new BitmapDrawable(BitmapUtils.processBitmapBlurFast(BitmapUtils.obtainBitmap(imagePath))));
+                imageView.setBackground(new BitmapDrawable(BitmapUtils.processBitmapBlur(BitmapUtils.obtainBitmap(imagePath))));
+            }
+        });
+
+        findViewById(R.id.dialog_bt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog
+                        .Builder(MainActivity.this, R.style.MyAlertDialogStyle)
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setTitle("AppCompatDialog")
+                        .setMessage("Lorem ipsum dolor...")
+                        .setPositiveButton("OK", null)
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                builder.show();
+            }
+        });
+
+        findViewById(R.id.dialog_my_bt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppDialog appDialog = new AppDialog(MainActivity.this);
+                appDialog.show();
             }
         });
     }
@@ -123,7 +151,7 @@ public class MainActivity extends BaseActivity {
                     }
                 }, 2000);
 
-                async(new IBasicAsyncTask() {
+            /*    async(new IBasicAsyncTask() {
                     @Override
                     public void callback(Object result) {
                         loadComponent.endRefresh();
@@ -135,11 +163,14 @@ public class MainActivity extends BaseActivity {
                             Lg.print("webber", "user:" + user.toString());
                         }
                     }
-                }, new BaseRequest(), new PersionInfoService());
+                }, new BaseRequest(), new PersionInfoService());*/
             }
 
             @Override
             public boolean onBGARefreshLayoutBeginLoadingMore(BGARefreshLayout refreshLayout) {
+                if (normalRecycleAdapter.getItemCount() >= 20) {
+                    return false;
+                }
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {

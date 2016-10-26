@@ -16,6 +16,18 @@
         android:layout_height="wrap_content"
         android:text="选照片"/>
 
+    <Button
+        android:id="@+id/dialog_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试对话框"/>
+
+    <Button
+        android:id="@+id/dialog_my_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试自定义对话框"/>
+
     <ImageView
         android:id="@+id/chose_pic_iv"
         android:layout_width="100dp"

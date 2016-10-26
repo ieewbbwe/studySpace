@@ -10,4 +10,5 @@
     <string name="label_take_photo">拍照</string>
     <string name="label_chose_form_album">从相册中选</string>
     <string name="label_cancel">取消</string>
+    <string name="button_cancel">取消</string>
 </resources>
