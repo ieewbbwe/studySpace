@@ -1,11 +1,8 @@
 package com.android_mobile.core;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,8 +13,6 @@ import android.widget.TextView;
 
 import com.android_mobile.core.enums.CacheType;
 import com.android_mobile.core.enums.ModalDirection;
-import com.android_mobile.core.event.BasicEvent;
-import com.android_mobile.core.event.BasicEventDispatcher;
 import com.android_mobile.core.net.BasicAsyncTask;
 import com.android_mobile.core.net.IBasicAsyncTask;
 import com.android_mobile.core.net.IBasicAsyncTaskFinish;
@@ -30,7 +25,6 @@ import com.android_mobile.core.ui.listener.IMediaScannerListener;
 import com.android_mobile.core.ui.listener.IMediaSoundRecordListener;
 import com.android_mobile.core.ui.listener.IMediaVideoListener;
 import com.android_mobile.core.utiles.BitmapUtils;
-import com.android_mobile.core.utiles.CacheUtil;
 import com.android_mobile.core.utiles.Lg;
 
 import java.util.List;
@@ -462,7 +456,7 @@ public abstract class BasicFragment extends Fragment implements
     }
 
     public Bitmap readBitmap(int resId) {
-        return BitmapUtils.readBitmap(activity,resId);
+        return BitmapUtils.obtainBitmap(activity,resId);
     }
 
     @Override

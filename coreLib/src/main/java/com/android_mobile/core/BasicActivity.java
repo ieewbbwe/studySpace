@@ -456,7 +456,7 @@ public abstract class BasicActivity extends AppCompatActivity
                 RelativeLayout.LayoutParams.MATCH_PARENT,
                 RelativeLayout.LayoutParams.MATCH_PARENT);
         ImageView imageView = new ImageView(this);
-        Bitmap b = BitmapUtils.readBitmap(this, resId);
+        Bitmap b = BitmapUtils.obtainBitmap(this, resId);
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         imageView.setImageBitmap(b);
         helpView.addView(imageView, lp);
@@ -888,6 +888,40 @@ public abstract class BasicActivity extends AppCompatActivity
     @Override
     public void setMediaSoundRecordListener(IMediaSoundRecordListener listener) {
         this.iMediaSoundRecordListener = listener;
+    }
+
+    /**
+     * 弹出 选择 图片方式组件
+     *
+     * @return
+     */
+    public View showPictureComponent() {
+        View v = inflater.inflate(R.layout.dialog_headportrait, null);
+        TextView photograph = (TextView) v.findViewById(R.id.tv_take_photo);// 拍照
+        TextView albums = (TextView) v.findViewById(R.id.tv_pick_photo);// 相册
+        TextView cancel = (TextView) v.findViewById(R.id.tv_cancel);// 取消
+        photograph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                popModalView();
+                startCamera();
+            }
+        });
+        albums.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                popModalView();
+                startPictures();
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                popModalView();
+            }
+        });
+        return v;
+
     }
 
     /**

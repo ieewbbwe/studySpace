@@ -176,8 +176,10 @@ public abstract class BasicRecycleAdapter<M> extends RecyclerView.Adapter<BasicR
      * @param position
      */
     public void removeItem(int position) {
-        mData.remove(position);
-        notifyItemRemoved(position);
+        if (position != -1) {
+            mData.remove(position);
+            notifyItemRemoved(position);
+        }
     }
 
     /**

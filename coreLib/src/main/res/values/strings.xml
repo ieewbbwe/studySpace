@@ -7,4 +7,7 @@
     <string name="msg_camera_framework_bug">对不起，您的摄像头不支持扫描，请手动输入！</string>
     <string name="label_last_view">没有更多的数据</string>
     <string name="label_load_more">Loading...</string>
+    <string name="label_take_photo">拍照</string>
+    <string name="label_chose_form_album">从相册中选</string>
+    <string name="label_cancel">取消</string>
 </resources>

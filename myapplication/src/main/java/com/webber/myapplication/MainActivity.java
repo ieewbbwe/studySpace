@@ -1,18 +1,23 @@
 package com.webber.myapplication;
 
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.android_mobile.core.adapter.OnItemChildClickListener;
 import com.android_mobile.core.adapter.OnItemChildLongClickListener;
 import com.android_mobile.core.adapter.OnRVItemClickListener;
 import com.android_mobile.core.base.BaseActivity;
+import com.android_mobile.core.enums.ModalDirection;
 import com.android_mobile.core.net.IBasicAsyncTask;
 import com.android_mobile.core.ui.comp.pullListView.ListViewComponent;
+import com.android_mobile.core.ui.listener.IMediaPicturesListener;
+import com.android_mobile.core.utiles.BitmapUtils;
 import com.android_mobile.core.utiles.Lg;
 import com.android_mobile.core.utiles.TimerUtils;
 
@@ -27,6 +32,7 @@ public class MainActivity extends BaseActivity {
     private ListViewComponent loadComponent;
     private NormalRecycleAdapter normalRecycleAdapter;
     private List<BuyerInfoModel> buyerInfoModels;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +63,24 @@ public class MainActivity extends BaseActivity {
         loadComponent = new ListViewComponent(this, findViewById(R.id.home_list_fl));
         normalRecycleAdapter = new NormalRecycleAdapter(loadComponent.getRecycleView());
         loadComponent.setAdapter(normalRecycleAdapter);
+
+        imageView = (ImageView) findViewById(R.id.chose_pic_iv);
+        findViewById(R.id.chose_pic_bt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pushModalView(showPictureComponent(), ModalDirection.BOTTOM, dip2px(150));
+            }
+        });
+
+        setMediaPictureListener(new IMediaPicturesListener() {
+            @Override
+            public void mediaPicturePath(String imagePath) {
+                Lg.print("webber", "img:" + imagePath);
+                Lg.print("webber", "degree:" + BitmapUtils.obtainBitmapDegree(imagePath));
+                //UniversalImageLoad.getInstance().displayImage(imagePath, imageView);
+                imageView.setBackground(new BitmapDrawable(BitmapUtils.processBitmapBlurFast(BitmapUtils.obtainBitmap(imagePath))));
+            }
+        });
     }
 
     @Override
@@ -78,13 +102,27 @@ public class MainActivity extends BaseActivity {
         normalRecycleAdapter.setOnItemChildClickListener(new OnItemChildClickListener() {
             @Override
             public void onItemChildClick(ViewGroup parent, View childView, int position) {
-                Lg.print("webber", "onItemChildClick:" + position);
+                switch (childView.getId()) {
+                    case R.id.tv_item_normal_delete:
+                        childView.setClickable(false);
+                        normalRecycleAdapter.removeItem(position);
+                        break;
+                }
             }
         });
 
         loadComponent.setListener(new BGARefreshLayout.BGARefreshLayoutDelegate() {
             @Override
             public void onBGARefreshLayoutBeginRefreshing(BGARefreshLayout refreshLayout) {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadComponent.endRefresh();
+                        normalRecycleAdapter.clear();
+                        normalRecycleAdapter.addNewData(buyerInfoModels);
+                    }
+                }, 2000);
+
                 async(new IBasicAsyncTask() {
                     @Override
                     public void callback(Object result) {
