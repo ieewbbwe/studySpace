@@ -20,7 +20,7 @@ import java.io.File;
  */
 public final class UniversalImageLoad extends ImageLoader {
 
-    public static final String CACHE_IMAGE_LOADER = "images";
+    private static final String CACHE_IMAGE_LOADER = "images";
     private volatile static UniversalImageLoad instance;
 
     /**

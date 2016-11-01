@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\asWork\WebberDemo\Alib\libs"><file name="core.jar" path="D:\asWork\WebberDemo\Alib\libs\core.jar"/><file name="library.jar" path="D:\asWork\WebberDemo\Alib\libs\library.jar"/><file name="tween-engine-api.jar" path="D:\asWork\WebberDemo\Alib\libs\tween-engine-api.jar"/></source></dataSet><dataSet config="debug"><source path="D:\asWork\WebberDemo\Alib\src\debug\jniLibs"/></dataSet></merger>

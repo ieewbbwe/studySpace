@@ -6,7 +6,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 
 import butterknife.Bind;
@@ -36,6 +38,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         initListener();
+        View v = findViewById(R.id.test_tv);
+        v.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                Log.d("webber", "onPreDraw");
+                return true;
+            }
+        });
+        v.getViewTreeObserver().addOnDrawListener(new ViewTreeObserver.OnDrawListener() {
+            @Override
+            public void onDraw() {
+                Log.d("webber", "onDraw");
+            }
+        });
     }
 
     private void initListener() {

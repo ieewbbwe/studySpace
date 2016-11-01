@@ -1,15 +1,22 @@
 package com.webber.myapplication;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.android_mobile.core.adapter.OnItemChildClickListener;
 import com.android_mobile.core.adapter.OnItemChildLongClickListener;
@@ -21,6 +28,8 @@ import com.android_mobile.core.ui.listener.IMediaPicturesListener;
 import com.android_mobile.core.utiles.BitmapUtils;
 import com.android_mobile.core.utiles.Lg;
 import com.android_mobile.core.utiles.TimerUtils;
+import com.yanzhenjie.permission.PermissionNo;
+import com.yanzhenjie.permission.PermissionYes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,7 +100,15 @@ public class MainActivity extends BaseActivity {
                         .setIcon(R.mipmap.ic_launcher)
                         .setTitle("AppCompatDialog")
                         .setMessage("Lorem ipsum dolor...")
-                        .setPositiveButton("OK", null)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @TargetApi(Build.VERSION_CODES.M)
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String[] strs = {Manifest.permission.READ_SMS};
+                                ActivityCompat.requestPermissions(MainActivity.this, strs, 100);
+                                //AndPermission.with(MainActivity.this).requestCode(100).permission(Manifest.permission.READ_SMS).send();
+                            }
+                        })
                         .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -109,6 +126,44 @@ public class MainActivity extends BaseActivity {
                 appDialog.show();
             }
         });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        // 只需要调用这一句，剩下的AndPermission自动完成。
+        switch (requestCode) {
+            case 100: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(MainActivity.this,"成功",Toast.LENGTH_SHORT).show();
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+
+                } else {
+                    Toast.makeText(MainActivity.this,"失败",Toast.LENGTH_SHORT).show();
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+        }
+        //AndPermission.onRequestPermissionsResult(this, requestCode, permissions, grantResults);
+    }
+
+    // 成功回调的方法，用注解即可，里面的数字是请求时的requestCode。
+    @PermissionYes(100)
+    private void getLocationYes() {
+        // 申请权限成功，可以去做点什么了。
+        Toast.makeText(this, "获取定位权限成功", Toast.LENGTH_SHORT).show();
+    }
+
+    // 失败回调的方法，用注解即可，里面的数字是请求时的requestCode。
+    @PermissionNo(100)
+    private void getLocationNo() {
+        // 申请权限失败，可以提醒一下用户。
+        Toast.makeText(this, "获取定位权限失败", Toast.LENGTH_SHORT).show();
     }
 
     @Override

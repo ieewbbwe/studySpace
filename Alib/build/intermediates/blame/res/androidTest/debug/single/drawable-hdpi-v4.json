@@ -1,47 +1,31 @@
 [
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\navigationbar_rightbtn_icon2.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\navigationbar_rightbtn_icon2.png"
-    },
-    {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_nav_bar_bg_pad.9.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_nav_bar_bg_pad.9.png"
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ad_button_015_refresh_down_arrow.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ad_button_015_refresh_down_arrow.png"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_oauth_check_off.png",
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_oauth_check_off.png"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_share_pic.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_share_pic.png"
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\edittext_delete_btn_icon.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\edittext_delete_btn_icon.png"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ic_launcher.png",
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\edittext_delete_btn_icon.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\edittext_delete_btn_icon.png"
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\navigationbar_rightbtn_icon2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\navigationbar_rightbtn_icon2.png"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\navigationbar_leftbtn_icon.png",
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\navigationbar_leftbtn_icon.png"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_share_video.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_share_video.png"
-    },
-    {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\navigationbar_bg2.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\navigationbar_bg2.png"
-    },
-    {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_share_music.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_share_music.png"
-    },
-    {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png"
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_light_bar_bg_pad.9.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_light_bar_bg_pad.9.png"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\arrow.png",
@@ -52,23 +36,39 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\xlistview_arrow.png"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\navigationbar_bg.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\navigationbar_bg.png"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\navigationbar_leftbtn_icon2.png",
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\navigationbar_leftbtn_icon2.png"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ad_button_015_refresh_down_arrow.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ad_button_015_refresh_down_arrow.png"
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\navigationbar_bg.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\navigationbar_bg.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_share_music.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_share_music.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_nav_bar_bg_pad.9.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_nav_bar_bg_pad.9.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_share_video.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_share_video.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_oauth_check_on.png"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\updating.png",
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\updating.png"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_light_bar_bg_pad.9.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_light_bar_bg_pad.9.png"
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\umeng_socialize_share_pic.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\umeng_socialize_share_pic.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\navigationbar_bg2.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\navigationbar_bg2.png"
     }
 ]
