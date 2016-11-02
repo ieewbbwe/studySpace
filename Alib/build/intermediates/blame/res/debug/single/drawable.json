@@ -84,12 +84,12 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_red_blue.xml"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\navigationbar_leftbtn_icon.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\navigationbar_leftbtn_icon.png"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_button_red.9.png",
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_button_red.9.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\navigationbar_leftbtn_icon.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\navigationbar_leftbtn_icon.png"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_window_shadow_pad.xml",
