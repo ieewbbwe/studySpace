@@ -8,8 +8,17 @@ import java.util.List;
  */
 
 public class StudentBean {
+    private String unity;
     private String name;
     private List<Cause> causeList;
+
+    public String getUnity() {
+        return unity;
+    }
+
+    public void setUnity(String unity) {
+        this.unity = unity;
+    }
 
     public String getName() {
         return name;

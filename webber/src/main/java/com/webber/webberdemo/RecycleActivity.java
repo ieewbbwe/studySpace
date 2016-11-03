@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,12 +40,24 @@ public class RecycleActivity extends AppCompatActivity {
         }
         MyAdapter myAdapter = new MyAdapter(mData);
         mLoadMoreRv.setAdapter(myAdapter);
+        myAdapter.setOnRVItemClickListener(new OnRVItemClickListener() {
+            @Override
+            public void onRVItemClickListener(View itemView, int pos) {
+                Toast.makeText(RecycleActivity.this, "点击了" + pos, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     //RecycleView 适配器，泛型可以传自己定义的ViewHolder
     private class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         private List<String> list;
+
+        private OnRVItemClickListener onRVItemClickListener;
+
+        public void setOnRVItemClickListener(OnRVItemClickListener listener) {
+            this.onRVItemClickListener = listener;
+        }
 
         MyAdapter(List<String> list) {
             this.list = list;
@@ -58,8 +71,16 @@ public class RecycleActivity extends AppCompatActivity {
 
         //这个方法拿到绑定的ViewHolder 在此处处理数据
         @Override
-        public void onBindViewHolder(MyViewHolder holder, int position) {
+        public void onBindViewHolder(MyViewHolder holder, final int position) {
             holder.mItemTv.setText(list.get(position));
+            if (onRVItemClickListener != null) {
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onRVItemClickListener.onRVItemClickListener(v, position);
+                    }
+                });
+            }
         }
 
         @Override
@@ -76,5 +97,9 @@ public class RecycleActivity extends AppCompatActivity {
                 mItemTv = (TextView) itemView.findViewById(R.id.item_recycle_tv);
             }
         }
+    }
+
+    interface OnRVItemClickListener {
+        void onRVItemClickListener(View itemView, int pos);
     }
 }

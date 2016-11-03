@@ -1,1 +1,1 @@
-include ':webber', ':Alib', ':retorfitdemo', ':coreLib', ':myapplication', ':rxjavademo'
+include ':webber', ':Alib', ':retorfitdemo', ':coreLib', ':myapplication', ':rxjavademo', ':deeplinkdemo'

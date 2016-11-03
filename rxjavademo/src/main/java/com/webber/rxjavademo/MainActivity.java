@@ -19,8 +19,10 @@ import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action0;
 import rx.functions.Action1;
 import rx.functions.Func1;
+import rx.observables.GroupedObservable;
 import rx.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,7 +43,161 @@ public class MainActivity extends AppCompatActivity {
         //demo4();
         //demo5();
         //demo6();
-        demo7();
+        //demo7();
+        //demo8();
+        //demo9();
+        //demo10();
+        //学习了扔物线 的RxJava 大致来总结一下
+        //RxJava 是一种支持异步操作的库，并且支持链式调用，内部的实现是基于观察者模式
+        //RxJava 最大的亮点在于他能使程序逻辑更明了，并且提高了扩展性
+        //简单使用
+        // Observable 与 Observer 通过subscribe 联系起来 Observable.subscribe(Observer)
+        // Observable.create()\Observable.from()\Observable.just()用于创建一个Observable 对象
+        // 通常在使用的时候有库中提供的Fun&Action 来做具体操作
+        // 对于线程的处理，subscribeOn() 指定事件产生的线程，例如做一些耗时操作，多次设置时已第一次设置的线程为准;
+        // observableOn() 指定事件消费的线程，例如要在UI线程显示，多次设置时已最后一次的线程为准
+        // 通常使用的线程有：io()指 I\O线程，用于一些读写操作，例如查找数据库，网络请求,内部是无上限的线程池；
+        // computation() 计算线程，用于处理一些CPU密集计算，内部是核数的线程池；
+        // newThread() 新起一个线程；immediate() 当前线程，也是默认值；AndroidSchedulers.mainThread()，Android主线程即UI线程；
+        // 变换 （重难点）**
+        // 简单理解就是传入对象A输出对象B
+        // map() 一对一的变换，输入一个对象A，输出一个对象B
+        // flatMap() 一对多的变换，输入一个对象A，输出多个对象B
+        //原理分析
+        // 变换原理 （没搞明白，个人理解就是在Observable操作时生成一个新的Observable,并传递给subscribe）
+        //练手示例 利用RxJava 实现三级联动
+
+        demo11();
+    }
+
+    //连接符示例
+    private void demo11() {
+        demo11_1();
+        //demo11_2();
+        //demo11_3();
+    }
+
+    //组合连接符
+    private void demo11_3() {
+        demo11_3_1();
+    }
+
+    // GroupBy 根据条件分组
+    // 需求：有一些学生，按照他们的班级分类
+    private void demo11_3_1() {
+        //TODO GroupBy exc
+        List<StudentBean> students = getStudent();
+
+        Observable.from(students)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .groupBy(new Func1<StudentBean, String>() {
+                    @Override
+                    public String call(StudentBean studentBean) {
+                        return studentBean.getUnity();
+                    }
+                }).subscribe(new Action1<GroupedObservable<String, StudentBean>>() {
+            @Override
+            public void call(GroupedObservable<String, StudentBean> stringStudentBeanGroupedObservable) {
+                stringStudentBeanGroupedObservable.subscribe(new Action1<StudentBean>() {
+                    @Override
+                    public void call(StudentBean studentBean) {
+
+                    }
+                });
+            }
+        });
+    }
+
+    //过滤连接符
+    private void demo11_2() {
+
+    }
+
+    //转换连接符 map flatMap concatMap
+    private void demo11_1() {
+        //TODO flatMap 无序输出 concatMap 有序输出
+        Observable.just(1, 2, 3, 4)
+                .subscribeOn(Schedulers.newThread())
+                .flatMap(new Func1<Integer, Observable<String>>() {
+                    @Override
+                    public Observable<String> call(Integer integer) {
+                        return Observable.just(integer + "");
+                    }
+                })
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<String>() {
+                    @Override
+                    public void call(String s) {
+                        Log.d("demo11_1", s);
+                    }
+                });
+    }
+
+    //执行前的线程操作 doOnScheduler
+    //例如用于网络请求开始前 显示进度条
+    private void demo10() {
+        Observable.just(1, 0, 2, 4)
+                .subscribeOn(Schedulers.io())
+                .doOnSubscribe(new Action0() {
+                    @Override
+                    public void call() {
+                        Log.d("demo10", "doOnSub:" + getCurrentThreadName());
+                    }
+                }).subscribeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(Schedulers.computation())
+                .subscribe(new Action1<Integer>() {
+                    @Override
+                    public void call(Integer integer) {
+                        Log.d("demo10", "sub" + getCurrentThreadName());
+                    }
+                });
+    }
+
+    private String getCurrentThreadName() {
+        return Thread.currentThread().getName();
+    }
+
+    //变换中的多次线程切换 以map flatMap为例
+    //需求：输出学生的多门成绩
+    private void demo9() {
+        final List<StudentBean> students = getStudent();
+        Observable.from(students)
+                .subscribeOn(Schedulers.immediate())
+                .observeOn(AndroidSchedulers.mainThread())
+                .flatMap(new Func1<StudentBean, Observable<Cause>>() {
+                    @Override
+                    public Observable<Cause> call(StudentBean studentBean) {
+                        Log.d("demo9", "姓名:" + studentBean.getName() + "Thread:" + Thread.currentThread().getName());
+                        return Observable.from(studentBean.getCauseList());
+                    }
+                })
+                .subscribeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.computation()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<Cause>() {
+                    @Override
+                    public void call(Cause cause) {
+                        Log.d("demo9", formatCause(cause) + "Thread:" + Thread.currentThread().getName());
+                    }
+                });
+    }
+
+    //变换原理 lift
+    //需求：将Integer 转为String
+    private void demo8() {
+        Observable observable1 = Observable.create(new Observable.OnSubscribe<String>() {
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+
+            }
+        });
+        observable1.lift(new Observable.Operator<String, Integer>() {
+            @Override
+            public Subscriber<? super Integer> call(Subscriber<? super String> subscriber) {
+                return null;
+            }
+        });
     }
 
     //变换队列 flatMap
@@ -118,9 +274,10 @@ public class MainActivity extends AppCompatActivity {
     //float与double 的区别 单精度4字节，双精度8字节
     private List<StudentBean> getStudent() {
         List<StudentBean> students = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 30; i++) {
             StudentBean student = new StudentBean();
             student.setName("学生" + i);
+            student.setUnity(Math.random() * 5 + "班");
             List<Cause> causes = new ArrayList<>();
             for (int j = 0; j < 3; j++) {
                 Cause cause = new Cause(getCauseName(j), (float) (Math.random() * 100));
