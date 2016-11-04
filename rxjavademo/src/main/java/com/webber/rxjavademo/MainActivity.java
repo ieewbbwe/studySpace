@@ -8,12 +8,20 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jakewharton.rxbinding.widget.RxTextView;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.TreeMap;
+import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
 import rx.Observer;
@@ -25,10 +33,14 @@ import rx.functions.Func1;
 import rx.observables.GroupedObservable;
 import rx.schedulers.Schedulers;
 
+import static rx.Observable.from;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView mDemoTv;
     private ImageView mDemoIv;
+    private EditText mDemoEt;
+    private String mDemoStr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mDemoTv = (TextView) findViewById(R.id.demo_tv);
         mDemoIv = (ImageView) findViewById(R.id.demo_iv);
+        mDemoEt = (EditText) findViewById(R.id.demo_et);
 
         //demo1();
         //demo2();
@@ -67,46 +80,227 @@ public class MainActivity extends AppCompatActivity {
         // 变换原理 （没搞明白，个人理解就是在Observable操作时生成一个新的Observable,并传递给subscribe）
         //练手示例 利用RxJava 实现三级联动
 
+        //进阶示例 -操作符
         demo11();
     }
 
-    //连接符示例
+    //操作符示例
     private void demo11() {
-        demo11_1();
+        // 创建操作符
+        //demo11_1();
+        // 变换操作符
         //demo11_2();
-        //demo11_3();
+        // 过滤操作符
+        demo11_3();
+        // 结合操作符
+        //demo11_4();
+
+        // 错误处理
+        // 辅助操作
+        // 条件和布尔操作
+        // 算数\聚合操作
+        // 异步操作
+        // 连接操作
+    }
+
+    private void demo11_4() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        List<String> list2 = new ArrayList<>();
+        list2.add("a");
+        list2.add("b");
+        list2.add("c");
+        list2.add("d");
+
+        //一秒执行一次切三秒获取一次发送的事件  防抖动
+        Observable.interval(1, TimeUnit.SECONDS)
+                .throttleFirst(3, TimeUnit.SECONDS)
+                .subscribe(new Action1<Long>() {
+                    @Override
+                    public void call(Long aLong) {
+                        Log.d("demo11_4", getCurrentThreadName() + " " + aLong);
+                    }
+                });
+
+        /*// 需求 计时 无法递减，无法在链中控制停止
+        Observable.interval(1000, 1000, TimeUnit.MILLISECONDS)
+                .delay(10, TimeUnit.SECONDS)
+                .subscribe(new Action1<Long>() {
+                    @Override
+                    public void call(Long aLong) {
+                        Log.d("demo11_4", getCurrentThreadName() + " " + aLong);
+                    }
+                }).unsubscribe();*/
+
+       /* //Timer 发生在computation 线程中U操作需要切换到主线程
+        Observable.timer(3, TimeUnit.SECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<Long>() {
+                    @Override
+                    public void call(Long aLong) {
+                        Log.d("demo11_4", getCurrentThreadName());
+                        mDemoIv.setBackgroundResource(R.mipmap.ic_launcher);
+                    }
+                });
+*/
+
+     /*   Observable.from(list).delay(3, TimeUnit.SECONDS)
+                .subscribe(new Action1<String>() {
+                    @Override
+                    public void call(String s) {
+                        Log.d("demo11_4", s);
+                    }
+                });*/
+
+
+        /*Observable.zip(Observable.from(list), Observable.from(list2), new Func2<String, String, String>() {
+            @Override
+            public String call(String s, String s2) {
+                return s + s2;
+            }
+        }).subscribe(new Action1<String>() {
+            @Override
+            public void call(String s) {
+                Log.d("demo11_4", s);
+            }
+        });*/
+
+      /*  Observable.merge(Observable.from(list2), Observable.from(list))
+                .subscribe(new Action1<String>() {
+                    @Override
+                    public void call(String s) {
+                        Log.d("demo11_4", s);
+                    }
+                });*/
+
     }
 
     //组合连接符
     private void demo11_3() {
-        demo11_3_1();
+        //demo11_3_1();
+        //demo11_3_2();
+        demo11_3_3();
     }
+
+    // 一段时间没有变化则发送事件
+    // TODO 例如百度搜索 一段时间没有输入采取查找关键字
+    private void demo11_3_3() {
+        RxTextView.textChanges(mDemoEt)
+                .debounce(500, TimeUnit.MILLISECONDS)
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .filter(new Func1<CharSequence, Boolean>() {
+                    @Override
+                    public Boolean call(CharSequence charSequence) {
+                        return charSequence.toString().trim().length() > 0;
+                    }
+                }).subscribe(new Action1<CharSequence>() {
+            @Override
+            public void call(CharSequence charSequence) {
+                Log.d("demo11_3", charSequence.toString());
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        });
+
+    }
+
+    //过滤重复数据
+    private void demo11_3_2() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("1");
+        list.add("3");
+        list.add("1");
+        list.add("4");
+        list.add("1");
+
+        Observable.from(list)
+                .distinct()
+                .subscribe(new Action1<String>() {
+                    @Override
+                    public void call(String s) {
+                        Log.d("demo11_4", s);
+                    }
+                });
+    }
+
+    long startTime;
+    long time;
 
     // GroupBy 根据条件分组
     // 需求：有一些学生，按照他们的班级分类
     private void demo11_3_1() {
-        //TODO GroupBy exc
         List<StudentBean> students = getStudent();
+        formatUnity(students);
+        Log.d("demo11_3", "-------------格式化前分割线--------------");
+        //demo11_3_1_1(students);
+        demo11_3_1_2(students);
+    }
 
-        Observable.from(students)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+    //是出学生和班级
+    private void formatUnity(List<StudentBean> students) {
+        from(students)
+                .subscribe(new Action1<StudentBean>() {
+                    @Override
+                    public void call(StudentBean studentBean) {
+                        Log.d("demo11_3", String.format("姓名：%s->>班级:%s", studentBean.getName(), studentBean.getUnity()));
+                    }
+                });
+    }
+
+    //利用RxJava中的GroupBy操作符
+    private void demo11_3_1_2(final List<StudentBean> students) {
+        Observable<GroupedObservable<String, StudentBean>> groupedObservableObservable = Observable.from(students)
                 .groupBy(new Func1<StudentBean, String>() {
                     @Override
                     public String call(StudentBean studentBean) {
                         return studentBean.getUnity();
                     }
-                }).subscribe(new Action1<GroupedObservable<String, StudentBean>>() {
-            @Override
-            public void call(GroupedObservable<String, StudentBean> stringStudentBeanGroupedObservable) {
-                stringStudentBeanGroupedObservable.subscribe(new Action1<StudentBean>() {
-                    @Override
-                    public void call(StudentBean studentBean) {
-
-                    }
                 });
+
+        Observable.concat(groupedObservableObservable).subscribe(new Action1<StudentBean>() {
+            @Override
+            public void call(StudentBean studentBean) {
+                Log.d("demo11_3", formatStudent(studentBean));
             }
         });
+    }
+
+    private String formatStudent(StudentBean studentBean) {
+        return String.format("姓名：%s->>班级：%s", studentBean.getName(), studentBean.getUnity());
+    }
+
+    // 有一些学生，按照他们班级分组
+    // 常规思路 利用map()遍历一遍学生 班级相同的放在一个map中，一个Map即一个班级
+    private void demo11_3_1_1(List<StudentBean> students) {
+        startTime = System.currentTimeMillis();
+        Map<String, List<StudentBean>> studentMap = new HashMap<>();
+        for (StudentBean bean : students) {
+            if (studentMap.containsKey(bean.getUnity())) {
+                studentMap.get(bean.getUnity()).add(bean);
+            } else {
+                List<StudentBean> unitys = new ArrayList<>();
+                unitys.add(bean);
+                studentMap.put(bean.getUnity(), unitys);
+            }
+        }
+        studentMap = sortMap(studentMap);
+        for (Map.Entry<String, List<StudentBean>> entry : studentMap.entrySet()) {
+            Log.d("demo11_3", "key= " + entry.getKey());
+            formatUnity(entry.getValue());
+        }
+        startTime = System.currentTimeMillis();
+    }
+
+    private Map<String, List<StudentBean>> sortMap(Map<String, List<StudentBean>> studentMap) {
+        Map<String, List<StudentBean>> sortMap = new TreeMap<String, List<StudentBean>>(new StudentComparator());
+        sortMap.putAll(studentMap);
+        return sortMap;
     }
 
     //过滤连接符
@@ -163,14 +357,14 @@ public class MainActivity extends AppCompatActivity {
     //需求：输出学生的多门成绩
     private void demo9() {
         final List<StudentBean> students = getStudent();
-        Observable.from(students)
+        from(students)
                 .subscribeOn(Schedulers.immediate())
                 .observeOn(AndroidSchedulers.mainThread())
                 .flatMap(new Func1<StudentBean, Observable<Cause>>() {
                     @Override
                     public Observable<Cause> call(StudentBean studentBean) {
                         Log.d("demo9", "姓名:" + studentBean.getName() + "Thread:" + Thread.currentThread().getName());
-                        return Observable.from(studentBean.getCauseList());
+                        return from(studentBean.getCauseList());
                     }
                 })
                 .subscribeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io())
@@ -213,11 +407,11 @@ public class MainActivity extends AppCompatActivity {
     //写到这里感觉到了 from 和for循环一样，把list里面的对象挨个输出
     //这个例子传入的是Students 输出的是每一个课程信息
     private void demo7_4(List<StudentBean> students) {
-        Observable.from(students).flatMap(new Func1<StudentBean, Observable<Cause>>() {
+        from(students).flatMap(new Func1<StudentBean, Observable<Cause>>() {
             @Override
             public Observable<Cause> call(StudentBean studentBean) {
                 Log.d("demo7_4", "姓名：" + studentBean.getName());
-                return Observable.from(studentBean.getCauseList());
+                return from(studentBean.getCauseList());
             }
         }).subscribe(new Action1<Cause>() {
             @Override
@@ -228,7 +422,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void demo7_3(List<StudentBean> students) {
-        Observable.from(students).map(new Func1<StudentBean, List<Cause>>() {
+        from(students).map(new Func1<StudentBean, List<Cause>>() {
             @Override
             public List<Cause> call(StudentBean studentBean) {
                 Log.d("demo7_3", "姓名：" + studentBean.getName());
@@ -246,7 +440,7 @@ public class MainActivity extends AppCompatActivity {
 
     //RxJava
     private void demo7_2(List<StudentBean> students) {
-        Observable.from(students).subscribe(new Action1<StudentBean>() {
+        from(students).subscribe(new Action1<StudentBean>() {
             @Override
             public void call(StudentBean studentBean) {
                 Log.d("demo7_2", "姓名：" + studentBean.getName());
@@ -274,10 +468,11 @@ public class MainActivity extends AppCompatActivity {
     //float与double 的区别 单精度4字节，双精度8字节
     private List<StudentBean> getStudent() {
         List<StudentBean> students = new ArrayList<>();
+        Random random = new Random();
         for (int i = 0; i < 30; i++) {
             StudentBean student = new StudentBean();
             student.setName("学生" + i);
-            student.setUnity(Math.random() * 5 + "班");
+            student.setUnity(random.nextInt(5) + 1 + "班");
             List<Cause> causes = new ArrayList<>();
             for (int j = 0; j < 3; j++) {
                 Cause cause = new Cause(getCauseName(j), (float) (Math.random() * 100));
@@ -410,7 +605,7 @@ public class MainActivity extends AppCompatActivity {
     private void demo2() {
         String[] names = {"name1", "name2", "name3"};
         //from 表示将传入的集合 拆分成对象后依次输出
-        Observable.from(names).subscribe(new Action1<String>() {
+        from(names).subscribe(new Action1<String>() {
             @Override
             public void call(String s) {
                 Log.d("webber", "demo2:" + s);
