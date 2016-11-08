@@ -1,10 +1,12 @@
 package com.android_mobile.core.ui.comp.pullListView;
 
+import com.android_mobile.core.adapter.BasicRecycleAdapter;
+
 public interface IListViewComp {
 
-    void doRefresh();
+    void getListView();
 
-    void loadMore();
+    void setAdapter(BasicRecycleAdapter adapter);
 
-    void omComplete();
+    void setListener();
 }

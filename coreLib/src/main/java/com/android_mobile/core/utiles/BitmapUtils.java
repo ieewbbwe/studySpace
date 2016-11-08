@@ -15,7 +15,9 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
 import android.media.ThumbnailUtils;
+import android.support.annotation.NonNull;
 import android.view.Display;
+import android.view.View;
 import android.view.WindowManager;
 
 import java.io.BufferedInputStream;
@@ -447,9 +449,10 @@ public class BitmapUtils {
 
     /**
      * 根据指定宽高和角度获取图片
-     * @param path 图片路径
-     * @param w 宽
-     * @param h 高
+     *
+     * @param path   图片路径
+     * @param w      宽
+     * @param h      高
      * @param degree 角度
      * @return
      */
@@ -607,5 +610,21 @@ public class BitmapUtils {
         return degree;
     }
 
+    /**
+     * View 截屏
+     *
+     * @param view
+     * @return
+     */
+    public static Bitmap obtainBitmapByView(@NonNull View view) {
+        if (view.getWidth() > 0 && view.getHeight() > 0) {
+            Bitmap.Config config = Bitmap.Config.ARGB_8888;
+            Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), config);
+            Canvas canvas = new Canvas(bitmap);
+            view.draw(canvas);
+            return bitmap;
+        }
+        return null;
+    }
 
 }

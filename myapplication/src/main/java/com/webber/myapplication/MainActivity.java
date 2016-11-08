@@ -13,6 +13,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -23,18 +24,19 @@ import com.android_mobile.core.adapter.OnItemChildLongClickListener;
 import com.android_mobile.core.adapter.OnRVItemClickListener;
 import com.android_mobile.core.base.BaseActivity;
 import com.android_mobile.core.enums.ModalDirection;
+import com.android_mobile.core.ui.comp.pullListView.ILoadMoreViewListener;
 import com.android_mobile.core.ui.comp.pullListView.ListViewComponent;
 import com.android_mobile.core.ui.listener.IMediaPicturesListener;
 import com.android_mobile.core.utiles.BitmapUtils;
 import com.android_mobile.core.utiles.Lg;
 import com.android_mobile.core.utiles.TimerUtils;
+import com.ashokvarma.bottomnavigation.BottomNavigationBar;
+import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.yanzhenjie.permission.PermissionNo;
 import com.yanzhenjie.permission.PermissionYes;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
 
 
 public class MainActivity extends BaseActivity {
@@ -49,7 +51,28 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         navigationBar.hidden();
-        //navigationBar.hidden();
+        BottomNavigationBar navigationBar = (BottomNavigationBar) findViewById(R.id.bottom_bar);
+        BottomNavigationItem item = new BottomNavigationItem(R.mipmap.ic_launcher, "item1");
+        navigationBar.addItem(item)
+                .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_fav, "item2"))
+                .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_recent, "item3"))
+                .initialise();
+        navigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(int position) {
+                Log.d("bottomBar", "onTabSelected" + position);
+            }
+
+            @Override
+            public void onTabUnselected(int position) {
+                Log.d("bottomBar", "onTabUnselected" + position);
+            }
+
+            @Override
+            public void onTabReselected(int position) {
+                Log.d("bottomBar", "onTabReselected" + position);
+            }
+        });
      /*   Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setLogo(R.mipmap.ic_launcher);
@@ -74,6 +97,7 @@ public class MainActivity extends BaseActivity {
         loadComponent = new ListViewComponent(this, findViewById(R.id.home_list_fl));
         normalRecycleAdapter = new NormalRecycleAdapter(loadComponent.getRecycleView());
         loadComponent.setAdapter(normalRecycleAdapter);
+        loadComponent.setLoadMoreEnable(false);
 
         imageView = (ImageView) findViewById(R.id.chose_pic_iv);
         findViewById(R.id.chose_pic_bt).setOnClickListener(new View.OnClickListener() {
@@ -137,12 +161,12 @@ public class MainActivity extends BaseActivity {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(MainActivity.this,"成功",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "成功", Toast.LENGTH_SHORT).show();
                     // permission was granted, yay! Do the
                     // contacts-related task you need to do.
 
                 } else {
-                    Toast.makeText(MainActivity.this,"失败",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "失败", Toast.LENGTH_SHORT).show();
 
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
@@ -195,9 +219,9 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        loadComponent.setListener(new BGARefreshLayout.BGARefreshLayoutDelegate() {
+        loadComponent.setListener(new ILoadMoreViewListener() {
             @Override
-            public void onBGARefreshLayoutBeginRefreshing(BGARefreshLayout refreshLayout) {
+            public void startRefresh() {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -206,26 +230,14 @@ public class MainActivity extends BaseActivity {
                         normalRecycleAdapter.addNewData(buyerInfoModels);
                     }
                 }, 2000);
-
-            /*    async(new IBasicAsyncTask() {
-                    @Override
-                    public void callback(Object result) {
-                        loadComponent.endRefresh();
-                        if (result != null) {
-                            User user = (User) result;
-                            //normalRecycleAdapter.addItem(0, user.purchaseInfo);
-                            normalRecycleAdapter.clear();
-                            normalRecycleAdapter.addNewData(buyerInfoModels);
-                            Lg.print("webber", "user:" + user.toString());
-                        }
-                    }
-                }, new BaseRequest(), new PersionInfoService());*/
             }
 
             @Override
-            public boolean onBGARefreshLayoutBeginLoadingMore(BGARefreshLayout refreshLayout) {
+            public void startLoadMore() {
                 if (normalRecycleAdapter.getItemCount() >= 20) {
-                    return false;
+                    Snackbar.make(loadComponent.getRecycleView(), "没有更多了", Snackbar.LENGTH_SHORT).show();
+                    loadComponent.setLoadMoreEnable(false);
+                    return;
                 }
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -234,7 +246,6 @@ public class MainActivity extends BaseActivity {
                         normalRecycleAdapter.addMoreData(buyerInfoModels);
                     }
                 }, 2000);
-                return true;
             }
         });
     }

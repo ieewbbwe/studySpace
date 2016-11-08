@@ -1,8 +1,6 @@
 package com.webber.myapplication;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
@@ -16,6 +14,7 @@ import com.android_mobile.core.ui.comp.dialog.BasicDialog;
  * Describe：
  */
 public class AppDialog extends BasicDialog {
+
     public AppDialog(Context context) {
         super(context);
     }
@@ -35,11 +34,12 @@ public class AppDialog extends BasicDialog {
         Window dialogWindow = this.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();
         dialogWindow.setGravity(Gravity.CENTER);
-        dialogWindow.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00000000")));
+        //dialogWindow.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00000000")));
+        //设置Dialog 出现动画
         //dialogWindow.setWindowAnimations(R.style.dialog_anim);
         DisplayMetrics dm = getContext().getResources().getDisplayMetrics();
         lp.width = (int) (0.9 * dm.widthPixels);
-        //lp.height += dm.density * 3;
+        //设置Dialog的高度
         //lp.height = (int) (0.21 * dm.heightPixels);
         dialogWindow.setAttributes(lp);
     }

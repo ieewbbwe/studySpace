@@ -15,11 +15,17 @@ import cn.bingoogolapple.refreshlayout.BGANormalRefreshViewHolder;
 import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
 import cn.bingoogolapple.refreshlayout.BGARefreshViewHolder;
 
-public class ListViewComponent extends BaseComponent {
+public class ListViewComponent extends BaseComponent implements BGARefreshLayout.BGARefreshLayoutDelegate {
 
     private BGARefreshLayout mRefreshLayout;
     private RecyclerView mRecycleView;
     private BGARefreshViewHolder refreshViewHolder;
+    // 加载监听
+    private ILoadMoreViewListener mLoadMoreListener;
+    // 加载更多是否可用
+    private boolean mIsLoadMoreEnable = true;
+    // 刷新是否可用
+    private boolean mIsPullDownEnable = true;
 
     public ListViewComponent(BasicActivity activity, int resId) {
         super(activity, resId);
@@ -48,7 +54,7 @@ public class ListViewComponent extends BaseComponent {
 
     @Override
     public void initListener() {
-
+        mRefreshLayout.setDelegate(this);
     }
 
     @Override
@@ -68,8 +74,8 @@ public class ListViewComponent extends BaseComponent {
         mRefreshLayout.setCustomHeaderView(headerView, true);
     }
 
-    public void setListener(BGARefreshLayout.BGARefreshLayoutDelegate listener) {
-        mRefreshLayout.setDelegate(listener);
+    public void setListener(ILoadMoreViewListener listener) {
+        this.mLoadMoreListener = listener;
     }
 
     public void endLoadMore() {
@@ -195,4 +201,39 @@ public class ListViewComponent extends BaseComponent {
         return maxPosition;
     }
 
+    /**
+     * 设置加载更多是否可用
+     *
+     * @param isLoadMoreEnable
+     */
+    public void setLoadMoreEnable(boolean isLoadMoreEnable) {
+        this.mIsLoadMoreEnable = isLoadMoreEnable;
+    }
+
+    /**
+     * 设置下拉刷新是否可用
+     *
+     * @param isPullDownEnable
+     */
+    public void setRefreshEnable(boolean isPullDownEnable) {
+        this.mIsPullDownEnable = isPullDownEnable;
+        if (mRefreshLayout != null) {
+            mRefreshLayout.setPullDownRefreshEnable(isPullDownEnable);
+        }
+    }
+
+    @Override
+    public void onBGARefreshLayoutBeginRefreshing(BGARefreshLayout refreshLayout) {
+        if (mLoadMoreListener != null && mIsPullDownEnable) {
+            mLoadMoreListener.startRefresh();
+        }
+    }
+
+    @Override
+    public boolean onBGARefreshLayoutBeginLoadingMore(BGARefreshLayout refreshLayout) {
+        if (mLoadMoreListener != null && mIsLoadMoreEnable) {
+            mLoadMoreListener.startLoadMore();
+        }
+        return mIsLoadMoreEnable;
+    }
 }

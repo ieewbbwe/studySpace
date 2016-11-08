@@ -18,7 +18,6 @@ import java.util.List;
 
 public class IntentUtils {
 
-
     /**
      * 判断设备是否存在功能
      */

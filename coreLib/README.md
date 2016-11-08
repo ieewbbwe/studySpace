@@ -4,12 +4,12 @@
 Copyright (C) 2012 Square, Inc.
 Apache License, Version 2.0
 
-### Refreshlayout
+### RefreshLayout
 List刷新库 https://github.com/bingoogolapple/BGARefreshLayout-Android
 Copyright 2015 bingoogolapple
 Apache License, Version 2.0
 
-### Universalimageloader
+### UniversalImageLoader
 图片加载库 https://github.com/dodola/Android-Universal-Image-Loader
 Copyright 2011-2013 Sergey Tarasevich
 Apache License, Version 2.0
@@ -47,5 +47,43 @@ AndPermission.with(this)
         Toast.makeText(this, "获取定位权限失败", Toast.LENGTH_SHORT).show();
     }
 ```
+
+# 工具类介绍（欢迎补充）
+### Utils 基础工具类
+1. 判断系统网络情况
+2. dip2px 互换
+3. 判断SD卡搭载状态
+
+### StringUtils 字符串处理工具类
+1. 常见的正则表达式
+2. 判断传入的字符串是否有值
+3. 邮箱、密码、银行卡、电话、身份证正则校验
+4. 特殊字符、纯数字正则校验
+5. 字符串编码转换
+
+### TimerUtils 时间处理工具类
+1. 常见的日期格式format
+2. 转换时间格式,long与string时间互换
+3. 获取与当前时间的时间差
+4. 获取与当前时间的关系
+5. UTC时间转换
+
+### BitmapUtils 图片处理工具类
+1. 根据路径获取图片
+2. Drawable转Bitmap
+3. Bitmap图片模糊处理
+4. 按比例或者宽高压缩图片
+5. 获取图片角度，旋转图片
+
+### SystemInfo 系统信息工具类
+1. 获取运营商、CPU、磁盘、网络、显示屏等信息
+2. 获取运行中服务、任务列表
+
+### IntentUtils 意图工具类
+1. 进行各类意图跳转操作
+
+### Log工具类
+1. 打印各级log，上线后屏蔽所有log
+
 
 

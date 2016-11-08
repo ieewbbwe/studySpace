@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
-import android.view.View;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -40,16 +38,6 @@ public class Utils {
         buffer.put(v);
         buffer.position(0);
         return buffer;
-    }
-
-    public static Bitmap takeScreenshot(View view) {
-        assert view.getWidth() > 0 && view.getHeight() > 0;
-        Bitmap.Config config = Bitmap.Config.ARGB_8888;
-        Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), config);
-        Canvas canvas = new Canvas(bitmap);
-        view.draw(canvas);
-
-        return bitmap;
     }
 
     public static int dip2px(Context context, float dipValue) {
@@ -91,7 +79,7 @@ public class Utils {
     /**
      * 判断有无sd卡
      */
-    public static boolean hasSdcard() {
+    public static boolean isSdCardAvailable() {
         String status = Environment.getExternalStorageState();
         return status.equals(Environment.MEDIA_MOUNTED)
                 || status.equals("/mnt/sdcard");
@@ -99,13 +87,6 @@ public class Utils {
 
     public static boolean isTestUser(String phone) {
         return phone.startsWith("400");
-    }
-
-    public static boolean isFirstAppRunning() {
-        boolean b = true;
-        b = CacheUtil.getInteger("app_help_view") < 0;
-        CacheUtil.saveInteger("app_help_view", 100);
-        return b;
     }
 
     /**
@@ -120,9 +101,6 @@ public class Utils {
 
     /**
      * 获取文件的后缀名
-     *
-     * @param fileName
-     * @return
      */
     public static String getFileType(String fileName) {
         if (!StringUtils.isEmpty(fileName)) {

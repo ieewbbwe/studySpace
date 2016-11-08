@@ -52,6 +52,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("webber", "onDraw");
             }
         });
+
+        forTest();
+    }
+
+    private void forTest() {
+        for (int i = 0; i < 3; i++) {
+            Log.d("webber", "第" + i + "次循環");
+            for (int j = 0; j < 3; j++) {
+                if (i == j) {
+                    Log.d("webber", "相等： i:" + i + "j:" + j);
+                    continue;
+                } else {
+                    Log.d("webber", "i:" + i + "j:" + j);
+                }
+            }
+        }
     }
 
     private void initListener() {

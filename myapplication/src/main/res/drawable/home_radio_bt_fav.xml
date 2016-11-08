@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 主页的radio 背景 -->
+    <item android:drawable="@mipmap/ic_nav_fav_orange" android:state_checked="true"/>
+    <item android:drawable="@mipmap/ic_nav_fav_normal" android:state_checked="false"/>
+
+</selector>

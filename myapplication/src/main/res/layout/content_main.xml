@@ -1,41 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.webber.myapplication.MainActivity"
-    tools:showIn="@layout/activity_main">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/chose_pic_bt"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.webber.myapplication.MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <Button
+            android:id="@+id/chose_pic_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选照片"/>
+
+        <Button
+            android:id="@+id/dialog_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试对话框"/>
+
+        <Button
+            android:id="@+id/dialog_my_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试自定义对话框"/>
+
+        <ImageView
+            android:id="@+id/chose_pic_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <FrameLayout
+            android:id="@+id/home_list_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="选照片"/>
-
-    <Button
-        android:id="@+id/dialog_bt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="测试对话框"/>
-
-    <Button
-        android:id="@+id/dialog_my_bt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="测试自定义对话框"/>
-
-    <ImageView
-        android:id="@+id/chose_pic_iv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
-
-    <FrameLayout
-        android:id="@+id/home_list_fl"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-</LinearLayout>
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
