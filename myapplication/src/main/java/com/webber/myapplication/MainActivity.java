@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -30,6 +32,7 @@ import com.android_mobile.core.ui.listener.IMediaPicturesListener;
 import com.android_mobile.core.utiles.BitmapUtils;
 import com.android_mobile.core.utiles.Lg;
 import com.android_mobile.core.utiles.TimerUtils;
+import com.ashokvarma.bottomnavigation.BadgeItem;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.yanzhenjie.permission.PermissionNo;
@@ -52,10 +55,17 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         navigationBar.hidden();
         BottomNavigationBar navigationBar = (BottomNavigationBar) findViewById(R.id.bottom_bar);
+        BadgeItem badgeItem = new BadgeItem().setBackgroundColor(Color.RED).setText("99").setGravity(Gravity.RIGHT);
         BottomNavigationItem item = new BottomNavigationItem(R.mipmap.ic_launcher, "item1");
-        navigationBar.addItem(item)
-                .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_fav, "item2"))
-                .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_recent, "item3"))
+        item.setBadgeItem(badgeItem);
+
+        navigationBar.setMode(BottomNavigationBar.MODE_FIXED)
+                .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE)
+                .addItem(item)
+                .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_fav, "最新动态"))
+                .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_recent, "我的最爱"))
+                .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_recent, "我的最爱"))
+                .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_recent, "我的最爱"))
                 .initialise();
         navigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
@@ -79,6 +89,7 @@ public class MainActivity extends BaseActivity {
         if (Build.VERSION.SDK_INT > 21) {
             toolbar.setOutlineProvider(ViewOutlineProvider.BOUNDS);
         }*/
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -253,6 +264,14 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initData() {
         loadComponent.doRefresh();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                findViewById(R.id.hsv).setAlpha(0.89f);
+
+            }
+        }, 1000);
+
         buyerInfoModels = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             buyerInfoModels.add(new BuyerInfoModel("buyerFirstName" + i, "buyerLastName" + i));

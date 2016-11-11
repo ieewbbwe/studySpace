@@ -6,4 +6,92 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <!--   theme UI controls like checkboxes and text fields -->
     <color name="colorAccent">#FF4081</color>
+
+
+    <!-- 背景颜色 -->
+    <!--所有布局灰色背景-->
+    <color name="bg_gray">#F1F1F5</color>
+    <!--所有布局白色背景-->
+    <color name="bg_white">#ffffff</color>
+    <!--bar背景色-->
+    <color name="bar_color">#ff8b12</color>
+
+    <!--商品詳情頁商品名顏色-->
+    <color name="treasure_name_color">#ff8b12</color>
+
+    <!--Navigation-->
+    <color name="primary">#ff8b12</color>
+    <color name="primary_dark">#d78813</color>
+    <color name="status_bar_color">@color/primary_dark</color>
+
+    <!-- 首页下面radio button 没有选中时的文字颜色 -->
+    <color name="home_radio_bt_text_color_empty">#464e56</color>
+    <!-- 首页下面radio button 选中时的文字颜色 -->
+    <color name="home_radio_bt_text_color_select">#ff8b12</color>
+    <!--商品內容-->
+    <color name="treasure_content_color">#26282a</color>
+    <!--60%-->
+    <color name="filter_text_color">#6026282a</color>
+    <!--商品價格-->
+    <color name="treasure_original_price">#fa1229</color>
+    <color name="text_color_gray">#b9bdc5</color>
+
+    <color name="text_color_red">#fa1229</color>
+    <color name="text_color_orange">#cf6b54</color>
+    <color name="text_color_green">#7eb404</color>
+    <color name="button_layout_bg">#f8f8f8</color>
+    <color name="button_normal">#feb609</color>
+    <color name="button_press">#fcc84c</color>
+    <color name="text_color_white">#ffffff</color>
+    <color name="divider_line">#dbdbdb</color>
+    <color name="text_color">#464e56</color>
+    <color name="list_pressed">#dedede</color>
+
+    <color name="line_nomal">#d8dade</color>
+    <color name="minus_bg">#e0e4e9</color>
+    <color name="button_enable_false">#e0e4e9</color>
+    <color name="contact_phone_num">#ff8b12</color>
+    <color name="prog_normal">#ffd333</color>
+    <color name="prog_now">#f9f9fa</color>
+    <color name="text_error_red">#deff5c5c</color>
+    <!--指引界面背景文字-->
+    <color name="background_text_color">#878c91</color>
+    <color name="car_item_num">#ff8b12</color>
+
+    <color name="text_color_ff8b12">#ff8b12</color>
+    <color name="text_color_464e56">#464e56</color>
+    <!--收藏界面 收藏狀態下顏色-->
+    <color name="text_color_fc8400">#fc8400</color>
+    <color name="card_view_shadow">#00000000</color>
+    <!--收藏toast-->
+    <color name="fav_toast">#00cd7a</color>
+    <color name="outside_gray">#66444444</color>
+    <color name="swipe_bg">#ffffff</color>
+    <color name="swipe_color1">#ff8b12</color>
+    <color name="button_stroke_disable">#d8dade</color>
+    <!--阴影-->
+    <color name="shadow_bar">#33000000</color>
+    <color name="price_selected">#ffff00</color>
+    <color name="dialog_shadow">#38000000</color>
+
+    <!-- Yahoo Internal SDK Mbox -->
+    <color name="mbox_nc_title_color">#3F3F3F</color>
+    <color name="mbox_nc_description_color">#3F3F3F</color>
+    <color name="mbox_nc_time_color">#B4B4B4</color>
+    <color name="mbox_nc_bg_acted">#FFFFFF</color>
+    <color name="mbox_nc_bg_seen">#FFFCEA</color>
+    <color name="mbox_nc_error_background">#FFF3F3F3</color>
+    <color name="mbox_nc_error_text_color">#9F9F9F</color>
+    <color name="mbox_nc_button_border_color">#1888FF</color>
+    <color name="mbox_nc_item_border_color">#dbdbdb</color>
+    <color name="mbox_nc_loading_color">#B4B4B4</color>
+    <color name="mbox_nc_toast_gradient_start">#30d3b6</color>
+    <color name="mbox_nc_toast_gradient_end">#00cd7a</color>
+    <color name="mbox_nc_tab_font_color">#FF8B12</color>
+    <color name="mbox_nc_tab_bg_color">#FFFFFF</color>
+    <color name="mbox_nc_tab_indicator_color">#FF8B12</color>
+    <color name="bg_gray_lucency">#89f1f1f5</color>
+    <color name="link_color">#1111E2</color>
+
 </resources>
+

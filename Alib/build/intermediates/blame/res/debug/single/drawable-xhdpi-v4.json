@@ -12,12 +12,12 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xhdpi\\navigationbar_bg.png"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\navigationbar_leftbtn_icon.png",
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xhdpi\\navigationbar_leftbtn_icon.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\zxing_error.png",

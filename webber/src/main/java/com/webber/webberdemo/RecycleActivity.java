@@ -35,7 +35,7 @@ public class RecycleActivity extends AppCompatActivity {
 
         //创建适配器及数据
         List<String> mData = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 50; i++) {
             mData.add("item" + i);
         }
         MyAdapter myAdapter = new MyAdapter(mData);
