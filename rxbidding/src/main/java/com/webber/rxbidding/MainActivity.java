@@ -17,6 +17,9 @@ import java.util.concurrent.TimeUnit;
 
 import rx.functions.Action1;
 
+/**
+ * RxBinding
+ */
 public class MainActivity extends AppCompatActivity {
 
     private Button button;
@@ -36,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
         //demo2();
         //demo3();
         demo4();
+        // RxBindding 小结
+        // 用来处理 * 防止连续去点击
+        // * 搜索栏间隔搜索
+        // * 控件关联
     }
 
     private void demo4() {

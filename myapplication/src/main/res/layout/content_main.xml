@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="?selectableItemBackgroundBorderless"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?selectableItemBackgroundBorderless">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,16 +18,18 @@
 
         <HorizontalScrollView
             android:id="@+id/hsv"
-            android:background="#ffffff"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
-                    android:text="test_alpha"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="test_alpha"/>
 
                 <TextView
                     android:id="@+id/all_id"
@@ -70,6 +72,11 @@
 
     </LinearLayout>
 
+    <EditText
+        android:layout_above="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
     <com.ashokvarma.bottomnavigation.BottomNavigationBar
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"

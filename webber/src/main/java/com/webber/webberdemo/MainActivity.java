@@ -1,6 +1,8 @@
 package com.webber.webberdemo;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,7 +22,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button recycleBt;
     @Bind(R.id.snack_bt)
     Button snackBt;
+    @Bind(R.id.bottom_elevation_6)
+    View bottom6;
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +59,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         forTest();
+
+        bottom6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     private void forTest() {

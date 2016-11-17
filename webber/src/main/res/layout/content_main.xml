@@ -79,6 +79,7 @@
         <TextView
             android:layout_width="200dp"
             android:layout_height="20dp"
+            android:background="@android:color/white"
             android:elevation="4dp"
             android:text="top Elevation 4dp"/>
 
@@ -103,7 +104,7 @@
                 android:layout_width="200dp"
                 android:layout_height="20dp"
                 android:background="@android:color/white"
-                android:text="bottom CardView 包裹"/>
+                android:text="bottom CardView 包裹4dp"/>
 
         </android.support.v7.widget.CardView>
 
@@ -115,6 +116,7 @@
             android:text="bottom elevation 4dp"/>
 
         <TextView
+            android:id="@+id/bottom_elevation_6"
             android:layout_width="200dp"
             android:layout_height="20dp"
             android:background="@android:color/white"

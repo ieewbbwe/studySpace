@@ -34,5 +34,12 @@ dependencies {
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.6@aar'
     /*6.0 及以上权限库*/
     compile 'com.yanzhenjie:permission:1.0.3'
+    /*RxJava*/
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    /*RxLife*/
+    compile 'com.trello:rxlifecycle:0.3.1'
+    compile 'com.trello:rxlifecycle-components:0.3.1'
 
 }

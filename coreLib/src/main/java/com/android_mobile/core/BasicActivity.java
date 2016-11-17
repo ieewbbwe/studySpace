@@ -22,7 +22,6 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.Selection;
 import android.text.Spannable;
@@ -64,6 +63,7 @@ import com.android_mobile.core.utiles.Lg;
 import com.android_mobile.core.utiles.StringUtils;
 import com.android_mobile.core.utiles.Utils;
 import com.android_mobile.core.utiles.ViewServer;
+import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -73,7 +73,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Stack;
 
-public abstract class BasicActivity extends AppCompatActivity
+public abstract class BasicActivity extends RxAppCompatActivity
         implements IBasicCoreMethod, IBasicAsyncTaskFinish {
 
     public final String TAG = this.getClass().getSimpleName();

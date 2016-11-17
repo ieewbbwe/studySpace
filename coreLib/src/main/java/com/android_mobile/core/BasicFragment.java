@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,12 +25,13 @@ import com.android_mobile.core.ui.listener.IMediaSoundRecordListener;
 import com.android_mobile.core.ui.listener.IMediaVideoListener;
 import com.android_mobile.core.utiles.BitmapUtils;
 import com.android_mobile.core.utiles.Lg;
+import com.trello.rxlifecycle.components.support.RxFragment;
 
 import java.util.List;
 import java.util.Stack;
 
 @SuppressLint("NewApi")
-public abstract class BasicFragment extends Fragment implements
+public abstract class BasicFragment extends RxFragment implements
         IBasicAsyncTaskFinish, IBasicCoreMethod {
     public View v;
     public BasicActivity activity;
@@ -227,7 +227,6 @@ public abstract class BasicFragment extends Fragment implements
         if (activity.fragmentBodyLayoutRes != -1)
             activity.pushFragment(activity.fragmentBodyLayoutRes, f);
     }
-
 
 
     public void setTitle(String title) {
@@ -456,7 +455,7 @@ public abstract class BasicFragment extends Fragment implements
     }
 
     public Bitmap readBitmap(int resId) {
-        return BitmapUtils.obtainBitmap(activity,resId);
+        return BitmapUtils.obtainBitmap(activity, resId);
     }
 
     @Override

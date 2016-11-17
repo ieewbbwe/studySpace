@@ -48,6 +48,18 @@ AndPermission.with(this)
     }
 ```
 
+### RxJava
+响应式库 https://github.com/ReactiveX/RxJava
+Copyright 2013 Netflix, Inc.
+Apache License, Version 2.0
+
+### RxLifecycle
+RxJava生命周期管理库 https://github.com/trello/RxLifecycle
+防止RxJava滥用造成的内存泄漏，在需要时同步解除订阅
+.compose(RxLifecycle.bindUntilEvent(lifecycle, ActivityEvent.DESTROY))
+Copyright (C) 2016 Trello
+Apache License, Version 2.0
+
 # 工具类介绍（欢迎补充）
 ### Utils 基础工具类
 1. 判断系统网络情况

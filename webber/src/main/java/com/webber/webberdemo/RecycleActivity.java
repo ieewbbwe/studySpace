@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,7 @@ public class RecycleActivity extends AppCompatActivity {
     }
 
     private void initRecycleView() {
-        RecyclerView mLoadMoreRv = (RecyclerView) findViewById(R.id.load_more_rv);
+        final RecyclerView mLoadMoreRv = (RecyclerView) findViewById(R.id.load_more_rv);
         //创建布局管理器 LinearLayoutManager为线性布局，支持横向、纵向。
         //               GridLayoutManager()为网格布局。
         //               StaggeredGridLayoutManager为瀑布流布局
@@ -46,7 +47,24 @@ public class RecycleActivity extends AppCompatActivity {
                 Toast.makeText(RecycleActivity.this, "点击了" + pos, Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        mLoadMoreRv.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                Log.d("webber", "scrollChange");
+            }
+        });
+
+        myAdapter.setOnRVItemClickListener(new OnRVItemClickListener() {
+            @Override
+            public void onRVItemClickListener(View itemView, int pos) {
+                mLoadMoreRv.smoothScrollToPosition(0);
+            }
+        });
     }
+
 
     //RecycleView 适配器，泛型可以传自己定义的ViewHolder
     private class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {

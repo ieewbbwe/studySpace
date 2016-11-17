@@ -35,11 +35,16 @@ import com.android_mobile.core.utiles.TimerUtils;
 import com.ashokvarma.bottomnavigation.BadgeItem;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import com.trello.rxlifecycle.ActivityEvent;
 import com.yanzhenjie.permission.PermissionNo;
 import com.yanzhenjie.permission.PermissionYes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import rx.Observable;
+import rx.functions.Action1;
 
 
 public class MainActivity extends BaseActivity {
@@ -59,6 +64,15 @@ public class MainActivity extends BaseActivity {
         BottomNavigationItem item = new BottomNavigationItem(R.mipmap.ic_launcher, "item1");
         item.setBadgeItem(badgeItem);
 
+        Observable.just("1", "2", "3")
+                .delay(2000, TimeUnit.MILLISECONDS)
+                .compose(this.<String>bindUntilEvent(ActivityEvent.PAUSE))
+                .subscribe(new Action1<String>() {
+                    @Override
+                    public void call(String s) {
+                        Lg.print("WEBBER", s);
+                    }
+                });
         navigationBar.setMode(BottomNavigationBar.MODE_FIXED)
                 .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE)
                 .addItem(item)
@@ -83,6 +97,7 @@ public class MainActivity extends BaseActivity {
                 Log.d("bottomBar", "onTabReselected" + position);
             }
         });
+
      /*   Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setLogo(R.mipmap.ic_launcher);
