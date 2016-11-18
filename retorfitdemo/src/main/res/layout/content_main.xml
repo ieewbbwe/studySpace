@@ -13,8 +13,17 @@
     tools:context="com.webber.retorfitdemo.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <Button
+        android:id="@+id/text_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="模拟点击"/>
+
+    <ImageView
+        android:id="@+id/test_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_below="@+id/text_bt"/>
+
+
 </RelativeLayout>

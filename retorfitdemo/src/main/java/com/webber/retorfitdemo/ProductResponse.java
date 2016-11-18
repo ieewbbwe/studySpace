@@ -1,5 +1,6 @@
 package com.webber.retorfitdemo;
 
+
 import java.util.ArrayList;
 
 /**
@@ -12,6 +13,12 @@ public class ProductResponse extends BaseProduct {
 
     public String message;
 
+    public class ProductImages  {
+        public ArrayList<Scheme> schemes;
+
+
+    }
+
     public enum SchemeType {
         THUMB,
         MEDIUM,
@@ -19,35 +26,22 @@ public class ProductResponse extends BaseProduct {
         ORIGINAL
     }
 
-    public class Scheme{
+    public class Scheme   {
         public String height;
         public String type;
         public String uri;
         public String width;
     }
 
-    public class MyProductImage {
+    public class MyProductImage   {
         public String height;
         public String uri;
         public String width;
     }
 
-    public class ProductSpec {
+    public class ProductSpec  {
         public String name;
-        public ArrayList<Value> values;
     }
 
-    public class Value {
-       /* public String id;
-        public String name;
-        public boolean isSelected = false;*/
-    }
-
-
-    public class ImagesBean{
-        private MyProductImage medium;
-        private MyProductImage original;
-        private MyProductImage thumb;
-    }
 
 }

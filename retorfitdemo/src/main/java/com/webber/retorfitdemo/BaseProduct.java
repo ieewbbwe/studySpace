@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by mxh on 2016/6/17.
  * 產品基類
  */
-public class BaseProduct{
+public class BaseProduct   {
 
     public String availableQuantity;                                        //可購買數量
     public String categoryId;                                               //分類ID
@@ -27,6 +27,7 @@ public class BaseProduct{
     public String stepPurchaseQuantity;
     public String title;                                                     //商品標題
     public String toDealOnQuantity;                                          //差多少人成團
+    public ArrayList<ProductResponse.ProductImages> images;                     //商品圖片
     public String[] paymentMethods;                                             //支持的支付方式
     public boolean isFreightNoMatch = false;
     public boolean isLiked;                                                      //該用戶是否收藏
@@ -49,5 +50,21 @@ public class BaseProduct{
     public String[] activityTexts;                                              //活動信息
     public String highlight;                                                    //買點
 
+    public int quantity; //商品購買數量
+    public String favorableInfo;//优惠信息
+    public String parentTitle;
+    public String parentId;
+    public String refId;
+    public String mername; //商鋪名
+    public long countDownTime;//倒計時時間 自用字段
+    public String ischecked;   //保存收藏狀態
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 
 }

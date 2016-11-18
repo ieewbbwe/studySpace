@@ -1,5 +1,8 @@
-package com.webber.retorfitdemo;
+package com.webber.retorfitdemo.net.api;
 
+import com.webber.retorfitdemo.BaseProduct;
+import com.webber.retorfitdemo.LikesItem;
+import com.webber.retorfitdemo.LikesResponse;
 
 import java.util.List;
 import java.util.Map;
@@ -8,6 +11,7 @@ import retrofit2.Response;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -16,12 +20,13 @@ import retrofit2.http.QueryMap;
 import rx.Observable;
 
 /**
- * Created by mxh on 2016/11/17.
+ * Created by mxh on 2016/11/18.
  * Describe：
  */
 
-public interface NetEngine {
+public interface ProductAPI {
 
+    @Headers({"X-YahooWSSID-Authorization:irUe0dfbWW7"})
     @GET("products/{id}")
     Observable<Response<BaseProduct>> getProductDetail(@Path("id") String pId, @Query("fields") String fields, @Query("id") String id);
 
@@ -35,7 +40,4 @@ public interface NetEngine {
     @Multipart
     @POST("likes")
     Observable<Response<Void>> postLikeItem(@Field("likes") List<LikesItem> item);
-
-
-
 }

@@ -160,12 +160,12 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable\\umeng_socialize_action_back.xml"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\umeng_socialize_oauth_check_on.png",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable\\umeng_socialize_oauth_check_on.png"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\umeng_socialize_title_tab_right_normal.png",
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable\\umeng_socialize_title_tab_right_normal.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\umeng_socialize_oauth_check_on.png",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable\\umeng_socialize_oauth_check_on.png"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\umeng_socialize_button_red.9.png",
@@ -248,12 +248,12 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable\\umeng_socialize_share_transparent_corner.xml"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\umeng_socialize_at_button.xml",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable\\umeng_socialize_at_button.xml"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\textcolor_selecter.xml",
         "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable\\textcolor_selecter.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\umeng_socialize_at_button.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\bundles\\debug\\res\\drawable\\umeng_socialize_at_button.xml"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\umeng_socialize_bind_bg.9.png",
