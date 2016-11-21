@@ -16,13 +16,15 @@ public class BuyerInfoModel extends ServiceResponse {
     public String deliveryDistrict;
     public String deliveryAddress1;
     public String deliveryAddress2;
+    public int imgSrc;
 
     public boolean isSaveContactInfo;//保存聯絡資料
     public boolean isLikeToPerson;//與個人資料一致
 
-    public BuyerInfoModel(String buyerFirstName, String buyerLastName) {
+    public BuyerInfoModel(String buyerFirstName, String buyerLastName, int url) {
         this.buyerFirstName = buyerFirstName;
         this.buyerLastName = buyerLastName;
+        this.imgSrc = url;
     }
 
     @Override

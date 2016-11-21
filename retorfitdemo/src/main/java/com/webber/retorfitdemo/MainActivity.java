@@ -76,9 +76,16 @@ public class MainActivity extends AppCompatActivity {
                             productSubScription.unsubscribe();
                         }
                         Log.d("webber", "点击了" + Thread.currentThread().getName());
-                        demo3();
+                        demo4();
                     }
                 });
+
+    }
+
+    /**
+     * 加载一批图片
+     */
+    private void demo4() {
 
     }
 

@@ -1,7 +1,6 @@
 package com.android_mobile.core.ui.comp.banner;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,25 +8,16 @@ import android.widget.ImageView;
 
 import com.android_mobile.core.R;
 import com.android_mobile.core.utiles.CollectionUtils;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LoopPagerAdapter<T> extends BasicPageAdapter<T> {
     private static final String TAG = "LoopPagerAdapter";
-    private DisplayImageOptions options;//设置图片参数
     private OnImageClickListener mListener;
 
     public LoopPagerAdapter(Context context, List<T> list) {
         super(context, list);
-        options = new DisplayImageOptions.Builder()
-                .showImageOnFail(R.mipmap.img_item_default)
-                .imageScaleType(ImageScaleType.EXACTLY)
-                .resetViewBeforeLoading(true).cacheOnDisc(true)
-                .bitmapConfig(Bitmap.Config.RGB_565)
-                .considerExifParams(true).build();
     }
 
     @Override

@@ -464,4 +464,21 @@
     <color name="home_bg">#30549e</color>
 
     <color name="list_comp_swipe_color">#ff8b12</color>
+
+    <array name="g_default_loading_fg">
+        <item>@color/cyan_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/blue_500</item>
+        <item>@color/orange_500</item>
+        <item>@color/pink_500</item>
+    </array>
+
+    <color name="cyan_500">#00bcd4</color>
+    <color name="purple_500">#9c27b0</color>
+    <color name="blue_500">#5677fc</color>
+    <color name="orange_500">#ff9800</color>
+    <color name="pink_500">#e91e63</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="g_default_loading_bg">@color/grey_300</color>
+
 </resources>

@@ -5,6 +5,9 @@
     <application
         android:allowBackup="true">
 
+        <meta-data
+            android:name="com.android_mobile.core.helper.image.GlideModelConfig"
+            android:value="GlideModule"/>
     </application>
 
 </manifest>

@@ -5,17 +5,19 @@ import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -26,6 +28,8 @@ import com.android_mobile.core.adapter.OnItemChildLongClickListener;
 import com.android_mobile.core.adapter.OnRVItemClickListener;
 import com.android_mobile.core.base.BaseActivity;
 import com.android_mobile.core.enums.ModalDirection;
+import com.android_mobile.core.helper.image.ImageLoadFactory;
+import com.android_mobile.core.ui.EmptyLayout;
 import com.android_mobile.core.ui.comp.pullListView.ILoadMoreViewListener;
 import com.android_mobile.core.ui.comp.pullListView.ListViewComponent;
 import com.android_mobile.core.ui.listener.IMediaPicturesListener;
@@ -35,16 +39,14 @@ import com.android_mobile.core.utiles.TimerUtils;
 import com.ashokvarma.bottomnavigation.BadgeItem;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-import com.trello.rxlifecycle.ActivityEvent;
+import com.bumptech.glide.Glide;
 import com.yanzhenjie.permission.PermissionNo;
 import com.yanzhenjie.permission.PermissionYes;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-import rx.Observable;
-import rx.functions.Action1;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 
 public class MainActivity extends BaseActivity {
@@ -53,35 +55,75 @@ public class MainActivity extends BaseActivity {
     private NormalRecycleAdapter normalRecycleAdapter;
     private List<BuyerInfoModel> buyerInfoModels;
     private ImageView imageView;
+    private BottomNavigationBar bottomBar;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.drawable_main);
         navigationBar.hidden();
-        BottomNavigationBar navigationBar = (BottomNavigationBar) findViewById(R.id.bottom_bar);
+        initBottomView();
+        initSnackBar();
+        initSlidMenu();
+
+    }
+
+    private void initSlidMenu() {
+    /*    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();*/
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_camera:
+                    case R.id.nav_gallery:
+                    case R.id.nav_manage:
+                    case R.id.nav_send:
+                    case R.id.nav_share:
+                    case R.id.nav_view:
+                    case R.id.nav_slideshow:
+                        Snackbar.make(getWindow().getDecorView(), item.getTitle(), Snackbar.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
+    }
+
+    private void initSnackBar() {
+      /*  toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+    }
+
+    private void initBottomView() {
+        bottomBar = (BottomNavigationBar) findViewById(R.id.bottom_bar);
         BadgeItem badgeItem = new BadgeItem().setBackgroundColor(Color.RED).setText("99").setGravity(Gravity.RIGHT);
         BottomNavigationItem item = new BottomNavigationItem(R.mipmap.ic_launcher, "item1");
         item.setBadgeItem(badgeItem);
 
-        Observable.just("1", "2", "3")
-                .delay(2000, TimeUnit.MILLISECONDS)
-                .compose(this.<String>bindUntilEvent(ActivityEvent.PAUSE))
-                .subscribe(new Action1<String>() {
-                    @Override
-                    public void call(String s) {
-                        Lg.print("WEBBER", s);
-                    }
-                });
-        navigationBar.setMode(BottomNavigationBar.MODE_FIXED)
+        bottomBar.setMode(BottomNavigationBar.MODE_FIXED)
                 .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE)
-                .addItem(item)
                 .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_fav, "最新动态"))
                 .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_recent, "我的最爱"))
                 .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_recent, "我的最爱"))
                 .addItem(new BottomNavigationItem(R.drawable.home_radio_bt_recent, "我的最爱"))
                 .initialise();
-        navigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
+        bottomBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position) {
                 Log.d("bottomBar", "onTabSelected" + position);
@@ -98,23 +140,6 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-     /*   Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setLogo(R.mipmap.ic_launcher);
-        if (Build.VERSION.SDK_INT > 21) {
-            toolbar.setOutlineProvider(ViewOutlineProvider.BOUNDS);
-        }*/
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
     }
 
     @Override
@@ -123,7 +148,7 @@ public class MainActivity extends BaseActivity {
         loadComponent = new ListViewComponent(this, findViewById(R.id.home_list_fl));
         normalRecycleAdapter = new NormalRecycleAdapter(loadComponent.getRecycleView());
         loadComponent.setAdapter(normalRecycleAdapter);
-        loadComponent.setLoadMoreEnable(false);
+        //loadComponent.setLoadMoreEnable(false);
 
         imageView = (ImageView) findViewById(R.id.chose_pic_iv);
         findViewById(R.id.chose_pic_bt).setOnClickListener(new View.OnClickListener() {
@@ -139,7 +164,11 @@ public class MainActivity extends BaseActivity {
                 Lg.print("webber", "img:" + imagePath);
                 Lg.print("webber", "degree:" + BitmapUtils.obtainBitmapDegree(imagePath));
                 //UniversalImageLoad.getInstance().displayImage(imagePath, imageView);
-                imageView.setBackground(new BitmapDrawable(BitmapUtils.processBitmapBlur(BitmapUtils.obtainBitmap(imagePath))));
+                ImageLoadFactory.getInstance().getImageLoadHandler().displayImage(MainActivity.this, imagePath, imageView);
+                Glide.with(MainActivity.this).load(imagePath).crossFade()
+                        .bitmapTransform(new CropCircleTransformation(MainActivity.this))
+                        .into(imageView);
+                //imageView.setBackground(new BitmapDrawable(BitmapUtils.processBitmapBlur(BitmapUtils.obtainBitmap(imagePath))));
             }
         });
 
@@ -248,9 +277,11 @@ public class MainActivity extends BaseActivity {
         loadComponent.setListener(new ILoadMoreViewListener() {
             @Override
             public void startRefresh() {
+                mErrorLl.setErrorType(EmptyLayout.STATE_NETWORK_LOADING);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        mErrorLl.setErrorType(EmptyLayout.STATE_HIDE_LAYOUT);
                         loadComponent.endRefresh();
                         normalRecycleAdapter.clear();
                         normalRecycleAdapter.addNewData(buyerInfoModels);
@@ -262,6 +293,7 @@ public class MainActivity extends BaseActivity {
             public void startLoadMore() {
                 if (normalRecycleAdapter.getItemCount() >= 20) {
                     Snackbar.make(loadComponent.getRecycleView(), "没有更多了", Snackbar.LENGTH_SHORT).show();
+                    mErrorLl.setErrorType(EmptyLayout.STATE_NETWORK_ERROR);
                     loadComponent.setLoadMoreEnable(false);
                     return;
                 }
@@ -278,6 +310,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        mErrorLl.setErrorType(EmptyLayout.STATE_NETWORK_LOADING);
         loadComponent.doRefresh();
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -289,9 +322,13 @@ public class MainActivity extends BaseActivity {
 
         buyerInfoModels = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            buyerInfoModels.add(new BuyerInfoModel("buyerFirstName" + i, "buyerLastName" + i));
+            buyerInfoModels.add(new BuyerInfoModel("buyerFirstName" + i, "buyerLastName" + i, arr[i]));
         }
     }
 
-
+    Integer[] arr = {R.mipmap.bga_refresh_loading01,
+            R.mipmap.ic_ctn_pgdot_orange,
+            R.mipmap.search_icon,
+            R.mipmap.ic_nav_new_normal,
+            R.mipmap.navigation_bar_bg};
 }

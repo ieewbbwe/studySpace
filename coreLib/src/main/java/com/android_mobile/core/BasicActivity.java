@@ -33,7 +33,6 @@ import android.view.ViewGroup;
 import android.view.ViewStub;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -51,6 +50,7 @@ import com.android_mobile.core.net.IBasicAsyncTaskFinish;
 import com.android_mobile.core.net.ThreadPool;
 import com.android_mobile.core.net.http.Service;
 import com.android_mobile.core.net.http.ServiceRequest;
+import com.android_mobile.core.ui.EmptyLayout;
 import com.android_mobile.core.ui.NavigationBar;
 import com.android_mobile.core.ui.listener.IMediaImageListener;
 import com.android_mobile.core.ui.listener.IMediaPicturesListener;
@@ -96,21 +96,17 @@ public abstract class BasicActivity extends RxAppCompatActivity
     private ViewStub bodyStub;
     private View bodyView;
     private RelativeLayout rootView;
-    private RelativeLayout loadLayout;
-    private TextView failedText;
-    private ImageView failedImage;
-    private Button failedButton;
-    private LinearLayout failedLayot;
-    public static int skinColor;
+    private Toast toast;
+    private ProgressDialog progressDialog;
+    protected EmptyLayout mErrorLl;
 
     //变量
     private ArrayList<BasicAsyncTask> tasks = new ArrayList<BasicAsyncTask>();
+    public static int skinColor;
     private Stack<Integer> helpImgs = new Stack<Integer>();
     public Stack<Integer> helpFragmentImgs = new Stack<Integer>();
     Bitmap _tmpBtmp = null;
     public static String backActivityTitle = ""; //跳船activity 前保存当前activity 的title
-    private Toast toast;
-    private ProgressDialog progressDialog;
     public float SCREEN_WIDTH;
     public float SCREEN_HEIGHT;
     public int STATUS_BAR_HEIGHT;
@@ -144,6 +140,8 @@ public abstract class BasicActivity extends RxAppCompatActivity
         navigationBar = new NavigationBar(this,
                 (ViewStub) findViewById(R.id.title_stub));
         progressBar = (LinearLayout) findViewById(R.id.frame_progress);
+        mErrorLl = (EmptyLayout) findViewById(R.id.error_layout);
+
         progressBarLabel = (TextView) findViewById(R.id.frame_progress_label);
         modalViewGroup = (RelativeLayout) findViewById(R.id.frame_modal_view_root);
         helpView = (RelativeLayout) findViewById(R.id.frame_help_relativelayout);
@@ -176,11 +174,7 @@ public abstract class BasicActivity extends RxAppCompatActivity
         bodyView = bodyStub.inflate();
         rootView = (RelativeLayout) findViewById(R.id.main_root);
         //网络数据加载的时候出现的页面
-        loadLayout = (RelativeLayout) findViewById(R.id.http_data_load_layout);
-        failedText = (TextView) findViewById(R.id.http_data_load_text);
-        failedImage = (ImageView) findViewById(R.id.http_load_failed_image);
-        failedButton = (Button) findViewById(R.id.http_load_failed_button);
-        failedLayot = (LinearLayout) findViewById(R.id.http_load_failed_layout);
+
         // 换肤功能
         skinColor = CacheUtil.getInteger("SKIN_COLOR");
         if (skinColor != -1) {

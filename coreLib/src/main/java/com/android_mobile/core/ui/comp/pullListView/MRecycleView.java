@@ -48,6 +48,9 @@ public class MRecycleView extends RecyclerView {
         super.swapAdapter(mAutoLoadAdapter, true);
     }
 
+    /**
+     * 头尾的Adapter
+     */
     public class AutoLoadAdapter extends RecyclerView.Adapter {
 
         private Adapter mInternalAdapter;

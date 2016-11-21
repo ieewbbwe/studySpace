@@ -9,10 +9,11 @@ List刷新库 https://github.com/bingoogolapple/BGARefreshLayout-Android
 Copyright 2015 bingoogolapple
 Apache License, Version 2.0
 
-### UniversalImageLoader
-图片加载库 https://github.com/dodola/Android-Universal-Image-Loader
+### Glide
+图片加载库 https://github.com/bumptech/glide
 Copyright 2011-2013 Sergey Tarasevich
-Apache License, Version 2.0
+Author Sam Judd - @sjudd on GitHub, @samajudd on Twitter
+License BSD, part MIT and Apache 2.0. See the LICENSE file for details.
 
 ### AndPermission
 6.0以上的权限申请库 https://github.com/yanzhenjie/AndPermission

@@ -55,7 +55,6 @@ public abstract class BasicFragment extends RxFragment implements
         activity = (BasicActivity) getActivity();
         application = (BasicApplication) activity.getApplication();
         navigationBar = activity.navigationBar;
-//		Lg.print(name);
         activity.updateSkin(BasicActivity.skinColor);
         init();
         return v;

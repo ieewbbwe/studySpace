@@ -236,4 +236,5 @@ public class ListViewComponent extends BaseComponent implements BGARefreshLayout
         }
         return mIsLoadMoreEnable;
     }
+
 }

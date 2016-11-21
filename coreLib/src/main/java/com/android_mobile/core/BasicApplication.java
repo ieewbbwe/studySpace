@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 
-import com.android_mobile.core.helper.image.UniversalImageLoad;
+import com.android_mobile.core.helper.image.ImageLoadFactory;
 import com.android_mobile.core.net.ThreadPool;
 import com.android_mobile.core.utiles.CacheUtil;
 
@@ -22,7 +22,7 @@ public class BasicApplication extends Application {
         context = getApplicationContext();
         CacheUtil.context = context;
         helpFlag = CacheUtil.getInteger("app_help_view");
-        UniversalImageLoad.init(context);
+        ImageLoadFactory.init(context);
     }
 
     public static void closeApp() {
