@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android_mobile.core.R;
-import com.android_mobile.core.ui.loading.Loading;
+import com.android_mobile.core.ui.comp.loading.Loading;
 import com.android_mobile.core.utiles.Utils;
 
 /**

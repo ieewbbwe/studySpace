@@ -1,4 +1,4 @@
-package com.android_mobile.core.ui.loading;
+package com.android_mobile.core.ui.comp.loading;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

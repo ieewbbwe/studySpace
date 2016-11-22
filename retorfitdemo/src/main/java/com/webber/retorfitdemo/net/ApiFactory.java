@@ -23,5 +23,4 @@ public enum ApiFactory {
         return productAPI;
     }
 
-
 }

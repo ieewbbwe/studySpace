@@ -30,7 +30,7 @@
                     android:background="@mipmap/ic_loading_error"
                     android:visibility="gone"/>
 
-                <com.android_mobile.core.ui.loading.Loading
+                <com.android_mobile.core.ui.comp.loading.Loading
                     android:id="@+id/animProgress"
                     android:layout_width="26dip"
                     android:layout_height="26dip"

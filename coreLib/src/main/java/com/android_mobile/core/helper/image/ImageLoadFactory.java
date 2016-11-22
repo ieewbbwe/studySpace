@@ -41,7 +41,6 @@ public class ImageLoadFactory {
      */
     public ImageLoadFactory(Context context) {
         this.mContext = context;
-        //mImageLoadHandler = new PicassoImageHandler(mContext);
         //mImageLoadHandler = new UniversalImageLoadHandler(mContext);
         mImageLoadHandler = new GlideImageLoadHandler(mContext);
     }

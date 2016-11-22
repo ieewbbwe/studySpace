@@ -12,10 +12,16 @@ import com.google.gson.Gson;
 import com.jakewharton.rxbinding.view.RxView;
 import com.webber.retorfitdemo.image.GlideLoader;
 import com.webber.retorfitdemo.net.ApiFactory;
+import com.webber.retorfitdemo.net.OnProgressRequestCallback;
+import com.webber.retorfitdemo.net.request.BaseRequest;
+import com.webber.retorfitdemo.net.request.UserRequest;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Interceptor;
@@ -37,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Retrofit retrofit;
     private String baseUrl = "https://hk-stage.shop.yahoo.com/api/m/v1/";
-    public static final String wssid = "irUe0dfbWW7";
-    public static final String cookie = "Y=v=1&n=588s97encs6d9&l=a26x2n6jf6x1x02oslxkjawuib05guai8ispus1a/o&p=m2r0000012000000&iz=&r=10d&lg=zh-Hant-HK&intl=hk&np=1; path=/; domain=.yahoo.com;T=z=z.VLYBzErLYB7/DZnymIISnNk40NgY2N041NjU1TjU0NDIzNE&a=QAE&sk=DAAZJFpt0XZe/2&ks=EAAFao.AeLuut9VWOS8AkcbYQ--~F&kt=EAAvXtbNIMuKPtNDMyiyT_Auw--~F&d=c2wBTVRrek1RRXhNRGt5TVRJeU9USXpNelUwTXprd01Uay0BYQFRQUUBZwFBSVdaQkRSR1VPNFdQQUpSVFhJUjdCUEwzTQFzY2lkAWh4S0RLVDhmenBHcU0zRlRfSjJDRmtKLnZCdy0BYWMBQUFlVWhMV2RpUDlBckp3LQFhbAFpZXdlYmJlcgFzYwF5aGtkZWFsc2J1eWVyAXp6AXouVkxZQmdXQQFjcwFzZHBzLXIsc2RwcC13LHNkcHMtdyxhdWN0LXIsYXVjdC13LG1icgF0aXABY252YWJD; path=/; domain=.yahoo.com; HttpOnly";
+    public static final String wssid = "uRuv5V69tJ4";
+    public static final String cookie = "Y=v=1&n=588s97encs6d9&l=a26x2n6jf6x1x02oslxkjawuib05guai8ispus1a/o&p=m2r0000012000000&iz=&r=10d&lg=zh-Hant-HK&intl=hk&np=1; path=/; domain=.yahoo.com;T=z=bkoMYBbq9MYByl09jMHKU2iNk40NgY2N041NjU1TjU0NDIzNE&a=QAE&sk=DAAUWsQXlxsO7V&ks=EAAeXdR4e0SFBDKcVDhM.Nd9g--~F&kt=EAA9tbgq1ATxLbhm2zsuRAy.A--~F&d=c2wBTVRrek1RRXhNRGt5TVRJeU9USXpNelUwTXprd01Uay0BYQFRQUUBZwFBSVdaQkRSR1VPNFdQQUpSVFhJUjdCUEwzTQFzY2lkAUxxLl9nYWFJTzE5algwejlHUWZ4a3BNd3Fody0BYWMBQUVQSnc5LjBHcWxoTVJnLQFhbAFpZXdlYmJlcgFzYwF5aGtkZWFsc2J1eWVyAXp6AWJrb01ZQmdXQQFjcwFzZHBzLXIsc2RwcC13LHNkcHMtdyxhdWN0LXIsYXVjdC13LG1icgF0aXABY252YWJD; path=/; domain=.yahoo.com; HttpOnly";
     private Button mTestBt;
     private Retrofit defaultRetrofot;
     private ImageView mIv;
@@ -66,16 +72,16 @@ public class MainActivity extends AppCompatActivity {
         //demo3();
 
         RxView.clicks(mTestBt)
-                //.debounce(1000, TimeUnit.MILLISECONDS)
+                .debounce(1000, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Action1<Void>() {
                     @Override
                     public void call(Void aVoid) {
-                        if (productSubScription != null && productSubScription.isUnsubscribed()) {
+                        /*if (productSubScription != null && productSubScription.isUnsubscribed()) {
                             Log.d("respon", "取消订阅");
                             productSubScription.unsubscribe();
                         }
-                        Log.d("webber", "点击了" + Thread.currentThread().getName());
+                        Log.d("webber", "点击了" + Thread.currentThread().getName());*/
                         demo4();
                     }
                 });
@@ -86,7 +92,72 @@ public class MainActivity extends AppCompatActivity {
      * 加载一批图片
      */
     private void demo4() {
+        UserRequest userRequest = new UserRequest("195303", "+LOCATIONS,+VARIANTS,+SHIPPINGINFO");
 
+        ApiFactory.getProductAPI()
+                .getProductDetail("195303", getRequestMap(userRequest))
+                .subscribeOn(Schedulers.io())//IO线程进行网络访问
+                .observeOn(AndroidSchedulers.mainThread())//主线程接收消息
+                .subscribe(new OnProgressRequestCallback<Response<BaseProduct>>(getApplicationContext()) {
+                    @Override
+                    public void onResponse(Response<BaseProduct> response) {
+                        Log.d("network:", "response:" + new Gson().toJson(response));
+                        Snackbar.make(getWindow().getDecorView(), response.body().title, Snackbar.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private Map<String, String> getRequestMap(BaseRequest request) {
+        return getParams(request);
+    }
+
+    protected Map<String, String> getParams(BaseRequest req) {
+        Map<String, String> params = new HashMap<>();
+        Class<? extends BaseRequest> c = req.getClass();
+        Class supreClazz = c.getSuperclass();
+        Field[] fields = c.getDeclaredFields();
+        Field[] parentFields = supreClazz.getDeclaredFields();
+
+        Field[] result = new Field[fields.length + parentFields.length];
+        System.arraycopy(fields, 0, result, 0, fields.length);
+        System.arraycopy(parentFields, 0, result, fields.length,
+                parentFields.length);
+
+        for (Field f : result) {
+            f.setAccessible(true);
+            try {
+                String s = null;
+                if (f.get(req) instanceof Integer) {
+                    s = String.valueOf((Integer) f.get(req));
+                }
+                if (f.get(req) instanceof String) {
+                    s = (String) f.get(req);
+                }
+                if (f.get(req) instanceof Double) {
+                    s = String.valueOf((Double) f.get(req));
+                }
+                if (f.get(req) instanceof Float) {
+                    s = String.valueOf((Float) f.get(req));
+                }
+                if (f.get(req) instanceof Boolean) {
+                    s = String.valueOf((Boolean) f.get(req));
+                }
+                if (f.get(req) instanceof Long) {
+                    s = String.valueOf((Long) f.get(req));
+                }
+                if (s != null) {
+                    params.put(f.getName(), s);
+                }
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        Log.d("network", "params:" + new Gson().toJson(params));
+        return params;
     }
 
     private void demo3() {

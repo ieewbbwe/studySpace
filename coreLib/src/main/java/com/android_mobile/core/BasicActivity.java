@@ -16,6 +16,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -742,7 +743,7 @@ public abstract class BasicActivity extends RxAppCompatActivity
         modalViewGroupBg.setVisibility(View.VISIBLE);
         modalViewGroup.setVisibility(View.VISIBLE);
         ValueAnimator colorAnim = ObjectAnimator.ofInt(modalViewGroupBg,
-                "backgroundColor", /* Red */0x00000000, /* Blue */0x55000000);
+                "backgroundColor", /* Red */0x00000000, /* Blue */0x65000000);
         colorAnim.setDuration(modalAnimTime);
         colorAnim.setEvaluator(new ArgbEvaluator());
         colorAnim.start();
@@ -771,11 +772,19 @@ public abstract class BasicActivity extends RxAppCompatActivity
             imagebtn_params.height = widthDip;
             imagebtn_params.width = (int) SCREEN_WIDTH;
             modalViewGroup.setLayoutParams(imagebtn_params);
-            ObjectAnimator
-                    .ofFloat(modalViewGroup, "y",
-                            SCREEN_HEIGHT - STATUS_BAR_HEIGHT,
-                            SCREEN_HEIGHT - STATUS_BAR_HEIGHT - widthDip)
-                    .setDuration(modalAnimTime).start();
+            if (isInScreen()) {
+                ObjectAnimator
+                        .ofFloat(modalViewGroup, "y",
+                                SCREEN_HEIGHT,
+                                SCREEN_HEIGHT - widthDip)
+                        .setDuration(modalAnimTime).start();
+            } else {
+                ObjectAnimator
+                        .ofFloat(modalViewGroup, "y",
+                                SCREEN_HEIGHT - STATUS_BAR_HEIGHT,
+                                SCREEN_HEIGHT - STATUS_BAR_HEIGHT - widthDip)
+                        .setDuration(modalAnimTime).start();
+            }
         } else if (ModalDirection.TOP == d) {
             // Lg.print("modal  top");
             imagebtn_params.height = widthDip;
@@ -784,6 +793,11 @@ public abstract class BasicActivity extends RxAppCompatActivity
             ObjectAnimator.ofFloat(modalViewGroup, "y", -widthDip, STATUS_BAR_HEIGHT * 2)
                     .setDuration(modalAnimTime).start();
         }
+    }
+
+    //判断是否处于沉浸式状态
+    private boolean isInScreen() {
+        return Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT;
     }
 
     @Override
@@ -817,15 +831,23 @@ public abstract class BasicActivity extends RxAppCompatActivity
             ObjectAnimator.ofFloat(modalViewGroup, "y", 0, -widthDip)
                     .setDuration(modalAnimTime).start();
         } else if (direction == ModalDirection.BOTTOM) {
-            ObjectAnimator
-                    .ofFloat(modalViewGroup, "y",
-                            SCREEN_HEIGHT - widthDip - STATUS_BAR_HEIGHT,
-                            SCREEN_HEIGHT - STATUS_BAR_HEIGHT)
-                    .setDuration(modalAnimTime).start();
+            if (isInScreen()) {
+                ObjectAnimator
+                        .ofFloat(modalViewGroup, "y",
+                                SCREEN_HEIGHT - widthDip,
+                                SCREEN_HEIGHT)
+                        .setDuration(modalAnimTime).start();
+            } else {
+                ObjectAnimator
+                        .ofFloat(modalViewGroup, "y",
+                                SCREEN_HEIGHT - widthDip - STATUS_BAR_HEIGHT,
+                                SCREEN_HEIGHT - STATUS_BAR_HEIGHT)
+                        .setDuration(modalAnimTime).start();
+            }
         }
         ValueAnimator colorAnim = ObjectAnimator.ofInt(modalViewGroupBg,
                 "backgroundColor", /* Red */
-                0x55000000, /* Blue */0x00000000);
+                0x65000000, /* Blue */0x00000000);
         colorAnim.setDuration(modalAnimTime);
         colorAnim.setEvaluator(new ArgbEvaluator());
         colorAnim.addListener(new AnimatorListenerAdapter() {

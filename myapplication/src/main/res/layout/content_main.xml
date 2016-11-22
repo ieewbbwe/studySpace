@@ -17,7 +17,7 @@
         tools:context="com.webber.myapplication.MainActivity"
         tools:showIn="@layout/activity_main">
 
-        <HorizontalScrollView
+      <!--  <HorizontalScrollView
             android:id="@+id/hsv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                     android:text="全部"/>
             </FrameLayout>
 
-        </HorizontalScrollView>
+        </HorizontalScrollView>-->
 
         <Button
             android:id="@+id/chose_pic_bt"

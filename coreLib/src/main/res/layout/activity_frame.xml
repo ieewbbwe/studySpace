@@ -1,9 +1,15 @@
-<RelativeLayout android:id="@+id/main_root"
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#00000000"
-                android:gravity="center">
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    tools:context="com.android_mobile.core.BasicActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,11 +17,19 @@
         android:background="@null"
         android:orientation="vertical">
 
-        <!-- 标题栏 -->
-        <ViewStub
-            android:id="@+id/title_stub"
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/navigationbar_height"/>
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <!-- 标题栏 -->
+            <ViewStub
+                android:id="@+id/title_stub"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navigationbar_height"/>
+
+        </android.support.design.widget.AppBarLayout>
+
         <!-- 主体内容 -->
         <FrameLayout
             android:layout_width="match_parent"
@@ -76,7 +90,6 @@
         android:id="@+id/frame_modal_view_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/navigationbar_height"
         android:background="#666"
         android:clickable="true"
         android:visibility="gone">

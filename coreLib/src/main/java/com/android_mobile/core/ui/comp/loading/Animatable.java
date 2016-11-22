@@ -1,4 +1,4 @@
-package com.android_mobile.core.ui.loading;
+package com.android_mobile.core.ui.comp.loading;
 
 /**
  * Interface that drawables supporting animations should implement.

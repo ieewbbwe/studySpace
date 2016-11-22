@@ -31,7 +31,7 @@ public interface ProductAPI {
     Observable<Response<BaseProduct>> getProductDetail(@Path("id") String pId, @Query("fields") String fields, @Query("id") String id);
 
     @GET("products/{id}")
-    Observable<Response<BaseProduct>> getProductDetail(@QueryMap Map<String, String> stringMap);
+    Observable<Response<BaseProduct>> getProductDetail(@Path("id") String pId, @QueryMap Map<String, String> stringMap);
 
     //@Headers({"Content-Type: application/json", "Accept: application/json"})//需要添加头
     @POST("likes")

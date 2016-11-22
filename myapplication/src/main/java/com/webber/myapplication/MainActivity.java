@@ -62,11 +62,11 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawable_main);
+        //setTitle("demo1");
         navigationBar.hidden();
         initBottomView();
         initSnackBar();
         initSlidMenu();
-
     }
 
     private void initSlidMenu() {
@@ -293,7 +293,7 @@ public class MainActivity extends BaseActivity {
             public void startLoadMore() {
                 if (normalRecycleAdapter.getItemCount() >= 20) {
                     Snackbar.make(loadComponent.getRecycleView(), "没有更多了", Snackbar.LENGTH_SHORT).show();
-                    mErrorLl.setErrorType(EmptyLayout.STATE_NETWORK_ERROR);
+                    mErrorLl.setErrorType(EmptyLayout.STATE_NODATA_ENABLE_CLICK);
                     loadComponent.setLoadMoreEnable(false);
                     return;
                 }
@@ -312,13 +312,13 @@ public class MainActivity extends BaseActivity {
     protected void initData() {
         mErrorLl.setErrorType(EmptyLayout.STATE_NETWORK_LOADING);
         loadComponent.doRefresh();
-        new Handler().postDelayed(new Runnable() {
+        /*new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 findViewById(R.id.hsv).setAlpha(0.89f);
 
             }
-        }, 1000);
+        }, 1000);*/
 
         buyerInfoModels = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
