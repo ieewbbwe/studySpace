@@ -2,12 +2,9 @@ package com.webber.retorfitdemo.net;
 
 /**
  * Created by mxh on 2016/11/18.
- * Describe：
+ * Describe：网络请求常量类
  */
-
 public interface ApiConstants {
-
-    String BASE_URL = "https://hk-stage.shop.yahoo.com/api/m/v1/";
 
     /**
      * 无网络连接
@@ -33,5 +30,7 @@ public interface ApiConstants {
      * 自定义错误
      */
     int ERROR_OTHER = 10;
+
+    String BASE_URL = "https://hk-stage.shop.yahoo.com/api/m/v1/";
 
 }

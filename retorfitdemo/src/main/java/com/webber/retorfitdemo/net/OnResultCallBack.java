@@ -34,7 +34,6 @@ public abstract class OnResultCallBack<T extends Response> extends Subscriber<T>
 
     @Override
     public void onStart() {
-        Log.d("network", "onStart" + Thread.currentThread().getName());
         super.onStart();
         if (!isNetworkAvailable(mContext)) {
             onFailed(ApiConstants.ERROR_NO_INTERNET, mContext.getString(R.string.network_unavailable));
@@ -45,7 +44,6 @@ public abstract class OnResultCallBack<T extends Response> extends Subscriber<T>
 
     @Override
     public void onCompleted() {
-        Log.d("network", "onCompleted" + Thread.currentThread().getName());
 
     }
 
@@ -57,8 +55,6 @@ public abstract class OnResultCallBack<T extends Response> extends Subscriber<T>
 
     @Override
     public void onNext(T response) {
-        Log.d("network", "onNext" + Thread.currentThread().getName());
-
         if (response.isSuccessful()) {
             Log.d("network", "response:" + new Gson().toJson(response));
             onResponse(response);
@@ -77,12 +73,12 @@ public abstract class OnResultCallBack<T extends Response> extends Subscriber<T>
         if (cm == null) {
             return false;
         }
-        NetworkInfo[] netinfo = cm.getAllNetworkInfo();
-        if (netinfo == null) {
+        NetworkInfo[] netInfo = cm.getAllNetworkInfo();
+        if (netInfo == null) {
             return false;
         }
-        for (NetworkInfo aNetinfo : netinfo) {
-            if (aNetinfo.isConnected()) {
+        for (NetworkInfo aNetInfo : netInfo) {
+            if (aNetInfo.isConnected()) {
                 return true;
             }
         }

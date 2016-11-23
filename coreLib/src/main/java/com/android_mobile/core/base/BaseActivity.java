@@ -3,25 +3,17 @@ package com.android_mobile.core.base;
 import android.animation.ObjectAnimator;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
-import android.media.ExifInterface;
 import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.android_mobile.core.BasicActivity;
-import com.android_mobile.core.utiles.Lg;
-
-import java.io.ByteArrayOutputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 public abstract class BaseActivity extends BasicActivity {
 
@@ -91,12 +83,6 @@ public abstract class BaseActivity extends BasicActivity {
 		paint1.setAntiAlias(true);
 		canvas.drawCircle(sbmp.getWidth() / 2, sbmp.getHeight() / 2,
 				sbmp.getWidth() / 2 - 1, paint1);
-		// if (sbmp != null)
-		// {
-		// sbmp.recycle();
-		// sbmp = null;
-		// }
 		return output;
 	}
-
 }

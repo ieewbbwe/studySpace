@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">猿人头条</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_bottom_new">精选</string>
+    <string name="label_bottom_good">干货</string>
+    <string name="label_bottom_min">设置</string>
+    <string name="label_bottom_video">视屏</string>
+</resources>

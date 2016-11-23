@@ -23,7 +23,6 @@ public class UserAgentInterceptor implements Interceptor {
 
         Request userRequest = originalRequest.newBuilder()
                 //添加统一的头信息
-                //.addHeader()
                 .addHeader("Cookie", MainActivity.cookie)
                 .addHeader("X-YahooWSSID-Authorization", MainActivity.wssid)
                 .build();

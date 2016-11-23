@@ -46,8 +46,6 @@ import com.yanzhenjie.permission.PermissionYes;
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.wasabeef.glide.transformations.CropCircleTransformation;
-
 
 public class MainActivity extends BaseActivity {
 
@@ -166,7 +164,7 @@ public class MainActivity extends BaseActivity {
                 //UniversalImageLoad.getInstance().displayImage(imagePath, imageView);
                 ImageLoadFactory.getInstance().getImageLoadHandler().displayImage(MainActivity.this, imagePath, imageView);
                 Glide.with(MainActivity.this).load(imagePath).crossFade()
-                        .bitmapTransform(new CropCircleTransformation(MainActivity.this))
+                        //.bitmapTransform(new CropCircleTransformation(MainActivity.this))
                         .into(imageView);
                 //imageView.setBackground(new BitmapDrawable(BitmapUtils.processBitmapBlur(BitmapUtils.obtainBitmap(imagePath))));
             }
