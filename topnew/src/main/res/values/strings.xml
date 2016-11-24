@@ -5,4 +5,6 @@
     <string name="label_bottom_good">干货</string>
     <string name="label_bottom_min">设置</string>
     <string name="label_bottom_video">视屏</string>
+    <string name="title_top_news">猿人头条</string>
+    <string name="network_unavailable">请检查您的网络</string>
 </resources>

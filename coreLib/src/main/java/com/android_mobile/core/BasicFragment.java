@@ -232,6 +232,10 @@ public abstract class BasicFragment extends RxFragment implements
         activity.setTitle(title);
     }
 
+    public void setTitle(int strRes) {
+        activity.setTitle(strRes);
+    }
+
     @Override
     public void isDisplayFragmentEffect(boolean flag) {
         activity.isDisplayFragmentEffect(flag);

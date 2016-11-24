@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.android_mobile.core.base.BaseActivity;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.webber.topnew.mine.MineFragment;
@@ -18,8 +19,9 @@ import com.webber.topnew.topnews.TopNewsFragment;
 import com.webber.topnew.video.VideoFragmnet;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
-public class MainActivity extends NActivity {
+public class MainActivity extends BaseActivity {
 
     @Bind(R.id.main_content_fl)
     FrameLayout mainContentFl;
@@ -35,13 +37,14 @@ public class MainActivity extends NActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle(R.string.app_name);
+        navigationBar.setTitle(R.string.app_name);
 
     }
 
     @Override
     protected void initComp() {
-        super.initComp();
+        //super.initComp();
+        ButterKnife.bind(this);
         mFab = (FloatingActionButton) findViewById(R.id.fab);
         bottomNavigation
                 .setMode(BottomNavigationBar.MODE_FIXED)
@@ -51,7 +54,9 @@ public class MainActivity extends NActivity {
                 .addItem(new BottomNavigationItem(R.mipmap.search_icon, R.string.label_bottom_video))
                 .addItem(new BottomNavigationItem(R.mipmap.ic_nav_new_orange, R.string.label_bottom_min))
                 .initialise();
-
+        bottomNavigation.setFab(mFab);
+        toast(bottomNavigation.getCurrentSelectedPosition() + "");
+        bottomNavigation.setFirstSelectedPosition(1);
         mFragmentManager = getSupportFragmentManager();
     }
 
@@ -146,7 +151,7 @@ public class MainActivity extends NActivity {
 
     @Override
     protected void initData() {
-        
+
     }
 
 }

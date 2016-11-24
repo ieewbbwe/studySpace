@@ -12,6 +12,7 @@ public class SlidNewsFragment extends BaseFragment {
     @Override
     protected int create() {
         return R.layout.fragment_slid_news;
+
     }
 
     @Override
