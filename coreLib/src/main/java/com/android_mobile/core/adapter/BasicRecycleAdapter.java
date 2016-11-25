@@ -10,6 +10,33 @@ import java.util.List;
 
 public abstract class BasicRecycleAdapter<M> extends RecyclerView.Adapter<BasicRecycleViewHolder> {
 
+    public static final int STATE_EMPTY_ITEM = 0;
+    /**
+     * 加载更多
+     */
+    public static final int STATE_LOAD_MORE = 1;
+    /**
+     * 没有更多
+     */
+    public static final int STATE_NO_MORE = 2;
+    /**
+     * 无数据
+     */
+    public static final int STATE_NO_DATA = 3;
+    /**
+     * 数据不满一页
+     */
+    public static final int STATE_LESS_ONE_PAGE = 4;
+    /**
+     * 网络错误
+     */
+    public static final int STATE_NETWORK_ERROR = 5;
+    /**
+     * 其他状态
+     */
+    public static final int STATE_OTHER = 6;
+
+    private int mState;
     protected final int mItemLayoutId;
     protected RecyclerView mRecyclerView;
     protected Context mContext;
@@ -251,5 +278,10 @@ public abstract class BasicRecycleAdapter<M> extends RecyclerView.Adapter<BasicR
         mData.add(toPosition, mData.remove(fromPosition));
         notifyItemMoved(fromPosition, toPosition);
     }
+
+    public void setState(int state) {
+        this.mState = state;
+    }
+
 
 }

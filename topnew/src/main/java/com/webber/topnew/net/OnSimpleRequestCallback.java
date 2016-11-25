@@ -1,7 +1,9 @@
 package com.webber.topnew.net;
 
-import android.content.Context;
 import android.widget.Toast;
+
+import com.android_mobile.core.BasicActivity;
+import com.android_mobile.core.utiles.Lg;
 
 import retrofit2.Response;
 
@@ -14,18 +16,20 @@ import retrofit2.Response;
 
 public abstract class OnSimpleRequestCallback<T extends Response> extends OnResultCallBack<T> {
 
-    public OnSimpleRequestCallback(Context context) {
+    public OnSimpleRequestCallback(BasicActivity context) {
         super(context);
     }
 
     @Override
     public void onFailed(int code, String message) {
         Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show();
+        Lg.print("network", String.format("onFailed code：%s->>message：%s", code, message));
     }
 
     @Override
     public void onException(String message) {
         Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show();
+        Lg.print("network", "onException " + message);
     }
 
 }

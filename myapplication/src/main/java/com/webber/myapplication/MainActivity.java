@@ -275,11 +275,11 @@ public class MainActivity extends BaseActivity {
         loadComponent.setListener(new ILoadMoreViewListener() {
             @Override
             public void startRefresh() {
-                mErrorLl.setErrorType(EmptyLayout.STATE_NETWORK_LOADING);
+                mEmptyLl.setErrorType(EmptyLayout.STATE_NETWORK_LOADING);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        mErrorLl.setErrorType(EmptyLayout.STATE_HIDE_LAYOUT);
+                        mEmptyLl.setErrorType(EmptyLayout.STATE_HIDE_LAYOUT);
                         loadComponent.endRefresh();
                         normalRecycleAdapter.clear();
                         normalRecycleAdapter.addNewData(buyerInfoModels);
@@ -291,7 +291,7 @@ public class MainActivity extends BaseActivity {
             public void startLoadMore() {
                 if (normalRecycleAdapter.getItemCount() >= 20) {
                     Snackbar.make(loadComponent.getRecycleView(), "没有更多了", Snackbar.LENGTH_SHORT).show();
-                    mErrorLl.setErrorType(EmptyLayout.STATE_NODATA_ENABLE_CLICK);
+                    mEmptyLl.setErrorType(EmptyLayout.STATE_NODATA_ENABLE_CLICK);
                     loadComponent.setLoadMoreEnable(false);
                     return;
                 }
@@ -308,7 +308,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        mErrorLl.setErrorType(EmptyLayout.STATE_NETWORK_LOADING);
+        mEmptyLl.setErrorType(EmptyLayout.STATE_NETWORK_LOADING);
         loadComponent.doRefresh();
         /*new Handler().postDelayed(new Runnable() {
             @Override

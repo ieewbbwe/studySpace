@@ -99,7 +99,7 @@ public abstract class BasicActivity extends RxAppCompatActivity
     private RelativeLayout rootView;
     private Toast toast;
     private ProgressDialog progressDialog;
-    protected EmptyLayout mErrorLl;
+    public EmptyLayout mEmptyLl;
 
     //变量
     private ArrayList<BasicAsyncTask> tasks = new ArrayList<BasicAsyncTask>();
@@ -141,7 +141,7 @@ public abstract class BasicActivity extends RxAppCompatActivity
         navigationBar = new NavigationBar(this,
                 (ViewStub) findViewById(R.id.title_stub));
         progressBar = (LinearLayout) findViewById(R.id.frame_progress);
-        mErrorLl = (EmptyLayout) findViewById(R.id.error_layout);
+        mEmptyLl = (EmptyLayout) findViewById(R.id.error_layout);
 
         progressBarLabel = (TextView) findViewById(R.id.frame_progress_label);
         modalViewGroup = (RelativeLayout) findViewById(R.id.frame_modal_view_root);
@@ -353,8 +353,10 @@ public abstract class BasicActivity extends RxAppCompatActivity
     public void displayProgressBar(String s) {
         progressBar.bringToFront();
         progressBar.setVisibility(View.VISIBLE);
-        progressBarLabel.setVisibility(View.VISIBLE);
-        progressBarLabel.setText(s);
+        if (!StringUtils.isEmpty(s)) {
+            progressBarLabel.setVisibility(View.VISIBLE);
+            progressBarLabel.setText(s);
+        }
     }
 
     public void displayProgressBar() {

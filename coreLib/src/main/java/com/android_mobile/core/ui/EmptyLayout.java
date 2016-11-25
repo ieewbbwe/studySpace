@@ -126,8 +126,12 @@ public class EmptyLayout extends LinearLayout {
                 clickEnable = true;
                 break;
             case STATE_HIDE_LAYOUT:
-                mLoading.stop();
-                setVisibility(View.GONE);
+                if (mLoading.isRunning()) {
+                    mLoading.stop();
+                }
+                if (getVisibility() == VISIBLE) {
+                    setVisibility(View.GONE);
+                }
                 break;
             case STATE_NODATA_ENABLE_CLICK:
                 mErrorState = STATE_NODATA_ENABLE_CLICK;

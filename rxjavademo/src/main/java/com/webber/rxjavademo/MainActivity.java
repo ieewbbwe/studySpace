@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         mDemoIv = (ImageView) findViewById(R.id.demo_iv);
         mDemoEt = (EditText) findViewById(R.id.demo_et);
 
-        //demo1();
+        demo1();
         //demo2();
         //demo3();
         //demo4();
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         //练手示例 利用RxJava 实现三级联动
 
         //进阶示例 -操作符
-        demo11();
+        //demo11();
     }
 
     //操作符示例
@@ -617,6 +617,7 @@ public class MainActivity extends AppCompatActivity {
     private void demo1() {
         //创建观察者
         Observer<String> observer = new Observer<String>() {
+
             @Override
             public void onCompleted() {
                 Log.d("webber", "onCompleted:");
@@ -632,19 +633,47 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("webber", "onNext:" + s);
             }
         };
+
+
+        Subscriber<String> stringSubscriber = new Subscriber<String>() {
+            @Override
+            public void onCompleted() {
+                Log.d("network", "onCompleted" + Thread.currentThread().getName());
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.d("network", "onError" + Thread.currentThread().getName());
+
+            }
+
+            @Override
+            public void onNext(String s) {
+                Log.d("network", "onNext" + Thread.currentThread().getName());
+
+            }
+
+            @Override
+            public void onStart() {
+                super.onStart();
+                Log.d("network", "onStart" + Thread.currentThread().getName());
+            }
+        };
         //创建被观察者
         Observable<String> observable = Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
+                //subscriber.onStart();
+                Log.d("network", "call" + Thread.currentThread().getName());
                 subscriber.onNext("item1");
                 subscriber.onNext("item2");
                 subscriber.onNext("item3");
-                //subscriber.onCompleted();
-                subscriber.onError(new Throwable("我出错了！！！"));
+                subscriber.onCompleted();
+                //subscriber.onError(new Throwable("我出错了！！！"));
             }
-        });
-
+        }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
         //订阅二者关系
-        observable.subscribe(observer);
+        observable.subscribe(stringSubscriber);
     }
 }

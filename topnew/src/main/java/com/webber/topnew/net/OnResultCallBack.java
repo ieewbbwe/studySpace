@@ -5,6 +5,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
+import com.android_mobile.core.BasicActivity;
+import com.android_mobile.core.utiles.Lg;
 import com.google.gson.Gson;
 import com.webber.topnew.R;
 
@@ -18,7 +20,7 @@ import rx.Subscriber;
 
 public abstract class OnResultCallBack<T extends Response> extends Subscriber<T> {
 
-    protected final Context mContext;
+    protected final BasicActivity mContext;
 
     public abstract void onFailed(int code, String message);
 
@@ -28,13 +30,14 @@ public abstract class OnResultCallBack<T extends Response> extends Subscriber<T>
 
     public abstract void onFinish();
 
-    public OnResultCallBack(Context context) {
+    public OnResultCallBack(BasicActivity context) {
         this.mContext = context;
     }
 
     @Override
     public void onStart() {
         super.onStart();
+        Lg.print("network", "onStart");
         if (!isNetworkAvailable(mContext)) {
             onFailed(ApiConstants.ERROR_NO_INTERNET, mContext.getString(R.string.network_unavailable));
             onFinish();
@@ -44,17 +47,19 @@ public abstract class OnResultCallBack<T extends Response> extends Subscriber<T>
 
     @Override
     public void onCompleted() {
-
+        Lg.print("network", "onCompleted");
     }
 
     @Override
     public void onError(Throwable e) {
+        Lg.print("network", "onError");
         onException(e.getMessage());
         onFinish();
     }
 
     @Override
     public void onNext(T response) {
+        Lg.print("network", "onNext");
         if (response.isSuccessful()) {
             Log.d("network", "response:" + new Gson().toJson(response));
             onResponse(response);

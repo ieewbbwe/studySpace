@@ -1,7 +1,7 @@
 package com.webber.topnew.net;
 
-import android.content.Context;
-import android.widget.Toast;
+import com.android_mobile.core.BasicActivity;
+import com.android_mobile.core.utiles.Lg;
 
 import retrofit2.Response;
 
@@ -12,20 +12,25 @@ import retrofit2.Response;
 
 public abstract class OnProgressRequestCallback<T extends Response> extends OnSimpleRequestCallback<T> {
 
-    public OnProgressRequestCallback(Context context) {
+    public OnProgressRequestCallback(BasicActivity context) {
         super(context);
     }
 
     @Override
     public void onStart() {
-        //displayProgress
-        Toast.makeText(mContext, "开始加载", Toast.LENGTH_SHORT).show();
+        mContext.displayProgressBar();
         super.onStart();
     }
 
     @Override
+    public void onCompleted() {
+        mContext.hiddenProgressBar();
+        super.onCompleted();
+    }
+
+    @Override
     public void onFinish() {
-        //hideProgress
-        Toast.makeText(mContext, "加载结束", Toast.LENGTH_SHORT).show();
+        mContext.hiddenProgressBar();
+        Lg.print("network", "onFinish");
     }
 }

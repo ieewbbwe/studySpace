@@ -2,7 +2,6 @@ package com.webber.topnew.net.api;
 
 import com.webber.topnew.net.response.TopNewsResponse;
 
-import java.util.List;
 import java.util.Map;
 
 import retrofit2.Response;
@@ -17,5 +16,5 @@ import rx.Observable;
 
 public interface NewsApi {
     @GET("wxnew")
-    Observable<Response<List<TopNewsResponse>>> getTopNews(@QueryMap Map<String, String> map);
+    Observable<Response<TopNewsResponse>> getTopNews(@QueryMap Map<String, String> map);
 }

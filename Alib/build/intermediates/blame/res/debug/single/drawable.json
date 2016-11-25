@@ -240,12 +240,12 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_action_back_selected.png"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\border_round_fill_ffffff.xml",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\border_round_fill_ffffff.xml"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_x_button.png",
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\umeng_socialize_x_button.png"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\border_round_fill_ffffff.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\drawable\\border_round_fill_ffffff.xml"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\drawable\\umeng_socialize_qq_on.png",
