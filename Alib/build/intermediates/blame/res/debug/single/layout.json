@@ -64,12 +64,12 @@
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\layout\\sample_act.xml"
     },
     {
-        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\layout\\component_banner_carousel.xml",
-        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\layout\\component_banner_carousel.xml"
-    },
-    {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\layout\\loadding.xml",
         "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\layout\\loadding.xml"
+    },
+    {
+        "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\layout\\component_banner_carousel.xml",
+        "source": "D:\\asWork\\WebberDemo\\Alib\\src\\main\\res\\layout\\component_banner_carousel.xml"
     },
     {
         "merged": "D:\\asWork\\WebberDemo\\Alib\\build\\intermediates\\res\\merged\\debug\\layout\\banner_item.xml",

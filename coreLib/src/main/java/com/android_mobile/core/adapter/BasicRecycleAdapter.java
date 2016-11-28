@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.android_mobile.core.utiles.Lg;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,12 +58,21 @@ public abstract class BasicRecycleAdapter<M> extends RecyclerView.Adapter<BasicR
 
     @Override
     public BasicRecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        BasicRecycleViewHolder viewHolder = new BasicRecycleViewHolder(mRecyclerView, LayoutInflater.from(mContext)
+        BasicRecycleViewHolder viewHolder;
+        if (mState == STATE_LOAD_MORE) {
+            Lg.print("loadList", "加载更多");
+        } else if (mState == STATE_NO_MORE) {
+            Lg.print("loadList", "没有更多");
+        } else {
+
+        }
+        viewHolder = new BasicRecycleViewHolder(mRecyclerView, LayoutInflater.from(mContext)
                 .inflate(mItemLayoutId, parent, false), mOnRVItemClickListener, mOnRVItemLongClickListener);
         viewHolder.getViewHolderHelper().setOnItemChildClickListener(mOnItemChildClickListener);
         viewHolder.getViewHolderHelper().setOnItemChildLongClickListener(mOnItemChildLongClickListener);
         viewHolder.getViewHolderHelper().setOnItemChildCheckedChangeListener(mOnItemChildCheckedChangeListener);
         setItemChildListener(viewHolder.getViewHolderHelper());
+
         return viewHolder;
     }
 
@@ -282,6 +293,5 @@ public abstract class BasicRecycleAdapter<M> extends RecyclerView.Adapter<BasicR
     public void setState(int state) {
         this.mState = state;
     }
-
 
 }

@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/rxbidding/rxbidding.iml" filepath="$PROJECT_DIR$/rxbidding/rxbidding.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/topnew/topnew.iml" filepath="$PROJECT_DIR$/topnew/topnew.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uploaddemo/uploaddemo.iml" filepath="$PROJECT_DIR$/uploaddemo/uploaddemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/webber/webber.iml" filepath="$PROJECT_DIR$/webber/webber.iml" />
     </modules>
   </component>

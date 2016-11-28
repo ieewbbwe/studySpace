@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        forTest();
+        //forTest();
 
         bottom6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +97,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.snack_bt:
+                startActivity(new Intent(MainActivity.this, ActivityOne.class));
+                overridePendingTransition(R.anim.push_bottom_in, R.anim.push_left_out);
                 break;
         }
     }
