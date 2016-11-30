@@ -43,7 +43,7 @@ public class FTPUtil {
     /**
      * ftp远程目录
      */
-    private String remoteDir;
+    private String remoteDir = "../upload";
     /**
      * 本地存储目录
      */

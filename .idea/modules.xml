@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/WebberDemo.iml" filepath="$PROJECT_DIR$/WebberDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/coreLib/coreLib.iml" filepath="$PROJECT_DIR$/coreLib/coreLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/deeplinkdemo/deeplinkdemo.iml" filepath="$PROJECT_DIR$/deeplinkdemo/deeplinkdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/immersion/immersion.iml" filepath="$PROJECT_DIR$/immersion/immersion.iml" />
       <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/retorfitdemo/retorfitdemo.iml" filepath="$PROJECT_DIR$/retorfitdemo/retorfitdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxbidding/rxbidding.iml" filepath="$PROJECT_DIR$/rxbidding/rxbidding.iml" />
