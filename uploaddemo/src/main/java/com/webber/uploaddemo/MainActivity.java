@@ -1,5 +1,6 @@
 package com.webber.uploaddemo;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -25,7 +26,6 @@ import com.webber.uploaddemo.FTP.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
@@ -82,6 +82,14 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String FTP_DELETEFILE_SUCCESS = "ftp文件删除成功";
     public static final String FTP_DELETEFILE_FAIL = "ftp文件删除失败";
+    @Bind(R.id.service_et)
+    EditText serviceEt;
+    @Bind(R.id.port_et)
+    EditText portEt;
+    @Bind(R.id.user_et)
+    EditText userEt;
+    @Bind(R.id.pwd_et)
+    EditText pwdEt;
 
     private File file;
     private FTPUtil ftpUtil;
@@ -96,7 +104,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         ftpUtil = new FTPUtil();
-        ftpUtil.setConfig("10.27.0.127", 21, "webbermo", "151102");
+        //ftpUtil.setConfig("10.27.0.127", 21, "webbermo", "151102");
+        ftpUtil.setConfig("10.27.0.20", 6657, "admin", "123456");
         //ScanIp();
         init();
     }
@@ -117,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
                 try {
                     startActivityForResult(Intent.createChooser(intent, "Select a File to Upload"), FILE_SELECT_CODE);
-                } catch (android.content.ActivityNotFoundException ex) {
+                } catch (ActivityNotFoundException ex) {
                     Toast.makeText(MainActivity.this, "Please install a File Manager.", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -127,12 +136,14 @@ public class MainActivity extends AppCompatActivity {
         uploadBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ftpUtil.setConfig(serviceEt.getText().toString().trim(), Integer.parseInt(portEt.getText().toString().trim()),
+                        userEt.getText().toString().trim(), pwdEt.getText().toString().trim());
                 if (file != null) {
                     progressLl.removeAllViews();
                     threadCount = Integer.parseInt(threadEt.getText().toString().trim());
                     for (int i = 0; i < threadCount; i++) {
                         createProgress();
-                        new UploadThread(file, i).start();
+                        new UploadThread(file, (ProgressBar) progressLl.getChildAt(i), i).start();
                     }
                     //uploadFile();
                 } else {
@@ -149,6 +160,12 @@ public class MainActivity extends AppCompatActivity {
         private ProgressBar pb;
         private long step;
 
+        public UploadThread(File file, ProgressBar pb, int threadId) {
+            this.mFile = file;
+            this.pb = pb;
+            this.threadId = threadId;
+        }
+
         public UploadThread(File file, int threadId) {
             this.mFile = file;
             this.threadId = threadId;
@@ -161,18 +178,24 @@ public class MainActivity extends AppCompatActivity {
             super.run();
             Log.d("start", "进度:" + threadId + "线程：" + Thread.currentThread().getName());
             try {
-                new FTP().uploadSingleFile(file, "../upload", new FTP.UploadProgressListener() {
+                FTP ftp = new FTP();
+                FTP.UploadProgressListener listener = new FTP.UploadProgressListener() {
                     @Override
                     public void onUploadProgress(String currentStep, long uploadSize, File file) {
                         if (uploadSize != 0) {
                             step = uploadSize;
-                            Log.d("progress", "进度:" + threadId + "线程：" + Thread.currentThread().getName() + "进度：" + uploadSize);
+                           // Log.d("progress", "进度:" + threadId + "线程：" + Thread.currentThread().getName() + "进度：" + uploadSize);
                             pb.setProgress((int) uploadSize);
                         } else if (currentStep.equals(FTP_UPLOAD_SUCCESS)) {
-                            Log.d("start", "进度:" + threadId + "线程：" + Thread.currentThread().getName());
+                            Snackbar.make(getWindow().getDecorView(), currentStep, Snackbar.LENGTH_SHORT).show();
+                            Log.d("end", "进度:" + threadId + "线程：" + Thread.currentThread().getName());
                         }
+                        //Log.d("end", "信息：" + currentStep);
+                        //Toast.makeText(MainActivity.this, currentStep, Toast.LENGTH_SHORT).show();
                     }
-                });
+                };
+                Log.d("end", "listener地址：" + listener.toString());
+                ftp.uploadSingleFile(file, "../upload", listener);
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -1,7 +1,5 @@
 package com.webber.uploaddemo.FTP;
 
-import android.util.Log;
-
 import com.webber.uploaddemo.MainActivity;
 
 import org.apache.commons.net.ftp.FTPClient;
@@ -137,7 +135,6 @@ public class FTP {
         ProgressInputStream progressInput = new ProgressInputStream(buffIn,
                 listener, localFile);
         String[] str = localFile.getName().split(".");
-        Log.d("webber", "str:" + localFile.getName());
         flag = ftpClient.storeFile(localFile.getName(), progressInput);
         buffIn.close();
 
@@ -172,6 +169,7 @@ public class FTP {
         // 改变FTP目录
         ftpClient.changeWorkingDirectory(remotePath);
         // 上传单个文件
+
 
     }
 

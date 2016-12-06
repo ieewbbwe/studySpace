@@ -66,8 +66,20 @@ public class MainActivity extends NActivity {
         currentCheckedId = 0;
         navigationBar.display();
         tag = TopNewsFragment.class.getSimpleName();
-        fragmentTransaction.add(R.id.main_content_fl, new TopNewsFragment(), tag);
+        Fragment fragment;
+        Fragment menu0 = mFragmentManager.findFragmentByTag(tag);
+        if (menu0 != null) {
+            fragment = menu0;
+        } else {
+            fragment = new TopNewsFragment();
+        }
+        if (fragment.isAdded()) {
+            fragmentTransaction.show(fragment);
+        } else {
+            fragmentTransaction.add(R.id.main_content_fl, fragment, tag);
+        }
         fragmentTransaction.commit();
+        mCurrentFragmentTag = tag;
     }
 
     @Override

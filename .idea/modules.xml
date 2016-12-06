@@ -7,7 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/coreLib/coreLib.iml" filepath="$PROJECT_DIR$/coreLib/coreLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/deeplinkdemo/deeplinkdemo.iml" filepath="$PROJECT_DIR$/deeplinkdemo/deeplinkdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/immersion/immersion.iml" filepath="$PROJECT_DIR$/immersion/immersion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvpdemo/mvpdemo.iml" filepath="$PROJECT_DIR$/mvpdemo/mvpdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nfcdemo/nfcdemo.iml" filepath="$PROJECT_DIR$/nfcdemo/nfcdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/retorfitdemo/retorfitdemo.iml" filepath="$PROJECT_DIR$/retorfitdemo/retorfitdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxbidding/rxbidding.iml" filepath="$PROJECT_DIR$/rxbidding/rxbidding.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />

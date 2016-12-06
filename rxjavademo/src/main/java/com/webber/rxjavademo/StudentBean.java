@@ -11,6 +11,7 @@ public class StudentBean {
     private String unity;
     private String name;
     private List<Cause> causeList;
+    private boolean isMale;
 
     public String getUnity() {
         return unity;
@@ -34,5 +35,9 @@ public class StudentBean {
 
     public void setCauseList(List<Cause> causeList) {
         this.causeList = causeList;
+    }
+
+    public Boolean isMale() {
+        return isMale;
     }
 }

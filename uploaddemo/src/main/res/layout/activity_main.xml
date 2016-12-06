@@ -16,6 +16,34 @@
         android:orientation="vertical"
         tools:context="com.webber.uploaddemo.MainActivity">
 
+        <EditText
+            android:text="10.27.0.20"
+            android:id="@+id/service_et"
+            android:hint="服务器地址"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:text="6657"
+            android:id="@+id/port_et"
+            android:hint="端口号"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:text="admin"
+            android:id="@+id/user_et"
+            android:hint="登录帐号"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:text="123456"
+            android:id="@+id/pwd_et"
+            android:hint="登录密码"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

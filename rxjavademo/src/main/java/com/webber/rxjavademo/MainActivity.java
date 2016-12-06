@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -49,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
         mDemoTv = (TextView) findViewById(R.id.demo_tv);
         mDemoIv = (ImageView) findViewById(R.id.demo_iv);
         mDemoEt = (EditText) findViewById(R.id.demo_et);
+        View.OnClickListener observer = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("webber","点击了！");
+            }
+        };
+        mDemoEt.setOnClickListener(observer);
 
         demo1();
         //demo2();
@@ -398,10 +406,38 @@ public class MainActivity extends AppCompatActivity {
     //有这样一个需求：有若干学生，现在需要输出这些学生所有的成绩
     private void demo7() {
         List<StudentBean> students = getStudent();
-        //demo7_1(students);
+        demo7_1(students);
         //demo7_2(students);
         //demo7_3(students);
-        demo7_4(students);
+        //demo7_4(students);
+        demo7_5(students);
+    }
+
+    private void demo7_5(List<StudentBean> students) {
+        from(students)//遍历学生数组
+                .subscribeOn(Schedulers.io())//在IO线程中运算
+                .observeOn(AndroidSchedulers.mainThread())//在主线程中回调
+                .filter(new Func1<StudentBean, Boolean>() {
+                    @Override
+                    public Boolean call(StudentBean studentBean) {
+                        return studentBean.isMale();//筛选出性别为男的数据
+                    }
+                })
+                .map(new Func1<StudentBean, List<Cause>>() {
+                    @Override
+                    public List<Cause> call(StudentBean studentBean) {
+                        Log.d("demo7_5", "姓名：" + studentBean.getName() + "性别：" + (studentBean.isMale() ? "男" : "女"));
+                        return studentBean.getCauseList();
+                    }
+                })
+                .subscribe(new Action1<List<Cause>>() {
+                    @Override
+                    public void call(List<Cause> causes) {
+                        for (Cause cause : causes) {
+                            Log.d("demo7_5", formatCause(cause));
+                        }
+                    }
+                });
     }
 
     //写到这里感觉到了 from 和for循环一样，把list里面的对象挨个输出
@@ -672,7 +708,7 @@ public class MainActivity extends AppCompatActivity {
                 subscriber.onCompleted();
                 //subscriber.onError(new Throwable("我出错了！！！"));
             }
-        }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        });//.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
         //订阅二者关系
         observable.subscribe(stringSubscriber);
     }

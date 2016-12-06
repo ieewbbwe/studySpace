@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
+import android.widget.Toast;
 
 import com.android_mobile.core.BasicActivity;
 import com.android_mobile.core.R;
@@ -23,7 +24,7 @@ public class ListViewComponent extends BaseComponent implements BGARefreshLayout
     // 加载监听
     private ILoadMoreViewListener mLoadMoreListener;
     // 加载更多是否可用
-    private boolean mIsLoadMoreEnable = true;
+    private boolean mIsLoadMoreEnable = false;
     // 刷新是否可用
     private boolean mIsPullDownEnable = true;
 
@@ -234,6 +235,7 @@ public class ListViewComponent extends BaseComponent implements BGARefreshLayout
         if (mLoadMoreListener != null && mIsLoadMoreEnable) {
             mLoadMoreListener.startLoadMore();
         }
+        Toast.makeText(activity, "bottom", Toast.LENGTH_SHORT).show();
         return mIsLoadMoreEnable;
     }
 
