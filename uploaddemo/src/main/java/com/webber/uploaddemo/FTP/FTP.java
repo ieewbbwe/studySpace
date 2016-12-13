@@ -1,5 +1,7 @@
 package com.webber.uploaddemo.FTP;
 
+import android.util.Log;
+
 import com.webber.uploaddemo.MainActivity;
 
 import org.apache.commons.net.ftp.FTPClient;
@@ -43,10 +45,10 @@ public class FTP {
     private FTPClient ftpClient;
 
     public FTP() {
-        this.hostName = "10.27.0.127";
-        this.serverPort = 21;
-        this.userName = "webbermo";
-        this.password = "151102";
+        this.hostName = "10.27.0.20";
+        this.serverPort = 6657;
+        this.userName = "admin";
+        this.password = "123456";
         this.ftpClient = new FTPClient();
     }
 
@@ -326,6 +328,7 @@ public class FTP {
      * @throws IOException
      */
     public void openConnect() throws IOException {
+        Log.d("webber",String.format("host:%s->>port:%s->>username:%s->>pwd:%s",hostName,serverPort,userName,password));
         // 中文转码
         ftpClient.setControlEncoding("UTF-8");
         int reply; // 服务器响应值

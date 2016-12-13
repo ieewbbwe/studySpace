@@ -31,7 +31,7 @@ public class FTPUtil {
     /**
      * ftp 端口号 默认21
      */
-    private int port = 7795;
+    private int port = 6657;
     /**
      * ftp服务器用户名
      */

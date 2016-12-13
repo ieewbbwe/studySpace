@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         ftpUtil.setConfig("10.27.0.20", 6657, "admin", "123456");
         //ScanIp();
         init();
+        //LifeObject object = new LifeObject();
     }
 
     private String remoteStr = "/root_dir/share/data_disk1/";
@@ -184,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onUploadProgress(String currentStep, long uploadSize, File file) {
                         if (uploadSize != 0) {
                             step = uploadSize;
-                           // Log.d("progress", "进度:" + threadId + "线程：" + Thread.currentThread().getName() + "进度：" + uploadSize);
+                            // Log.d("progress", "进度:" + threadId + "线程：" + Thread.currentThread().getName() + "进度：" + uploadSize);
                             pb.setProgress((int) uploadSize);
                         } else if (currentStep.equals(FTP_UPLOAD_SUCCESS)) {
                             Snackbar.make(getWindow().getDecorView(), currentStep, Snackbar.LENGTH_SHORT).show();
