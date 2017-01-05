@@ -53,12 +53,12 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener observer = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("webber","点击了！");
+                Log.d("webber", "点击了！");
             }
         };
         mDemoEt.setOnClickListener(observer);
 
-        demo1();
+        //demo1();
         //demo2();
         //demo3();
         //demo4();
@@ -89,18 +89,18 @@ public class MainActivity extends AppCompatActivity {
         //练手示例 利用RxJava 实现三级联动
 
         //进阶示例 -操作符
-        //demo11();
+        demo11();
     }
 
     //操作符示例
     private void demo11() {
         // 创建操作符
-        //demo11_1();
+        demo11_1();
         // 变换操作符
         //demo11_2();
         // 过滤操作符
-        demo11_3();
-        // 结合操作符
+        //demo11_3();
+        // 组合操作符
         //demo11_4();
 
         // 错误处理
@@ -313,12 +313,8 @@ public class MainActivity extends AppCompatActivity {
 
     //过滤连接符
     private void demo11_2() {
-
-    }
-
-    //转换连接符 map flatMap concatMap
-    private void demo11_1() {
         //TODO flatMap 无序输出 concatMap 有序输出
+        //转换连接符 map flatMap concatMap
         Observable.just(1, 2, 3, 4)
                 .subscribeOn(Schedulers.newThread())
                 .flatMap(new Func1<Integer, Observable<String>>() {
@@ -334,6 +330,29 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("demo11_1", s);
                     }
                 });
+    }
+
+    /**
+     * 创建操作符demo
+     */
+    private void demo11_1() {
+        //Create
+        demo11_1_1();
+    }
+
+    private void demo11_1_1() {
+        Observable.create(new Observable.OnSubscribe<Object>() {
+            @Override
+            public void call(Subscriber<? super Object> subscriber) {
+                subscriber.onNext("下一个");
+            }
+        }).subscribe(new Action1<Object>() {
+            @Override
+            public void call(Object o) {
+                Log.d("demo11_1_1", (String) o);
+                Log.d("demo11_1_1", o.toString());
+            }
+        });
     }
 
     //执行前的线程操作 doOnScheduler

@@ -38,7 +38,6 @@ public class MainActivity extends NActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         navigationBar.setTitle(R.string.app_name);
-
     }
 
     @Override

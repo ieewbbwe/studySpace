@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/WebberDemo.iml" filepath="$PROJECT_DIR$/WebberDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/coreLib/coreLib.iml" filepath="$PROJECT_DIR$/coreLib/coreLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/deeplinkdemo/deeplinkdemo.iml" filepath="$PROJECT_DIR$/deeplinkdemo/deeplinkdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dial/dial.iml" filepath="$PROJECT_DIR$/dial/dial.iml" />
       <module fileurl="file://$PROJECT_DIR$/immersion/immersion.iml" filepath="$PROJECT_DIR$/immersion/immersion.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvpdemo/mvpdemo.iml" filepath="$PROJECT_DIR$/mvpdemo/mvpdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
@@ -14,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/rxbidding/rxbidding.iml" filepath="$PROJECT_DIR$/rxbidding/rxbidding.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavademo/rxjavademo.iml" filepath="$PROJECT_DIR$/rxjavademo/rxjavademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/topnew/topnew.iml" filepath="$PROJECT_DIR$/topnew/topnew.iml" />
+      <module fileurl="file://$PROJECT_DIR$/touchDemo/touchDemo.iml" filepath="$PROJECT_DIR$/touchDemo/touchDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/uploaddemo/uploaddemo.iml" filepath="$PROJECT_DIR$/uploaddemo/uploaddemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/webber/webber.iml" filepath="$PROJECT_DIR$/webber/webber.iml" />
     </modules>

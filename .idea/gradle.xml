@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/Alib" />
             <option value="$PROJECT_DIR$/coreLib" />
             <option value="$PROJECT_DIR$/deeplinkdemo" />
+            <option value="$PROJECT_DIR$/dial" />
             <option value="$PROJECT_DIR$/immersion" />
             <option value="$PROJECT_DIR$/mvpdemo" />
             <option value="$PROJECT_DIR$/myapplication" />
@@ -19,6 +20,7 @@
             <option value="$PROJECT_DIR$/rxbidding" />
             <option value="$PROJECT_DIR$/rxjavademo" />
             <option value="$PROJECT_DIR$/topnew" />
+            <option value="$PROJECT_DIR$/touchDemo" />
             <option value="$PROJECT_DIR$/uploaddemo" />
             <option value="$PROJECT_DIR$/webber" />
           </set>

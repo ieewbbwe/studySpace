@@ -1,3 +1,3 @@
-include ':webber', ':mvpdemo',
+include ':webber', ':mvpdemo', ':dial', ':touchDemo',
         ':Alib', ':retorfitdemo', ':coreLib', ':myapplication', ':rxjavademo',
         ':deeplinkdemo', ':rxbidding', ':topnew', ':uploaddemo', ':immersion', ':nfcdemo'
